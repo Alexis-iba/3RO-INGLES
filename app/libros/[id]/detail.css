@@ -1,0 +1,26 @@
+.detail-page { position:relative; max-width:1200px; background:linear-gradient(145deg,#f6fcff,white 45%,#f4fbff); padding:28px 5% 18px; }
+.detail-sun { position:absolute; right:2%; top:24px; width:64px; height:64px; }
+.detail-grid { grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr); gap:18px 30px; align-items:start; }
+.detail-cover { overflow:hidden; border-radius:9px; box-shadow:0 5px 12px #1f4a7920; grid-column:1; grid-row:1; }
+.detail-cover .catalog-cover { border-left:8px solid #7fa54a; }
+.detail-cover .catalog-cover h2 { font-size:clamp(25px,3vw,40px); height:92px; }
+.detail-cover .catalog-scene { height:clamp(190px,25vw,320px); }
+.detail-description { grid-column:2; grid-row:1 / span 2; padding-right:10px; }
+.detail-description h1 { font-size:clamp(23px,2.8vw,34px); line-height:1.1; padding-right:26px; }
+.detail-unit { font-size:14px; font-weight:800; margin:8px 0; }
+.detail-description .tag { background:#e0e3ff; color:#3952a5; padding:3px 10px; font-size:12px; }
+.detail-description .tag:first-child { background:#87abfa; color:white; }
+.detail-description > p:not(.detail-unit) { color:#345579; font-size:15px; line-height:1.55; }
+.detail-description > .card { background:linear-gradient(135deg,#fffbee,#fbf6e5); border-radius:12px; padding:20px; }
+.detail-description li { color:#355777; font-size:14px; padding:3px 0; }
+.detail-description li > span { background:#5dab64; color:white; border-radius:4px; width:17px; height:17px; font-size:12px; flex-shrink:0; text-align:center; }
+.detail-page .preview-link { border:1px solid #6e8aff; border-radius:10px; background:linear-gradient(120deg,#5871ff,#527fff); color:white; font-size:15px; padding:15px 10px; box-shadow:0 3px 8px #5871ff20; }
+.detail-info { grid-column:1; grid-row:2; padding:15px 18px; background:linear-gradient(140deg,#f3f9ff,#edf5ff); border-radius:12px; }
+.detail-info > div { border:0; padding:9px 0; }.detail-info > div > span:first-child { color:#285acc; }.detail-info > div > span:last-child > span:first-child { color:#315078; font-weight:700; }.detail-info > div > span:last-child > span:last-child { color:#23446a; }
+.detail-recommendations { margin-top:34px; position:relative; }.detail-recommendations > h2 { font-size:25px; }.detail-recommendations > .grid { grid-template-columns:repeat(4,minmax(0,1fr)); gap:15px; }
+.detail-related-book { display:block; overflow:hidden; border:1px solid #ebf2fa; border-radius:8px; background:white; box-shadow:0 3px 8px #16477708; transition:transform .15s; }.detail-related-book:hover { transform:translateY(-3px); }
+.detail-related-book .catalog-cover { border-left-width:3px; border-radius:6px; }.detail-related-book .catalog-cover h2 { font-size:clamp(15px,1.8vw,23px); height:52px; padding:8px 3px 0; }.detail-related-book .catalog-scene { height:clamp(85px,12vw,145px); }.detail-related-book > span { display:block; padding:7px 5px; font-size:12px; font-weight:800; }
+@media(max-width:767px) {
+ .detail-page { padding:20px 14px 10px; }.detail-grid { grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr); gap:12px 15px; }.detail-sun { width:42px; height:42px; top:12px; right:6px; }.detail-description { padding-right:0; }.detail-description h1 { font-size:20px; padding-right:0; }.detail-cover .catalog-cover h2 { font-size:22px; height:65px; }.detail-cover .catalog-scene { height:155px; }.detail-description > .card { padding:12px; }.detail-description > p:not(.detail-unit) { font-size:13px; }.detail-description li { font-size:12px; }.detail-description .tag { font-size:11px; padding:2px 6px; }.detail-page .preview-link { font-size:12px; padding:12px 5px; }.detail-info { padding:10px; }.detail-info > div { font-size:12px; }.detail-recommendations > .grid { gap:8px; }.detail-related-book .catalog-cover h2 { font-size:14px; height:45px; }.detail-related-book .catalog-scene { height:80px; }.detail-related-book > span { font-size:11px; }.detail-recommendations > h2 { font-size:22px; }
+}
+@media(max-width:359px) { .detail-grid { grid-template-columns:1fr; }.detail-cover,.detail-description,.detail-info { grid-column:auto; grid-row:auto; }.detail-recommendations > .grid { grid-template-columns:repeat(2,minmax(0,1fr)); } }

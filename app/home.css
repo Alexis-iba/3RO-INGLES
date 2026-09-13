@@ -1,0 +1,129 @@
+body:has(.reference-home) { background: linear-gradient(135deg,#164360,#298daf); }
+body:has(.reference-home) > .site-header, body:has(.reference-home) > footer { display:none; }
+body:has(.reference-home) > main { background:transparent; padding:10px; flex:none; }
+.reference-home { container-type:inline-size; width:min(100%,1080px); margin:auto; overflow:hidden; background:#fff; color:#093575; border-radius:20px; box-shadow:0 8px 30px #082d4933; }
+.reference-header { min-height:8.6cqw; display:flex; align-items:center; gap:2.8cqw; padding:1.5cqw 3.7cqw; }
+.reference-logo { display:flex; align-items:center; flex:0 0 26%; gap:1cqw; }
+.reference-logo-img { height:9cqw; width:auto; }
+.reference-header nav { display:flex; justify-content:space-between; flex:1; gap:1.6cqw; }
+.reference-header nav a { font-size:1.3cqw; font-weight:900; white-space:nowrap; padding:1.6cqw 0; }
+.reference-header nav a[aria-current] { border-bottom:2px solid #8ad2ee; }
+.reference-search { width:3.5cqw; flex-shrink:0; }
+.reference-hero { height:52cqw; position:relative; isolation:isolate; background:linear-gradient(120deg,#e5f8ff,#c9eeff); overflow:hidden; }
+.hero-copy { position:relative; z-index:3; width:45%; padding:6cqw 0 0 4.5cqw; }
+.hero-copy h1 { font-size:6cqw; font-weight:800; letter-spacing:-.15cqw; line-height:1.02; margin:0; }
+.word-green { color:#20a386; }
+.word-orange { color:#ef9230; }
+.hero-copy p { max-width:35cqw; font-size:2.15cqw; line-height:1.45; margin:3cqw 0 2.5cqw; }
+.reference-explore { display:inline-flex; align-items:center; gap:2cqw; background:#ffda60; color:#153c68; font-size:2.15cqw; font-weight:900; border-radius:999px; padding:2cqw 3.4cqw; box-shadow:0 5px 14px #eab93124; }
+.hero-photograph { position:absolute; width:60%; height:100%; right:0; top:0; mask-image:linear-gradient(to right,transparent,#000 16%); }
+.hero-photograph img { object-fit:cover; object-position:59% center; }
+.hero-motto { position:absolute; z-index:4; right:3cqw; top:3cqw; border-radius:50% 45% 48% 40%; padding:3cqw 3.5cqw; background:#fffffff0; color:#2379c8; font-weight:900; font-size:3.1cqw; line-height:1.05; text-align:center; box-shadow:0 5px 20px #31647e13; }
+.hero-star { position:absolute; color:#ffd25d; z-index:4; font-size:6cqw; text-shadow:0 1px 0 #d3a739; }
+.star-one { left:37%; top:6%; }.star-two { right:2%; bottom:18%; }
+.hero-clouds { position:absolute; z-index:4; left:0; right:0; bottom:-1px; height:4cqw; background:radial-gradient(ellipse at 9% 120%,#b4ecd7 0 12%,transparent 12.5%),radial-gradient(ellipse at 24% 120%,#b4ecd7 0 13%,transparent 13.5%),radial-gradient(ellipse at 90% 120%,#fff0a7 0 20%,transparent 20.5%); }
+.reference-features { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:2.5cqw; padding:2.5cqw 3.7cqw 4.3cqw; background:#fff; border-radius:3cqw 3cqw 0 0; position:relative; margin-top:-.5cqw; z-index:5; }
+.reference-feature { border-radius:2.3cqw; padding:1.7cqw 0 2.3cqw; text-align:center; }
+.reference-feature svg { width:6cqw; height:6cqw; margin:0 auto 1.7cqw; color:var(--icon-color); }
+.reference-feature span { display:block; font-size:2.15cqw; font-weight:800; line-height:1.25; }
+.reference-books { padding:0 3.7cqw 3cqw; }
+.reference-books-heading { display:flex; justify-content:space-between; align-items:center; gap:2cqw; margin-bottom:2.4cqw; }
+.reference-books h2 { font-size:3.05cqw; font-weight:800; line-height:1.2; letter-spacing:-.07cqw; margin:0; }
+.reference-books-heading > a { font-size:2cqw; white-space:nowrap; font-weight:900; color:#236cc3; }
+.reference-book-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:2.7cqw; }
+.reference-book { position:relative; display:flex; flex-direction:column; overflow:hidden; border-radius:1.2cqw; box-shadow:0 1cqw 2cqw #18436820; border-left: .8cqw solid #ffffff60; transition:transform .15s; }
+.reference-book h3 { height:9cqw; display:grid; place-items:center; padding:1.5cqw 1cqw; font-size:3cqw; line-height:1.02; text-align:center; font-weight:800; margin:0; }
+.cover-photo { height:18cqw; position:relative; }
+.cover-photo img { object-fit:cover; }.cover-family img { object-position:56% center; }
+.cover-level { text-align:center; font-size:1.05cqw; font-weight:900; letter-spacing:.1cqw; padding:1cqw .2cqw; }
+.reference-book:hover { transform:translateY(-.5cqw); }
+.reference-bottom { position:relative; display:flex; align-items:center; justify-content:center; min-height:11cqw; background:radial-gradient(ellipse at 95% 100%,white 0 15%,transparent 15.5%),radial-gradient(ellipse at 10% 110%,white 0 15%,transparent 15.5%),#ffed9e; }
+.reference-bottom > svg { position:absolute; left:5cqw; height:11cqw; width:11cqw; transform:rotate(25deg); }
+.reference-bottom h2 { font-size:3.6cqw; line-height:1; font-weight:800; text-align:center; padding:2cqw; margin:0; }
+.reference-bottom h2 span { color:#139e8c; }.banner-star { position:absolute; right:19%; color:#ed9270; font-size:5cqw; }
+.reference-home a:focus-visible { outline:3px solid #1267e2; outline-offset:2px; }
+@media(max-width:700px) {
+ .reference-header { flex-wrap:wrap; padding:12px 4%; gap:8px; }.reference-logo { flex:1; }.reference-logo-img { height:38px; }.reference-search { width:24px; }.reference-header nav { order:3; width:100%; flex:0 0 100%; gap:8px; overflow-x:auto; }.reference-header nav a { font-size:12px; padding:8px 0; }
+ .hero-copy p { font-size:max(11px,2.15cqw); }.reference-explore { font-size:max(11px,2.15cqw); padding:2cqw; gap:1cqw; }.reference-feature span { font-size:max(11px,2.15cqw); }.reference-books-heading > a { font-size:max(11px,2cqw); }.reference-books h2 { font-size:max(14px,3.05cqw); }.reference-book h3 { font-size:max(13px,3cqw); }.cover-level { font-size:max(7px,1.05cqw); }.reference-home { border-radius:12px; }body:has(.reference-home)>main { padding:5px; }
+}
+@media(prefers-reduced-motion:reduce) { .reference-book { transition:none; } }
+
+/* Full-width canvas; cap desktop sizing so wider screens stay usable. */
+body:has(.reference-home) { background:#fff; }
+body:has(.reference-home) > main { padding:0; }
+.reference-home { width:100%; min-height:100vh; border-radius:0; box-shadow:none; }
+.kids-cover { position:relative; width:100%; height:100%; overflow:hidden; background:radial-gradient(ellipse at 50% 115%,#87c68b 0 35%,transparent 36%),linear-gradient(#ffffff15,#ffffff65); }
+.kids-cover .cover-character { position:absolute; object-fit:contain; width:78%; height:90%; left:11%; top:1%; }
+.kids-cover .character-1 { width:38%; height:40%; left:0; top:58%; }
+.kids-cover .character-2 { width:38%; height:40%; left:62%; top:58%; }
+.kids-cover-animals .character-0 { width:68%; left:-3%; top:10%; }
+.kids-cover-animals .character-1 { width:55%; height:65%; left:47%; top:35%; }
+.cover-sparkle { position:absolute; right:7%; top:3%; color:#e8ab18; font-size:25px; }
+.illustration-credit { text-align:center; color:#567189; font-size:12px; margin:0; padding:8px; }
+.illustration-credit a { text-decoration:underline; }
+@media(min-width:1000px) {
+ .reference-header { min-height:88px; padding:14px 4%; gap:36px; }
+ .reference-logo { flex-basis:260px; gap:10px; }.reference-logo-img { height:56px; }
+ .reference-header nav { gap:24px; }.reference-header nav a { font-size:15px; padding:16px 0; }.reference-search { width:30px; }
+ .reference-hero { height:clamp(470px,38vw,660px); }
+ .hero-copy { padding:clamp(45px,5vw,90px) 0 0 5%; width:47%; }.hero-copy h1 { font-size:clamp(55px,4.5vw,88px); letter-spacing:-2px; }.hero-copy p { font-size:20px; max-width:390px; margin:28px 0; }
+ .reference-explore { font-size:18px; gap:20px; padding:18px 30px; }.hero-motto { font-size:30px; padding:30px; right:4%; top:7%; }.hero-star { font-size:60px; }
+ .reference-features { padding:26px 5% 36px; gap:28px; border-radius:24px 24px 0 0; }.reference-feature { padding:20px 0; border-radius:22px; }.reference-feature svg { width:48px; height:48px; margin-bottom:14px; }.reference-feature span { font-size:18px; }
+ .reference-books { padding:0 5% 35px; }.reference-books-heading { margin-bottom:22px; }.reference-books h2 { font-size:29px; letter-spacing:-.5px; }.reference-books-heading > a { font-size:16px; }.reference-book-grid { gap:30px; }
+ .reference-book { border-radius:14px; border-left-width:7px; }.reference-book h3 { font-size:30px; height:90px; padding:16px; }.cover-photo { height:clamp(180px,16vw,300px); }.cover-level { font-size:12px; padding:10px; letter-spacing:1px; }
+ .reference-bottom { min-height:110px; }.reference-bottom > svg { width:100px; height:100px; }.reference-bottom h2 { font-size:36px; padding:20px; }.banner-star { font-size:48px; }
+}
+
+/* User-supplied English Kids artwork replaces the homepage photograph. */
+.hero-photograph.hero-brand-art { mask-image:none; width:57%; display:flex; align-items:center; }
+.hero-photograph.hero-brand-art img { object-fit:contain; object-position:center; padding:5%; }
+.reference-hero:has(.hero-brand-art) .hero-motto { display:none; }
+.reference-hero:has(.hero-brand-art) .star-two { bottom:8%; }
+
+/* Responsive hero: content determines height; artwork keeps its full proportions. */
+.reference-hero:has(.hero-brand-art) {
+  display:grid;
+  grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);
+  align-items:center;
+  gap:clamp(20px,3vw,56px);
+  height:auto;
+  min-height:440px;
+  padding:clamp(32px,5vw,80px) 5%;
+}
+.reference-hero:has(.hero-brand-art) .hero-copy { width:auto; min-width:0; padding:0; }
+.reference-hero:has(.hero-brand-art) .hero-copy h1 { font-size:clamp(40px,4.4vw,78px); letter-spacing:-.035em; line-height:1.06; }
+.reference-hero:has(.hero-brand-art) .hero-copy p { max-width:420px; font-size:clamp(16px,1.5vw,20px); line-height:1.5; margin:24px 0; }
+.reference-hero:has(.hero-brand-art) .reference-explore { font-size:16px; min-height:48px; padding:14px 24px; gap:18px; }
+.hero-photograph.hero-brand-art { position:relative; width:100%; height:auto; min-width:0; aspect-ratio:1.5; right:auto; top:auto; }
+.hero-photograph.hero-brand-art img { padding:0; object-fit:contain; object-position:center; }
+.reference-hero:has(.hero-brand-art) .star-one { left:43%; top:4%; font-size:32px; }
+.reference-hero:has(.hero-brand-art) .star-two { right:3%; bottom:6%; font-size:32px; }
+@media (min-width:701px) and (max-width:1100px) {
+ .reference-header { flex-wrap:wrap; gap:12px 22px; padding:16px 5%; }
+ .reference-logo { flex:1; gap:8px; }.reference-logo-img { height:44px; }
+ .reference-header nav { order:3; flex:0 0 100%; justify-content:space-between; gap:12px; }.reference-header nav a { font-size:14px; padding:10px 0; }
+ .reference-search { width:28px; }
+}
+@media (max-width:700px) {
+ .reference-hero:has(.hero-brand-art) { grid-template-columns:minmax(0,1fr); min-height:0; gap:24px; padding:32px 20px 36px; }
+ .reference-hero:has(.hero-brand-art) .hero-copy { text-align:center; }
+ .reference-hero:has(.hero-brand-art) .hero-copy h1 { font-size:clamp(36px,7.8vw,52px); }
+ .reference-hero:has(.hero-brand-art) .hero-copy p { margin:18px auto; max-width:360px; }
+ .hero-photograph.hero-brand-art { max-width:500px; justify-self:center; }
+ .reference-hero:has(.hero-brand-art) .star-one { left:auto; right:5%; top:14px; font-size:24px; }
+ .reference-header nav { flex-wrap:wrap; justify-content:center; gap:0 18px; overflow:visible; }
+ .reference-header nav a { font-size:14px; min-height:44px; display:flex; align-items:center; }
+ .reference-search { display:grid; place-items:center; width:44px; height:44px; }.reference-search svg { width:24px; }
+ .reference-features { grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; padding:20px; margin-top:0; }
+ .reference-feature { padding:18px 10px; border-radius:16px; }.reference-feature svg { width:36px; height:36px; margin-bottom:10px; }.reference-feature span { font-size:14px; }
+ .reference-books { padding:8px 20px 24px; }.reference-books-heading { align-items:flex-start; gap:12px; margin-bottom:16px; }.reference-books h2 { font-size:21px; }.reference-books-heading > a { font-size:14px; padding-top:3px; }
+ .reference-book-grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px; }.reference-book { border-radius:12px; }.reference-book h3 { font-size:23px; height:auto; min-height:72px; padding:12px 8px; }.cover-photo { height:160px; }.cover-level { font-size:10px; padding:9px 3px; }
+ .reference-bottom { min-height:100px; }.reference-bottom h2 { font-size:26px; padding:20px 64px; }.reference-bottom > svg { width:58px; height:58px; left:12px; }.banner-star { right:6%; font-size:28px; }
+}
+@media (max-width:360px) { .reference-book h3 { font-size:20px; }.cover-photo { height:130px; }.reference-books-heading { flex-wrap:wrap; } }
+
+/* Supplied cover illustrations: same frame, no cropping or distortion. */
+.reference-book .supplied-book-art { height:auto; aspect-ratio:1.18; background:linear-gradient(180deg,#ffffff12,#ffffff45); }
+.reference-book .supplied-book-art img { object-fit:contain; object-position:center bottom; padding:8px; }
+.reference-book { min-width:0; }
+@media(max-width:700px) { .reference-book .supplied-book-art img { padding:4px; } }

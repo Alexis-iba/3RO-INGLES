@@ -1,0 +1,4 @@
+OpenMoji illustrations by Benedikt Groß, Daniel Utz, HfG Schwäbisch Gmünd and the OpenMoji contributors.
+Source: https://github.com/hfg-gmuend/openmoji/tree/master/color/svg
+License: Creative Commons Attribution-ShareAlike 4.0 https://creativecommons.org/licenses/by-sa/4.0/
+Individual SVG files are unmodified. The page places them on decorative cover backgrounds.
