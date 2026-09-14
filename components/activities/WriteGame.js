@@ -1,19 +1,26 @@
 "use client";
 
-import { useState } from "react";
-import { getAllVocab } from "@/lib/data";
-import { shuffle } from "@/lib/shuffle";
+import { useEffect, useState } from "react";
+import { getActivityVocab } from "@/lib/activity-vocab";
+import { pickRoundWords, readRoundHistory, writeRoundHistory } from "@/lib/quiz-round";
+import ActivityImage from "./ActivityImage";
 
 const TOTAL = 8;
-const ALL_VOCAB = getAllVocab();
+const ALL_VOCAB = getActivityVocab();
+const HISTORY_KEY = "englishkids-write-history-v1";
 
 export default function WriteGame() {
-  const [questions, setQuestions] = useState(() => shuffle(ALL_VOCAB).slice(0, TOTAL));
+  const [round, setRound] = useState(() => pickRoundWords(ALL_VOCAB, readRoundHistory(HISTORY_KEY), TOTAL));
+  const questions = round.items;
   const [index, setIndex] = useState(0);
   const [score, setScore] = useState(0);
   const [value, setValue] = useState("");
   const [checked, setChecked] = useState(false);
   const [finished, setFinished] = useState(false);
+
+  useEffect(() => {
+    writeRoundHistory(HISTORY_KEY, round.history);
+  }, [round]);
 
   const current = questions[index];
 
@@ -32,7 +39,7 @@ export default function WriteGame() {
     }
   }
   function restart() {
-    setQuestions(shuffle(ALL_VOCAB).slice(0, TOTAL));
+    setRound(pickRoundWords(ALL_VOCAB, round.history, TOTAL));
     setIndex(0);
     setScore(0);
     setValue("");
@@ -58,7 +65,7 @@ export default function WriteGame() {
 
   return (
     <div className="text-center">
-      <div className="mb-3.5 text-7xl">{current.emoji}</div>
+      <div className="write-illustration"><ActivityImage word={current.word} /></div>
       <p className="font-bold text-navy/60">Escribe esta palabra en inglés</p>
       <div className="mt-3.5 flex flex-wrap items-center justify-center gap-2.5">
         <input

@@ -1,28 +1,37 @@
 "use client";
 
-import { useState } from "react";
-import { getAllVocab } from "@/lib/data";
+import { useEffect, useState } from "react";
+import { getActivityVocab } from "@/lib/activity-vocab";
 import { shuffle } from "@/lib/shuffle";
+import { pickRoundWords, readRoundHistory, writeRoundHistory } from "@/lib/quiz-round";
+import ActivityImage from "./ActivityImage";
+import { ACTIVITY_ART } from "@/lib/activity-art";
 
-const ALL_VOCAB = getAllVocab();
+const ALL_VOCAB = getActivityVocab();
 const COUNT = 6;
+const HISTORY_KEY = "englishkids-match-history-v1";
 
-function buildRound() {
-  const items = shuffle(ALL_VOCAB).slice(0, COUNT);
+function buildRound(history) {
+  const { items, history: nextHistory } = pickRoundWords(ALL_VOCAB, history, COUNT);
   return {
     items,
     words: shuffle(items),
     images: shuffle(items),
+    history: nextHistory,
   };
 }
 
 export default function MatchGame() {
-  const [round, setRound] = useState(buildRound);
+  const [round, setRound] = useState(() => buildRound(readRoundHistory(HISTORY_KEY)));
   const [selectedWord, setSelectedWord] = useState(null);
   const [selectedImage, setSelectedImage] = useState(null);
   const [matched, setMatched] = useState([]);
   const [shakeWord, setShakeWord] = useState(null);
   const [shakeImage, setShakeImage] = useState(null);
+
+  useEffect(() => {
+    writeRoundHistory(HISTORY_KEY, round.history);
+  }, [round]);
 
   const done = matched.length === COUNT;
 
@@ -55,7 +64,7 @@ export default function MatchGame() {
   }
 
   function restart() {
-    setRound(buildRound());
+    setRound(buildRound(round.history));
     setSelectedWord(null);
     setSelectedImage(null);
     setMatched([]);
@@ -70,13 +79,15 @@ export default function MatchGame() {
 
   return (
     <div>
-      <div className="grid grid-cols-2 gap-6">
+      <div className="match-illustrated-grid grid grid-cols-2 gap-6">
         <div className="flex flex-col gap-2.5">
           {round.words.map((w) => (
             <button
               key={w.word}
               onClick={() => pickWord(w.word)}
-              className={`rounded-xl border-2 bg-bg-page px-3.5 py-3.5 text-center text-sm font-bold ${itemClass(w.word, selectedWord === w.word)}`}
+              disabled={matched.includes(w.word)}
+              aria-pressed={selectedWord === w.word || matched.includes(w.word)}
+              className={`match-word-tile rounded-xl border-2 bg-bg-page px-3.5 text-center text-sm font-bold ${itemClass(w.word, selectedWord === w.word)}`}
             >
               {w.word}
             </button>
@@ -87,9 +98,12 @@ export default function MatchGame() {
             <button
               key={w.word}
               onClick={() => pickImage(w.word)}
-              className={`rounded-xl border-2 bg-bg-page px-3.5 py-3.5 text-center text-3xl ${itemClass(w.word, selectedImage === w.word)}`}
+              disabled={matched.includes(w.word)}
+              aria-label={`Imagen: ${ACTIVITY_ART[w.word].alt}`}
+              aria-pressed={selectedImage === w.word || matched.includes(w.word)}
+              className={`match-image-tile rounded-xl border-2 bg-bg-page text-center ${itemClass(w.word, selectedImage === w.word)}`}
             >
-              {w.emoji}
+              <ActivityImage word={w.word} decorative sizes="104px" />
             </button>
           ))}
         </div>

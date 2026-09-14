@@ -12,6 +12,12 @@ const QuizGame = dynamic(() => import("@/components/activities/QuizGame"), { ssr
 const MatchGame = dynamic(() => import("@/components/activities/MatchGame"), { ssr: false });
 const ListenGame = dynamic(() => import("@/components/activities/ListenGame"), { ssr: false });
 const WriteGame = dynamic(() => import("@/components/activities/WriteGame"), { ssr: false });
+const SpeedGame = dynamic(() => import("@/components/activities/SpeedGame"), { ssr: false });
+const MemoryFlipGame = dynamic(() => import("@/components/activities/MemoryFlipGame"), { ssr: false });
+const TrueFalseGame = dynamic(() => import("@/components/activities/TrueFalseGame"), { ssr: false });
+const ScrambleGame = dynamic(() => import("@/components/activities/ScrambleGame"), { ssr: false });
+const SpellingChoiceGame = dynamic(() => import("@/components/activities/SpellingChoiceGame"), { ssr: false });
+const HuntGame = dynamic(() => import("@/components/activities/HuntGame"), { ssr: false });
 
 const TYPES = [
   { id: "vocabulario", icon: "abc", title: "Vocabulario", desc: "Une palabras con imágenes" },
@@ -27,17 +33,51 @@ const TITLES = {
   escribir: "Escribir: completa la palabra",
 };
 
+// Tres juegos distintos por apartado, todos usando el mismo banco de 87 ilustraciones.
+const GAME_MODES = {
+  vocabulario: [
+    { id: "match", label: "Emparejar", Component: MatchGame },
+    { id: "memory", label: "🧠 Memoria", Component: MemoryFlipGame },
+    { id: "truefalse", label: "✅ Verdadero o falso", Component: TrueFalseGame, props: { mode: "image" } },
+  ],
+  escuchar: [
+    { id: "listen", label: "Elige la respuesta", Component: ListenGame },
+    { id: "truefalse-audio", label: "✅ Verdadero o falso", Component: TrueFalseGame, props: { mode: "audio" } },
+    { id: "hunt-audio", label: "⚡ Caza por audio", Component: HuntGame, props: { mode: "audio" } },
+  ],
+  escribir: [
+    { id: "write", label: "Completar", Component: WriteGame },
+    { id: "scramble", label: "🔤 Ordena las letras", Component: ScrambleGame },
+    { id: "spelling", label: "📝 Elige la ortografía", Component: SpellingChoiceGame },
+  ],
+  juegos: [
+    { id: "quiz", label: "Preguntas", Component: QuizGame },
+    { id: "contrarreloj", label: "⚡ Contrarreloj", Component: SpeedGame },
+    { id: "hunt", label: "🔎 Caza la imagen", Component: HuntGame, props: { mode: "visual" } },
+  ],
+};
+
 export default function ActividadesPage() {
   const [active, setActive] = useState("juegos");
   const [round, setRound] = useState(0);
+  const [gameModes, setGameModes] = useState({ vocabulario: "match", escuchar: "listen", escribir: "write", juegos: "quiz" });
 
   function selectType(id) {
     setActive(id);
     setRound((r) => r + 1);
   }
 
+  function selectGameMode(id) {
+    setGameModes((prev) => ({ ...prev, [active]: id }));
+    setRound((r) => r + 1);
+  }
+
+  const modes = GAME_MODES[active];
+  const current = modes.find((m) => m.id === gameModes[active]) || modes[0];
+  const { Component, props } = current;
+
   return (
-    <div className="activities-page section-container py-8 md:py-12">
+    <div className="activities-page section-container">
       <span className="activities-title-wrap">
         <h1 className="font-heading text-3xl font-extrabold text-navy md:text-[34px]">Actividades interactivas</h1>
         <Star className="activities-star activities-star-one" />
@@ -45,14 +85,13 @@ export default function ActividadesPage() {
       </span>
       <p className="mt-2 text-navy/60">Juega, practica y aprende de forma divertida.</p>
 
-      <div className="mt-8 grid grid-cols-2 gap-4 lg:grid-cols-4">
+      <div className="activity-types">
         {TYPES.map((t) => (
           <button
             key={t.id}
             onClick={() => selectType(t.id)}
-            className={`card px-4 py-6 text-center transition-transform hover:-translate-y-1 ${
-              active === t.id ? "border-2 border-brand-blue" : "border-2 border-transparent"
-            }`}
+            aria-pressed={active === t.id}
+            className={`activity-type activity-type-${t.id}`}
           >
             <ActivityIcon name={t.icon} />
             <h3 className="font-heading text-[15px] font-extrabold">{t.title}</h3>
@@ -61,12 +100,21 @@ export default function ActividadesPage() {
         ))}
       </div>
 
-      <div className="card mt-7 p-7">
+      <div className="activity-example">
         <h3 className="mb-4 font-heading text-lg font-extrabold">{TITLES[active]}</h3>
-        {active === "juegos" && <QuizGame key={round} />}
-        {active === "vocabulario" && <MatchGame key={round} />}
-        {active === "escuchar" && <ListenGame key={round} />}
-        {active === "escribir" && <WriteGame key={round} />}
+        <div className="game-mode-switch">
+          {modes.map((m) => (
+            <button
+              key={m.id}
+              onClick={() => selectGameMode(m.id)}
+              aria-pressed={current.id === m.id}
+              className="game-mode-btn"
+            >
+              {m.label}
+            </button>
+          ))}
+        </div>
+        <Component key={`${active}-${round}`} {...props} />
       </div>
     </div>
   );

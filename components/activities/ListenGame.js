@@ -1,11 +1,14 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
-import { getAllVocab } from "@/lib/data";
-import { shuffle, pickOptions } from "@/lib/shuffle";
+import { getActivityVocab } from "@/lib/activity-vocab";
+import { pickOptions } from "@/lib/shuffle";
+import { pickRoundWords, readRoundHistory, writeRoundHistory } from "@/lib/quiz-round";
+import ActivityImage from "./ActivityImage";
 
 const TOTAL = 8;
-const ALL_VOCAB = getAllVocab();
+const ALL_VOCAB = getActivityVocab();
+const HISTORY_KEY = "englishkids-listen-history-v1";
 
 function speak(word) {
   if (typeof window === "undefined" || !("speechSynthesis" in window)) return;
@@ -17,11 +20,16 @@ function speak(word) {
 }
 
 export default function ListenGame() {
-  const [questions, setQuestions] = useState(() => shuffle(ALL_VOCAB).slice(0, TOTAL));
+  const [round, setRound] = useState(() => pickRoundWords(ALL_VOCAB, readRoundHistory(HISTORY_KEY), TOTAL));
+  const questions = round.items;
   const [index, setIndex] = useState(0);
   const [score, setScore] = useState(0);
   const [selected, setSelected] = useState(null);
   const [finished, setFinished] = useState(false);
+
+  useEffect(() => {
+    writeRoundHistory(HISTORY_KEY, round.history);
+  }, [round]);
 
   const current = questions[index];
   const options = useMemo(() => (current ? pickOptions(ALL_VOCAB, current, 4) : []), [current]);
@@ -44,7 +52,7 @@ export default function ListenGame() {
     }
   }
   function restart() {
-    setQuestions(shuffle(ALL_VOCAB).slice(0, TOTAL));
+    setRound(pickRoundWords(ALL_VOCAB, round.history, TOTAL));
     setIndex(0);
     setScore(0);
     setSelected(null);
@@ -71,7 +79,7 @@ export default function ListenGame() {
       <button onClick={() => speak(current.word)} className="btn btn-sm mb-4 bg-brand-blue text-white">
         🔊 Escuchar palabra
       </button>
-      <div className="grid grid-cols-1 gap-2.5 sm:grid-cols-2">
+      <div className="listen-illustrated-options grid grid-cols-2 gap-3">
         {options.map((o, i) => {
           const isCorrect = o.word === current.word;
           const isSelected = o.word === selected;
@@ -84,9 +92,11 @@ export default function ListenGame() {
             <button
               key={o.word}
               onClick={() => handleAnswer(o.word)}
-              className={`rounded-xl border-2 px-3.5 py-3 text-left text-sm font-bold ${cls}`}
+              disabled={!!selected}
+              className={`listen-image-option rounded-xl border-2 p-3 text-center text-sm font-bold ${cls}`}
             >
-              {String.fromCharCode(65 + i)}) {o.word}
+              <ActivityImage word={o.word} decorative sizes="180px" />
+              <span>{String.fromCharCode(65 + i)}) {o.word}</span>
             </button>
           );
         })}

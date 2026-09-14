@@ -1,10 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
-import BrandLogo from "@/components/icons/BrandLogo";
 import Rocket from "@/components/icons/Rocket";
 import "./home.css";
 
-const links = [["/", "Inicio"], ["/catalogo", "Libros"], ["/actividades", "Actividades"], ["/recursos", "Recursos"], ["/sobre-nosotros", "Sobre nosotros"], ["/contacto", "Contacto"]];
 const features = [
   { title: <>Libros<br />ilustrados</>, href: "/catalogo", icon: "book", color: "#7847d8", background: "#f7f3ff" },
   { title: <>Actividades<br />divertidas</>, href: "/actividades", icon: "game", color: "#16a584", background: "#f0fbf7" },
@@ -26,18 +24,17 @@ function FeatureIcon({ name }) {
   };
   return <svg viewBox="0 0 24 24" fill={name === "heart" ? "currentColor" : "none"} stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">{paths[name]}</svg>;
 }
+function RainbowWord({ children }) {
+  const colors = ["#e84840", "#4b83ed", "#ef9b32", "#63aa53", "#6d43d8"];
+  return <span className="hero-rainbow" aria-label={children}>{[...children].map((letter, index) => <span key={index} aria-hidden="true" style={{ color: colors[index % colors.length] }}>{letter}</span>)}</span>;
+}
 export default function HomePage() {
   return (
     <article className="reference-home">
-      <header className="reference-header">
-        <Link className="reference-logo" href="/" aria-label="EnglishKids — Inicio"><BrandLogo className="reference-logo-img" priority /></Link>
-        <nav aria-label="Navegación principal">{links.map(([href, title]) => <Link key={href} href={href} aria-current={href === "/" ? "page" : undefined}>{title}</Link>)}</nav>
-        <Link className="reference-search" href="/catalogo" aria-label="Buscar libros"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><circle cx="10" cy="10" r="6.5" /><path d="m15 15 6 6" /></svg></Link>
-      </header>
       <section className="reference-hero" aria-labelledby="home-title">
-        <div className="hero-copy"><h1 id="home-title">Pequeños<br />pasos, <span className="word-green">grandes</span><br /><span className="word-orange">futuros</span></h1><p>Libros y recursos de inglés para niños de <strong>3° de primaria.</strong></p><Link className="reference-explore" href="/catalogo">Explora los libros <span aria-hidden="true">→</span></Link></div>
+        <div className="hero-copy"><h1 id="home-title">Pequeños<br />pasos, <RainbowWord>grandes</RainbowWord><br /><RainbowWord>futuros</RainbowWord></h1><p>Libros y recursos de inglés para niños de <strong>3° de primaria.</strong></p><Link className="reference-explore" href="/catalogo">Explora los libros <span aria-hidden="true">→</span></Link></div>
         <div className="hero-photograph hero-brand-art"><Image src="/INICO.png" alt="Ranita sonriente y perrito saludando, personajes de EnglishKids" fill priority sizes="(max-width: 700px) 90vw, 50vw" /></div>
-        <span className="hero-motto">Play<br />Learn<br />Grow</span><span className="hero-star star-one" aria-hidden="true">✦</span><span className="hero-star star-two" aria-hidden="true">✦</span><div className="hero-clouds" aria-hidden="true" />
+        <div className="hero-reading-note">Pequeños<br />lectores, <span>grandes</span><br />historias <span aria-hidden="true">♥</span></div><span className="hero-motto">Play<br />Learn<br />Grow <i aria-hidden="true">♥</i></span><span className="hero-star star-one" aria-hidden="true">✦</span><span className="hero-star star-two" aria-hidden="true">✦</span><div className="hero-clouds" aria-hidden="true" />
       </section>
       <section className="reference-features" aria-label="Aprende con EnglishKids">{features.map((feature) => <Link key={feature.icon} href={feature.href} className="reference-feature" style={{ background: feature.background, "--icon-color": feature.color }}><FeatureIcon name={feature.icon} /><span>{feature.title}</span></Link>)}</section>
       <section className="reference-books" aria-labelledby="featured-title">

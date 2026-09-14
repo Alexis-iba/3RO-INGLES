@@ -1,54 +1,24 @@
-// Iconos planos a color para las 4 tarjetas de tipo de actividad,
-// calcados al diseño de referencia (bloques ABC, audífonos, lápiz, control).
-
-function AbcBlocks() {
-  return (
-    <div className="abc-blocks" aria-hidden="true">
-      <span className="abc-block abc-block-a">A</span>
-      <span className="abc-block abc-block-b">B</span>
-      <span className="abc-block abc-block-c">C</span>
-    </div>
-  );
-}
-
-function Headphones() {
-  return (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" width="26" height="26" aria-hidden="true">
-      <path d="M4 14v-2a8 8 0 0 1 16 0v2" />
-      <rect x="2.5" y="13" width="5" height="7" rx="2" />
-      <rect x="16.5" y="13" width="5" height="7" rx="2" />
-    </svg>
-  );
-}
-
-function Pencil() {
-  return (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" width="26" height="26" aria-hidden="true" transform="rotate(-6)">
-      <path d="M4 20l1-4.5L16 4.5 19.5 8 8.5 19z" />
-      <path d="M14 6.5 17.5 10" />
-      <path d="M4 20l3-1-1.5-1.5z" fill="currentColor" stroke="none" />
-    </svg>
-  );
-}
-
-function Controller() {
-  return (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" width="28" height="28" aria-hidden="true">
-      <path d="M6.5 8h11a4 4 0 0 1 4 4.5l-.7 4a2.6 2.6 0 0 1-4.4 1.4L14 15.5h-4l-2.4 2.4A2.6 2.6 0 0 1 3.2 16.5l-.7-4A4 4 0 0 1 6.5 8Z" />
-      <path d="M8 10.5v3M6.5 12h3" />
-      <circle cx="17" cy="10.5" r=".9" fill="currentColor" stroke="none" />
-      <circle cx="15" cy="12.5" r=".9" fill="currentColor" stroke="none" />
-    </svg>
-  );
-}
-
-const ICONS = { abc: AbcBlocks, headphones: Headphones, pencil: Pencil, controller: Controller };
-
 export default function ActivityIcon({ name, className = "" }) {
-  const Icon = ICONS[name] || AbcBlocks;
-  return (
-    <div className={`activity-icon-box activity-icon-${name} ${className}`}>
-      <Icon />
-    </div>
-  );
+  return <div className={`activity-icon-box activity-icon-${name} ${className}`} aria-hidden="true">
+    <svg viewBox="0 0 80 80" fill="none">
+      <defs>
+        <linearGradient id={`paint-${name}`} x1="12" y1="8" x2="65" y2="75" gradientUnits="userSpaceOnUse"><stop stopColor={name === 'headphones' ? '#9858ff' : name === 'pencil' ? '#ffe17b' : '#4369bd'}/><stop offset="1" stopColor={name === 'headphones' ? '#4812bb' : name === 'pencil' ? '#ee960d' : '#15295f'}/></linearGradient>
+      </defs>
+      {name === 'abc' && <>
+        <rect x="26" y="5" width="30" height="30" rx="5" fill="#79bf69"/><path d="M30 9h21" stroke="#ade19d" strokeWidth="3" strokeLinecap="round"/>
+        <rect x="9" y="37" width="30" height="30" rx="5" fill="#ed8739"/><rect x="42" y="37" width="30" height="30" rx="5" fill="#599ce1"/>
+        <g fill="white" fontFamily="Arial,sans-serif" fontSize="25" fontWeight="bold" textAnchor="middle"><text x="41" y="30">B</text><text x="24" y="61">B</text><text x="57" y="61">C</text></g>
+      </>}
+      {name === 'headphones' && <>
+        <path d="M13 45V34a27 27 0 0154 0v11" stroke={`url(#paint-${name})`} strokeWidth="8"/><path d="M19 33a21 21 0 0142 0" stroke="#d3b6ff" strokeWidth="3"/>
+        <rect x="8" y="37" width="16" height="30" rx="7" fill="#6324d4"/><rect x="56" y="37" width="16" height="30" rx="7" fill="#6324d4"/><rect x="19" y="35" width="9" height="34" rx="4" fill="#a167fc"/><rect x="52" y="35" width="9" height="34" rx="4" fill="#a167fc"/>
+      </>}
+      {name === 'pencil' && <g transform="rotate(40 40 40)"><rect x="29" y="5" width="23" height="16" rx="6" fill="#f06b64"/><path d="M29 22h23v39H29z" fill={`url(#paint-${name})`}/><path d="M32 23v36" stroke="#fff3a1" strokeWidth="5"/><path d="M29 17h23v8H29z" fill="#e0ccd0"/><path d="M29 61h23L40.5 77z" fill="#eac28b"/><path d="m36 71 4.5 6 4.5-6" fill="#34415b"/></g>}
+      {name === 'controller' && <>
+        <path d="M23 19c-9 0-13 8-16 24L4 59c-1 11 8 14 14 7l12-14h20l12 14c6 7 15 4 14-7l-3-16C70 27 66 19 57 19c-7 0-8 4-17 4s-10-4-17-4Z" fill={`url(#paint-${name})`}/>
+        <path d="M23 29v17m-8-8h16" stroke="#c8d7f1" strokeWidth="6" strokeLinecap="round"/>
+        <circle cx="59" cy="31" r="4" fill="#ffc959"/><circle cx="66" cy="39" r="4" fill="#80b2f4"/><circle cx="52" cy="39" r="4" fill="#a08add"/><circle cx="59" cy="47" r="4" fill="#82c5a0"/>
+      </>}
+    </svg>
+  </div>;
 }

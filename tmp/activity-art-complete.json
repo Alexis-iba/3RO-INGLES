@@ -1,0 +1,657 @@
+[
+  {
+    "word": "Elephant",
+    "slug": "elephant",
+    "prompt": "Use case: illustration-story. Create ONE square high-resolution educational vocabulary illustration for EnglishKids. Subject: a friendly baby elephant, big floppy ears and curled trunk, full body. Reference image is STYLE ONLY: match its polished dimensional storybook cartoon rendering, rich soft textures, gentle golden lighting, appealing rounded forms and professional quality. Do NOT include a lion unless requested. Center the subject with 8% safe margins, entirely visible, occupying about 80% of square, on a simple softly blurred pastel cream or pale blue backdrop appropriate to the subject. Distinct and immediately recognizable at thumbnail size, visually uncluttered. Not a flat vector, not an emoji, no collage, no border, no watermark, no labels or English word. For numeral subjects render only the requested numeral.",
+    "source": "C:\\Users\\ibarr\\.codex\\generated_images\\01a09d15-e495-7b72-b4d1-73a0d15c3b9e\\exec-04e13778-3818-43df-9ea4-036dda95f5a0.png",
+    "file": "C:/Users/ibarr/3RO INGLES/public/activity-images/elephant.png",
+    "ok": true
+  },
+  {
+    "word": "Rabbit",
+    "slug": "rabbit",
+    "prompt": "Use case: illustration-story. Create ONE square high-resolution educational vocabulary illustration for EnglishKids. Subject: a fluffy white bunny sitting with two long ears and pink nose, full body. Reference image is STYLE ONLY: match its polished dimensional storybook cartoon rendering, rich soft textures, gentle golden lighting, appealing rounded forms and professional quality. Do NOT include a lion unless requested. Center the subject with 8% safe margins, entirely visible, occupying about 80% of square, on a simple softly blurred pastel cream or pale blue backdrop appropriate to the subject. Distinct and immediately recognizable at thumbnail size, visually uncluttered. Not a flat vector, not an emoji, no collage, no border, no watermark, no labels or English word. For numeral subjects render only the requested numeral.",
+    "source": "C:\\Users\\ibarr\\.codex\\generated_images\\01a09d15-e495-7b72-b4d1-73a0d15c3b9e\\exec-57a21e6a-701a-44b3-847c-413dd08f8897.png",
+    "file": "C:/Users/ibarr/3RO INGLES/public/activity-images/rabbit.png",
+    "ok": true
+  },
+  {
+    "word": "Cat",
+    "slug": "cat",
+    "prompt": "Use case: illustration-story. Create ONE square high-resolution educational vocabulary illustration for EnglishKids. Subject: a cute sitting domestic kitten, soft orange and cream fur, full body. Reference image is STYLE ONLY: match its polished dimensional storybook cartoon rendering, rich soft textures, gentle golden lighting, appealing rounded forms and professional quality. Do NOT include a lion unless requested. Center the subject with 8% safe margins, entirely visible, occupying about 80% of square, on a simple softly blurred pastel cream or pale blue backdrop appropriate to the subject. Distinct and immediately recognizable at thumbnail size, visually uncluttered. Not a flat vector, not an emoji, no collage, no border, no watermark, no labels or English word. For numeral subjects render only the requested numeral.",
+    "source": "C:\\Users\\ibarr\\.codex\\generated_images\\01a09d15-e495-7b72-b4d1-73a0d15c3b9e\\exec-3627f631-ff9d-4ee1-b80a-9415dbaf49a3.png",
+    "file": "C:/Users/ibarr/3RO INGLES/public/activity-images/cat.png",
+    "ok": true
+  },
+  {
+    "word": "Dog",
+    "slug": "dog",
+    "prompt": "Use case: illustration-story. Create ONE square high-resolution educational vocabulary illustration for EnglishKids. Subject: a cute golden puppy sitting with floppy ears and wagging tail, full body. Reference image is STYLE ONLY: match its polished dimensional storybook cartoon rendering, rich soft textures, gentle golden lighting, appealing rounded forms and professional quality. Do NOT include a lion unless requested. Center the subject with 8% safe margins, entirely visible, occupying about 80% of square, on a simple softly blurred pastel cream or pale blue backdrop appropriate to the subject. Distinct and immediately recognizable at thumbnail size, visually uncluttered. Not a flat vector, not an emoji, no collage, no border, no watermark, no labels or English word. For numeral subjects render only the requested numeral.",
+    "source": "C:\\Users\\ibarr\\.codex\\generated_images\\01a09d15-e495-7b72-b4d1-73a0d15c3b9e\\exec-4cd05962-6e8b-4d6c-861f-9de9dbe269a8.png",
+    "file": "C:/Users/ibarr/3RO INGLES/public/activity-images/dog.png",
+    "ok": true
+  },
+  {
+    "word": "Apple",
+    "slug": "apple",
+    "prompt": "Use case: illustration-story. Create ONE square high-resolution educational vocabulary illustration for EnglishKids. Subject: one glossy fresh red apple with one green leaf. Reference image is STYLE ONLY: match its polished dimensional storybook cartoon rendering, rich soft textures, gentle golden lighting, appealing rounded forms and professional quality. Do NOT include a lion unless requested. Center the subject with 8% safe margins, entirely visible, occupying about 80% of square, on a simple softly blurred pastel cream or pale blue backdrop appropriate to the subject. Distinct and immediately recognizable at thumbnail size, visually uncluttered. Not a flat vector, not an emoji, no collage, no border, no watermark, no labels or English word. For numeral subjects render only the requested numeral.",
+    "source": "C:\\Users\\ibarr\\.codex\\generated_images\\01a09d15-e495-7b72-b4d1-73a0d15c3b9e\\exec-ab1d3f7e-a125-4fb4-8fc8-63eaa25525b5.png",
+    "file": "C:/Users/ibarr/3RO INGLES/public/activity-images/apple.png",
+    "ok": true
+  },
+  {
+    "word": "Pizza",
+    "slug": "pizza",
+    "prompt": "Use case: illustration-story. Create ONE square high-resolution educational vocabulary illustration for EnglishKids. Subject: a delicious triangular slice of cheese pizza with tomato toppings. Reference image is STYLE ONLY: match its polished dimensional storybook cartoon rendering, rich soft textures, gentle golden lighting, appealing rounded forms and professional quality. Do NOT include a lion unless requested. Center the subject with 8% safe margins, entirely visible, occupying about 80% of square, on a simple softly blurred pastel cream or pale blue backdrop appropriate to the subject. Distinct and immediately recognizable at thumbnail size, visually uncluttered. Not a flat vector, not an emoji, no collage, no border, no watermark, no labels or English word. For numeral subjects render only the requested numeral.",
+    "source": "C:\\Users\\ibarr\\.codex\\generated_images\\01a09d15-e495-7b72-b4d1-73a0d15c3b9e\\exec-03344386-cbac-4aec-bd6d-c6a682e2e82d.png",
+    "file": "C:/Users/ibarr/3RO INGLES/public/activity-images/pizza.png",
+    "ok": true
+  },
+  {
+    "word": "Fish",
+    "slug": "fish",
+    "prompt": "Use case: illustration-story. Create ONE square high-resolution educational vocabulary illustration for EnglishKids. Subject: one cute orange fish swimming underwater, fins and tail visible. Reference image is STYLE ONLY: match its polished dimensional storybook cartoon rendering, rich soft textures, gentle golden lighting, appealing rounded forms and professional quality. Do NOT include a lion unless requested. Center the subject with 8% safe margins, entirely visible, occupying about 80% of square, on a simple softly blurred pastel cream or pale blue backdrop appropriate to the subject. Distinct and immediately recognizable at thumbnail size, visually uncluttered. Not a flat vector, not an emoji, no collage, no border, no watermark, no labels or English word. For numeral subjects render only the requested numeral.",
+    "source": "C:\\Users\\ibarr\\.codex\\generated_images\\01a09d15-e495-7b72-b4d1-73a0d15c3b9e\\exec-d2fea763-f52d-471b-866b-a4a14082d00f.png",
+    "file": "C:/Users/ibarr/3RO INGLES/public/activity-images/fish.png",
+    "ok": true
+  },
+  {
+    "word": "Bird",
+    "slug": "bird",
+    "prompt": "Use case: illustration-story. Create ONE square high-resolution educational vocabulary illustration for EnglishKids. Subject: one adorable little blue songbird perched on a twig, wings folded. Reference image is STYLE ONLY: match its polished dimensional storybook cartoon rendering, rich soft textures, gentle golden lighting, appealing rounded forms and professional quality. Do NOT include a lion unless requested. Center the subject with 8% safe margins, entirely visible, occupying about 80% of square, on a simple softly blurred pastel cream or pale blue backdrop appropriate to the subject. Distinct and immediately recognizable at thumbnail size, visually uncluttered. Not a flat vector, not an emoji, no collage, no border, no watermark, no labels or English word. For numeral subjects render only the requested numeral.",
+    "source": "C:\\Users\\ibarr\\.codex\\generated_images\\01a09d15-e495-7b72-b4d1-73a0d15c3b9e\\exec-bef8d139-8db4-41a1-ba43-70862f682e26.png",
+    "file": "C:/Users/ibarr/3RO INGLES/public/activity-images/bird.png",
+    "ok": true
+  },
+  {
+    "word": "School",
+    "slug": "school",
+    "prompt": "Use case: illustration-story. Create ONE square high-resolution educational vocabulary illustration for EnglishKids. Subject: a charming elementary school exterior with courtyard, school bell and school supplies motif, no lettering. Reference image is STYLE ONLY: match its polished dimensional storybook cartoon rendering, rich soft textures, gentle golden lighting, appealing rounded forms and professional quality. Do NOT include a lion unless requested. Center the subject with 8% safe margins, entirely visible, occupying about 80% of square, on a simple softly blurred pastel cream or pale blue backdrop appropriate to the subject. Distinct and immediately recognizable at thumbnail size, visually uncluttered. Not a flat vector, not an emoji, no collage, no border, no watermark, no labels or English word. For numeral subjects render only the requested numeral.",
+    "source": "C:\\Users\\ibarr\\.codex\\generated_images\\01a09d15-e495-7b72-b4d1-73a0d15c3b9e\\exec-a84776c8-ac53-481b-a009-1cd3fe700ad5.png",
+    "file": "C:/Users/ibarr/3RO INGLES/public/activity-images/school.png",
+    "ok": true
+  },
+  {
+    "word": "Tree",
+    "slug": "tree",
+    "prompt": "Use case: illustration-story. Create ONE square high-resolution educational vocabulary illustration for EnglishKids. Subject: one lush green leafy tree with a strong brown trunk, full tree. Reference image is STYLE ONLY: match its polished dimensional storybook cartoon rendering, rich soft textures, gentle golden lighting, appealing rounded forms and professional quality. Do NOT include a lion unless requested. Center the subject with 8% safe margins, entirely visible, occupying about 80% of square, on a simple softly blurred pastel cream or pale blue backdrop appropriate to the subject. Distinct and immediately recognizable at thumbnail size, visually uncluttered. Not a flat vector, not an emoji, no collage, no border, no watermark, no labels or English word. For numeral subjects render only the requested numeral.",
+    "source": "C:\\Users\\ibarr\\.codex\\generated_images\\01a09d15-e495-7b72-b4d1-73a0d15c3b9e\\exec-19c3b1d6-f270-487a-bbc4-5797ce7cfddd.png",
+    "file": "C:/Users/ibarr/3RO INGLES/public/activity-images/tree.png",
+    "ok": true
+  },
+  {
+    "word": "Sun",
+    "slug": "sun",
+    "prompt": "Use case: illustration-story. Create ONE square high-resolution educational vocabulary illustration for EnglishKids. Subject: a cheerful golden sun with rounded rays in a pale sky. Reference image is STYLE ONLY: match its polished dimensional storybook cartoon rendering, rich soft textures, gentle golden lighting, appealing rounded forms and professional quality. Do NOT include a lion unless requested. Center the subject with 8% safe margins, entirely visible, occupying about 80% of square, on a simple softly blurred pastel cream or pale blue backdrop appropriate to the subject. Distinct and immediately recognizable at thumbnail size, visually uncluttered. Not a flat vector, not an emoji, no collage, no border, no watermark, no labels or English word. For numeral subjects render only the requested numeral.",
+    "source": "C:\\Users\\ibarr\\.codex\\generated_images\\01a09d15-e495-7b72-b4d1-73a0d15c3b9e\\exec-82c84edd-7ff4-4eb7-8245-fa5947e6743e.png",
+    "file": "C:/Users/ibarr/3RO INGLES/public/activity-images/sun.png",
+    "ok": true
+  },
+  {
+    "word": "Monkey",
+    "slug": "monkey",
+    "prompt": "Use case: illustration-story. Create ONE square high-resolution educational vocabulary illustration for EnglishKids. Subject: a cute brown baby monkey sitting with curled tail, full body. Reference image is STYLE ONLY: match its polished dimensional storybook cartoon rendering, rich soft textures, gentle golden lighting, appealing rounded forms and professional quality. Do NOT include a lion unless requested. Center the subject with 8% safe margins, entirely visible, occupying about 80% of square, on a simple softly blurred pastel cream or pale blue backdrop appropriate to the subject. Distinct and immediately recognizable at thumbnail size, visually uncluttered. Not a flat vector, not an emoji, no collage, no border, no watermark, no labels or English word. For numeral subjects render only the requested numeral.",
+    "source": "C:\\Users\\ibarr\\.codex\\generated_images\\01a09d15-e495-7b72-b4d1-73a0d15c3b9e\\exec-819e482b-0cc7-44c5-868e-f5543cb8ad44.png",
+    "file": "C:/Users/ibarr/3RO INGLES/public/activity-images/monkey.png",
+    "ok": true
+  },
+  {
+    "word": "Family",
+    "slug": "family",
+    "prompt": "Use case: illustration-story. Create ONE square high-resolution educational vocabulary illustration for EnglishKids. Subject: a warm family portrait, mother father two children and baby together. Reference image is STYLE ONLY: match its polished dimensional storybook cartoon rendering, rich soft textures, gentle golden lighting, appealing rounded forms and professional quality. Do NOT include a lion unless requested. Center the subject with 8% safe margins, entirely visible, occupying about 80% of square, on a simple softly blurred pastel cream or pale blue backdrop appropriate to the subject. Distinct and immediately recognizable at thumbnail size, visually uncluttered. Not a flat vector, not an emoji, no collage, no border, no watermark, no labels or English word. For numeral subjects render only the requested numeral.",
+    "source": "C:\\Users\\ibarr\\.codex\\generated_images\\01a09d15-e495-7b72-b4d1-73a0d15c3b9e\\exec-4075f4f7-2e87-4d1b-82e6-d2f243913f9f.png",
+    "file": "C:/Users/ibarr/3RO INGLES/public/activity-images/family.png",
+    "ok": true
+  },
+  {
+    "word": "Bye",
+    "slug": "bye",
+    "prompt": "Use case: illustration-story. Create ONE square high-resolution educational vocabulary illustration for EnglishKids. Subject: a child waving goodbye at the doorway as a friend walks away with a backpack. Reference image is STYLE ONLY: match its polished dimensional storybook cartoon rendering, rich soft textures, gentle golden lighting, appealing rounded forms and professional quality. Do NOT include a lion unless requested. Center the subject with 8% safe margins, entirely visible, occupying about 80% of square, on a simple softly blurred pastel cream or pale blue backdrop appropriate to the subject. Distinct and immediately recognizable at thumbnail size, visually uncluttered. Not a flat vector, not an emoji, no collage, no border, no watermark, no labels or English word. For numeral subjects render only the requested numeral.",
+    "source": "C:\\Users\\ibarr\\.codex\\generated_images\\01a09d15-e495-7b72-b4d1-73a0d15c3b9e\\exec-045e21fe-70ee-40de-8b65-c10926245a0f.png",
+    "file": "C:/Users/ibarr/3RO INGLES/public/activity-images/bye.png",
+    "ok": true
+  },
+  {
+    "word": "Hello",
+    "slug": "hello",
+    "prompt": "Use case: illustration-story. Create ONE square high-resolution educational vocabulary illustration for EnglishKids. Subject: a child greeting a newly arriving friend face to face, raised waving hand, happy welcoming doorway scene. Reference image is STYLE ONLY: match its polished dimensional storybook cartoon rendering, rich soft textures, gentle golden lighting, appealing rounded forms and professional quality. Do NOT include a lion unless requested. Center the subject with 8% safe margins, entirely visible, occupying about 80% of square, on a simple softly blurred pastel cream or pale blue backdrop appropriate to the subject. Distinct and immediately recognizable at thumbnail size, visually uncluttered. Not a flat vector, not an emoji, no collage, no border, no watermark, no labels or English word. For numeral subjects render only the requested numeral.",
+    "source": "C:\\Users\\ibarr\\.codex\\generated_images\\01a09d15-e495-7b72-b4d1-73a0d15c3b9e\\exec-16e10a7e-c7f7-4582-bf1a-940680f91d6e.png",
+    "file": "C:/Users/ibarr/3RO INGLES/public/activity-images/hello.png",
+    "ok": true
+  },
+  {
+    "word": "See you",
+    "slug": "see-you",
+    "prompt": "Use case: illustration-story. Create ONE square high-resolution educational vocabulary illustration for EnglishKids. Subject: two friends parting at a park path turning back to wave to each other. Reference image is STYLE ONLY: match its polished dimensional storybook cartoon rendering, rich soft textures, gentle golden lighting, appealing rounded forms and professional quality. Do NOT include a lion unless requested. Center the subject with 8% safe margins, entirely visible, occupying about 80% of square, on a simple softly blurred pastel cream or pale blue backdrop appropriate to the subject. Distinct and immediately recognizable at thumbnail size, visually uncluttered. Not a flat vector, not an emoji, no collage, no border, no watermark, no labels or English word. For numeral subjects render only the requested numeral.",
+    "source": "C:\\Users\\ibarr\\.codex\\generated_images\\01a09d15-e495-7b72-b4d1-73a0d15c3b9e\\exec-ea6cf514-a512-488b-8133-ec3be1b8175a.png",
+    "file": "C:/Users/ibarr/3RO INGLES/public/activity-images/see-you.png",
+    "ok": true
+  },
+  {
+    "word": "Hi",
+    "slug": "hi",
+    "prompt": "Use case: illustration-story. Create ONE square high-resolution educational vocabulary illustration for EnglishKids. Subject: a smiling child waving toward the viewer with open hand in a playful greeting. Reference image is STYLE ONLY: match its polished dimensional storybook cartoon rendering, rich soft textures, gentle golden lighting, appealing rounded forms and professional quality. Do NOT include a lion unless requested. Center the subject with 8% safe margins, entirely visible, occupying about 80% of square, on a simple softly blurred pastel cream or pale blue backdrop appropriate to the subject. Distinct and immediately recognizable at thumbnail size, visually uncluttered. Not a flat vector, not an emoji, no collage, no border, no watermark, no labels or English word. For numeral subjects render only the requested numeral.",
+    "source": "C:\\Users\\ibarr\\.codex\\generated_images\\01a09d15-e495-7b72-b4d1-73a0d15c3b9e\\exec-907619e4-59a8-4cf7-bd46-82ea7271243f.png",
+    "file": "C:/Users/ibarr/3RO INGLES/public/activity-images/hi.png",
+    "ok": true
+  },
+  {
+    "word": "Book",
+    "slug": "book",
+    "prompt": "Use case: illustration-story. Create ONE square high-resolution educational vocabulary illustration for EnglishKids. Subject: one open storybook, thick colorful cover, blank pages, no lettering. Reference image is STYLE ONLY: match its polished dimensional storybook cartoon rendering, rich soft textures, gentle golden lighting, appealing rounded forms and professional quality. Do NOT include a lion unless requested. Center the subject with 8% safe margins, entirely visible, occupying about 80% of square, on a simple softly blurred pastel cream or pale blue backdrop appropriate to the subject. Distinct and immediately recognizable at thumbnail size, visually uncluttered. Not a flat vector, not an emoji, no collage, no border, no watermark, no labels or English word. For numeral subjects render only the requested numeral.",
+    "source": "C:\\Users\\ibarr\\.codex\\generated_images\\01a09d15-e495-7b72-b4d1-73a0d15c3b9e\\exec-0ab968c0-3dcd-44f5-9d6c-65551802e960.png",
+    "file": "C:/Users/ibarr/3RO INGLES/public/activity-images/book.png",
+    "ok": true
+  },
+  {
+    "word": "Pencil",
+    "slug": "pencil",
+    "prompt": "Use case: illustration-story. Create ONE square high-resolution educational vocabulary illustration for EnglishKids. Subject: one yellow wooden pencil with pink eraser and graphite point, diagonal full length. Reference image is STYLE ONLY: match its polished dimensional storybook cartoon rendering, rich soft textures, gentle golden lighting, appealing rounded forms and professional quality. Do NOT include a lion unless requested. Center the subject with 8% safe margins, entirely visible, occupying about 80% of square, on a simple softly blurred pastel cream or pale blue backdrop appropriate to the subject. Distinct and immediately recognizable at thumbnail size, visually uncluttered. Not a flat vector, not an emoji, no collage, no border, no watermark, no labels or English word. For numeral subjects render only the requested numeral.",
+    "source": "C:\\Users\\ibarr\\.codex\\generated_images\\01a09d15-e495-7b72-b4d1-73a0d15c3b9e\\exec-e503bde2-c4a3-41e3-9fe9-1cc41c6ca793.png",
+    "file": "C:/Users/ibarr/3RO INGLES/public/activity-images/pencil.png",
+    "ok": true
+  },
+  {
+    "word": "Backpack",
+    "slug": "backpack",
+    "prompt": "Use case: illustration-story. Create ONE square high-resolution educational vocabulary illustration for EnglishKids. Subject: one cute blue and orange school backpack with front pocket. Reference image is STYLE ONLY: match its polished dimensional storybook cartoon rendering, rich soft textures, gentle golden lighting, appealing rounded forms and professional quality. Do NOT include a lion unless requested. Center the subject with 8% safe margins, entirely visible, occupying about 80% of square, on a simple softly blurred pastel cream or pale blue backdrop appropriate to the subject. Distinct and immediately recognizable at thumbnail size, visually uncluttered. Not a flat vector, not an emoji, no collage, no border, no watermark, no labels or English word. For numeral subjects render only the requested numeral.",
+    "source": "C:\\Users\\ibarr\\.codex\\generated_images\\01a09d15-e495-7b72-b4d1-73a0d15c3b9e\\exec-25051f88-59c1-4d27-9f6c-7f4bbbd38c3d.png",
+    "file": "C:/Users/ibarr/3RO INGLES/public/activity-images/backpack.png",
+    "ok": true
+  },
+  {
+    "word": "Good afternoon",
+    "slug": "good-afternoon",
+    "prompt": "Use case: illustration-story. Create ONE square high-resolution educational vocabulary illustration for EnglishKids. Subject: a child enjoying a picnic outdoors beneath a high afternoon sun. Reference image is STYLE ONLY: match its polished dimensional storybook cartoon rendering, rich soft textures, gentle golden lighting, appealing rounded forms and professional quality. Do NOT include a lion unless requested. Center the subject with 8% safe margins, entirely visible, occupying about 80% of square, on a simple softly blurred pastel cream or pale blue backdrop appropriate to the subject. Distinct and immediately recognizable at thumbnail size, visually uncluttered. Not a flat vector, not an emoji, no collage, no border, no watermark, no labels or English word. For numeral subjects render only the requested numeral.",
+    "source": "C:\\Users\\ibarr\\.codex\\generated_images\\01a09d15-e495-7b72-b4d1-73a0d15c3b9e\\exec-87ed7b9a-a807-41ea-ae5d-a493d62ac1e2.png",
+    "file": "C:/Users/ibarr/3RO INGLES/public/activity-images/good-afternoon.png",
+    "ok": true
+  },
+  {
+    "word": "Chair",
+    "slug": "chair",
+    "prompt": "Use case: illustration-story. Create ONE square high-resolution educational vocabulary illustration for EnglishKids. Subject: one small wooden school chair, four legs and backrest fully visible. Reference image is STYLE ONLY: match its polished dimensional storybook cartoon rendering, rich soft textures, gentle golden lighting, appealing rounded forms and professional quality. Do NOT include a lion unless requested. Center the subject with 8% safe margins, entirely visible, occupying about 80% of square, on a simple softly blurred pastel cream or pale blue backdrop appropriate to the subject. Distinct and immediately recognizable at thumbnail size, visually uncluttered. Not a flat vector, not an emoji, no collage, no border, no watermark, no labels or English word. For numeral subjects render only the requested numeral.",
+    "source": "C:\\Users\\ibarr\\.codex\\generated_images\\01a09d15-e495-7b72-b4d1-73a0d15c3b9e\\exec-3f5e9156-fd55-4f73-b7d2-fde9b51b8639.png",
+    "file": "C:/Users/ibarr/3RO INGLES/public/activity-images/chair.png",
+    "ok": true
+  },
+  {
+    "word": "Teacher",
+    "slug": "teacher",
+    "prompt": "Use case: illustration-story. Create ONE square high-resolution educational vocabulary illustration for EnglishKids. Subject: a friendly adult schoolteacher holding an open book in front of blank classroom board. Reference image is STYLE ONLY: match its polished dimensional storybook cartoon rendering, rich soft textures, gentle golden lighting, appealing rounded forms and professional quality. Do NOT include a lion unless requested. Center the subject with 8% safe margins, entirely visible, occupying about 80% of square, on a simple softly blurred pastel cream or pale blue backdrop appropriate to the subject. Distinct and immediately recognizable at thumbnail size, visually uncluttered. Not a flat vector, not an emoji, no collage, no border, no watermark, no labels or English word. For numeral subjects render only the requested numeral.",
+    "source": "C:\\Users\\ibarr\\.codex\\generated_images\\01a09d15-e495-7b72-b4d1-73a0d15c3b9e\\exec-d58c9da2-4462-46d5-8a82-9656647cb2d4.png",
+    "file": "C:/Users/ibarr/3RO INGLES/public/activity-images/teacher.png",
+    "ok": true
+  },
+  {
+    "word": "Good morning",
+    "slug": "good-morning",
+    "prompt": "Use case: illustration-story. Create ONE square high-resolution educational vocabulary illustration for EnglishKids. Subject: a child stretching after waking beside window at sunrise, morning golden light. Reference image is STYLE ONLY: match its polished dimensional storybook cartoon rendering, rich soft textures, gentle golden lighting, appealing rounded forms and professional quality. Do NOT include a lion unless requested. Center the subject with 8% safe margins, entirely visible, occupying about 80% of square, on a simple softly blurred pastel cream or pale blue backdrop appropriate to the subject. Distinct and immediately recognizable at thumbnail size, visually uncluttered. Not a flat vector, not an emoji, no collage, no border, no watermark, no labels or English word. For numeral subjects render only the requested numeral.",
+    "source": "C:\\Users\\ibarr\\.codex\\generated_images\\01a09d15-e495-7b72-b4d1-73a0d15c3b9e\\exec-17613f4b-aca3-4775-856a-a773e4d57268.png",
+    "file": "C:/Users/ibarr/3RO INGLES/public/activity-images/good-morning.png",
+    "ok": true
+  },
+  {
+    "word": "Desk",
+    "slug": "desk",
+    "prompt": "Use case: illustration-story. Create ONE square high-resolution educational vocabulary illustration for EnglishKids. Subject: one wooden student desk with four legs and drawer, no chair. Reference image is STYLE ONLY: match its polished dimensional storybook cartoon rendering, rich soft textures, gentle golden lighting, appealing rounded forms and professional quality. Do NOT include a lion unless requested. Center the subject with 8% safe margins, entirely visible, occupying about 80% of square, on a simple softly blurred pastel cream or pale blue backdrop appropriate to the subject. Distinct and immediately recognizable at thumbnail size, visually uncluttered. Not a flat vector, not an emoji, no collage, no border, no watermark, no labels or English word. For numeral subjects render only the requested numeral.",
+    "source": "C:\\Users\\ibarr\\.codex\\generated_images\\01a09d15-e495-7b72-b4d1-73a0d15c3b9e\\exec-04c3a96e-1ee5-4d14-a9d2-c08d37843c1b.png",
+    "file": "C:/Users/ibarr/3RO INGLES/public/activity-images/desk.png",
+    "ok": true
+  },
+  {
+    "word": "Good night",
+    "slug": "good-night",
+    "prompt": "Use case: illustration-story. Create ONE square high-resolution educational vocabulary illustration for EnglishKids. Subject: a sleepy child tucked in bed with teddy bear and moon outside window. Reference image is STYLE ONLY: match its polished dimensional storybook cartoon rendering, rich soft textures, gentle golden lighting, appealing rounded forms and professional quality. Do NOT include a lion unless requested. Center the subject with 8% safe margins, entirely visible, occupying about 80% of square, on a simple softly blurred pastel cream or pale blue backdrop appropriate to the subject. Distinct and immediately recognizable at thumbnail size, visually uncluttered. Not a flat vector, not an emoji, no collage, no border, no watermark, no labels or English word. For numeral subjects render only the requested numeral.",
+    "source": "C:\\Users\\ibarr\\.codex\\generated_images\\01a09d15-e495-7b72-b4d1-73a0d15c3b9e\\exec-32139eb4-eb59-47d0-9158-8c851f3f825f.png",
+    "file": "C:/Users/ibarr/3RO INGLES/public/activity-images/good-night.png",
+    "ok": true
+  },
+  {
+    "word": "Ruler",
+    "slug": "ruler",
+    "prompt": "Use case: illustration-story. Create ONE square high-resolution educational vocabulary illustration for EnglishKids. Subject: one wooden school ruler with small measurement tick marks, no letters. Reference image is STYLE ONLY: match its polished dimensional storybook cartoon rendering, rich soft textures, gentle golden lighting, appealing rounded forms and professional quality. Do NOT include a lion unless requested. Center the subject with 8% safe margins, entirely visible, occupying about 80% of square, on a simple softly blurred pastel cream or pale blue backdrop appropriate to the subject. Distinct and immediately recognizable at thumbnail size, visually uncluttered. Not a flat vector, not an emoji, no collage, no border, no watermark, no labels or English word. For numeral subjects render only the requested numeral.",
+    "source": "C:\\Users\\ibarr\\.codex\\generated_images\\01a09d15-e495-7b72-b4d1-73a0d15c3b9e\\exec-bda6c672-b136-4ba0-8e06-8123bf93a62d.png",
+    "file": "C:/Users/ibarr/3RO INGLES/public/activity-images/ruler.png",
+    "ok": true
+  },
+  {
+    "word": "Classroom",
+    "slug": "classroom",
+    "prompt": "Use case: illustration-story. Create ONE square high-resolution educational vocabulary illustration for EnglishKids. Subject: a welcoming empty classroom interior with desks chairs and chalkboard, no writing. Reference image is STYLE ONLY: match its polished dimensional storybook cartoon rendering, rich soft textures, gentle golden lighting, appealing rounded forms and professional quality. Do NOT include a lion unless requested. Center the subject with 8% safe margins, entirely visible, occupying about 80% of square, on a simple softly blurred pastel cream or pale blue backdrop appropriate to the subject. Distinct and immediately recognizable at thumbnail size, visually uncluttered. Not a flat vector, not an emoji, no collage, no border, no watermark, no labels or English word. For numeral subjects render only the requested numeral.",
+    "source": "C:\\Users\\ibarr\\.codex\\generated_images\\01a09d15-e495-7b72-b4d1-73a0d15c3b9e\\exec-0683e427-d3e5-49b9-b803-f47d2ae70d58.png",
+    "file": "C:/Users/ibarr/3RO INGLES/public/activity-images/classroom.png",
+    "ok": true
+  },
+  {
+    "word": "Mother",
+    "slug": "mother",
+    "prompt": "Use case: illustration-story. Create ONE square high-resolution educational vocabulary illustration for EnglishKids. Subject: a smiling adult mother with a child hugging her at her side. Reference image is STYLE ONLY: match its polished dimensional storybook cartoon rendering, rich soft textures, gentle golden lighting, appealing rounded forms and professional quality. Do NOT include a lion unless requested. Center the subject with 8% safe margins, entirely visible, occupying about 80% of square, on a simple softly blurred pastel cream or pale blue backdrop appropriate to the subject. Distinct and immediately recognizable at thumbnail size, visually uncluttered. Not a flat vector, not an emoji, no collage, no border, no watermark, no labels or English word. For numeral subjects render only the requested numeral.",
+    "source": "C:\\Users\\ibarr\\.codex\\generated_images\\01a09d15-e495-7b72-b4d1-73a0d15c3b9e\\exec-e5e1b270-b502-4deb-99c5-16eafef16029.png",
+    "file": "C:/Users/ibarr/3RO INGLES/public/activity-images/mother.png",
+    "ok": true
+  },
+  {
+    "word": "Eye",
+    "slug": "eye",
+    "prompt": "Use case: illustration-story. Create ONE square high-resolution educational vocabulary illustration for EnglishKids. Subject: one big friendly human eye close-up, brown iris eyelashes and eyebrow, educational illustration. Reference image is STYLE ONLY: match its polished dimensional storybook cartoon rendering, rich soft textures, gentle golden lighting, appealing rounded forms and professional quality. Do NOT include a lion unless requested. Center the subject with 8% safe margins, entirely visible, occupying about 80% of square, on a simple softly blurred pastel cream or pale blue backdrop appropriate to the subject. Distinct and immediately recognizable at thumbnail size, visually uncluttered. Not a flat vector, not an emoji, no collage, no border, no watermark, no labels or English word. For numeral subjects render only the requested numeral.",
+    "source": "C:\\Users\\ibarr\\.codex\\generated_images\\01a09d15-e495-7b72-b4d1-73a0d15c3b9e\\exec-94315bef-66c4-4860-bcdd-5f25decba1ad.png",
+    "file": "C:/Users/ibarr/3RO INGLES/public/activity-images/eye.png",
+    "ok": true
+  },
+  {
+    "word": "Foot",
+    "slug": "foot",
+    "prompt": "Use case: illustration-story. Create ONE square high-resolution educational vocabulary illustration for EnglishKids. Subject: one bare child's foot viewed from side three-quarter angle, exactly five toes, friendly educational illustration. Reference image is STYLE ONLY: match its polished dimensional storybook cartoon rendering, rich soft textures, gentle golden lighting, appealing rounded forms and professional quality. Do NOT include a lion unless requested. Center the subject with 8% safe margins, entirely visible, occupying about 80% of square, on a simple softly blurred pastel cream or pale blue backdrop appropriate to the subject. Distinct and immediately recognizable at thumbnail size, visually uncluttered. Not a flat vector, not an emoji, no collage, no border, no watermark, no labels or English word. For numeral subjects render only the requested numeral.",
+    "source": "C:\\Users\\ibarr\\.codex\\generated_images\\01a09d15-e495-7b72-b4d1-73a0d15c3b9e\\exec-72ae6ab8-5744-47d9-b535-c3a5376cb060.png",
+    "file": "C:/Users/ibarr/3RO INGLES/public/activity-images/foot.png",
+    "ok": true
+  },
+  {
+    "word": "Nose",
+    "slug": "nose",
+    "prompt": "Use case: illustration-story. Create ONE square high-resolution educational vocabulary illustration for EnglishKids. Subject: close-up of a child's nose with small surrounding cheek area, two nostrils and rounded tip, educational illustration. Reference image is STYLE ONLY: match its polished dimensional storybook cartoon rendering, rich soft textures, gentle golden lighting, appealing rounded forms and professional quality. Do NOT include a lion unless requested. Center the subject with 8% safe margins, entirely visible, occupying about 80% of square, on a simple softly blurred pastel cream or pale blue backdrop appropriate to the subject. Distinct and immediately recognizable at thumbnail size, visually uncluttered. Not a flat vector, not an emoji, no collage, no border, no watermark, no labels or English word. For numeral subjects render only the requested numeral.",
+    "source": "C:\\Users\\ibarr\\.codex\\generated_images\\01a09d15-e495-7b72-b4d1-73a0d15c3b9e\\exec-c9675c77-68d9-48cd-a78e-35fb3c5ab6b9.png",
+    "file": "C:/Users/ibarr/3RO INGLES/public/activity-images/nose.png",
+    "ok": true
+  },
+  {
+    "word": "Eight",
+    "slug": "eight",
+    "prompt": "Use case: illustration-story. Create ONE square high-resolution educational vocabulary illustration for EnglishKids. Subject: one large playful dimensional numeral 8, centered, only this numeral and no other text. Reference image is STYLE ONLY: match its polished dimensional storybook cartoon rendering, rich soft textures, gentle golden lighting, appealing rounded forms and professional quality. Do NOT include a lion unless requested. Center the subject with 8% safe margins, entirely visible, occupying about 80% of square, on a simple softly blurred pastel cream or pale blue backdrop appropriate to the subject. Distinct and immediately recognizable at thumbnail size, visually uncluttered. Not a flat vector, not an emoji, no collage, no border, no watermark, no labels or English word. For numeral subjects render only the requested numeral.",
+    "source": "C:\\Users\\ibarr\\.codex\\generated_images\\01a09d15-e495-7b72-b4d1-73a0d15c3b9e\\exec-605c90c4-d7f0-4af5-824f-a1d9f07f6e35.png",
+    "file": "C:/Users/ibarr/3RO INGLES/public/activity-images/eight.png",
+    "ok": true
+  },
+  {
+    "word": "Mouth",
+    "slug": "mouth",
+    "prompt": "Use case: illustration-story. Create ONE square high-resolution educational vocabulary illustration for EnglishKids. Subject: close-up of a friendly smiling human mouth, lips and teeth, small surrounding skin area, educational illustration. Reference image is STYLE ONLY: match its polished dimensional storybook cartoon rendering, rich soft textures, gentle golden lighting, appealing rounded forms and professional quality. Do NOT include a lion unless requested. Center the subject with 8% safe margins, entirely visible, occupying about 80% of square, on a simple softly blurred pastel cream or pale blue backdrop appropriate to the subject. Distinct and immediately recognizable at thumbnail size, visually uncluttered. Not a flat vector, not an emoji, no collage, no border, no watermark, no labels or English word. For numeral subjects render only the requested numeral.",
+    "source": "C:\\Users\\ibarr\\.codex\\generated_images\\01a09d15-e495-7b72-b4d1-73a0d15c3b9e\\exec-dc3be699-b5f5-473e-a08d-459d7a1d608d.png",
+    "file": "C:/Users/ibarr/3RO INGLES/public/activity-images/mouth.png",
+    "ok": true
+  },
+  {
+    "word": "Hand",
+    "slug": "hand",
+    "prompt": "Use case: illustration-story. Create ONE square high-resolution educational vocabulary illustration for EnglishKids. Subject: one child's hand with open palm and exactly five fingers clearly visible, friendly educational illustration. Reference image is STYLE ONLY: match its polished dimensional storybook cartoon rendering, rich soft textures, gentle golden lighting, appealing rounded forms and professional quality. Do NOT include a lion unless requested. Center the subject with 8% safe margins, entirely visible, occupying about 80% of square, on a simple softly blurred pastel cream or pale blue backdrop appropriate to the subject. Distinct and immediately recognizable at thumbnail size, visually uncluttered. Not a flat vector, not an emoji, no collage, no border, no watermark, no labels or English word. For numeral subjects render only the requested numeral.",
+    "source": "C:\\Users\\ibarr\\.codex\\generated_images\\01a09d15-e495-7b72-b4d1-73a0d15c3b9e\\exec-0892eb18-c4bc-4b32-bfa4-316c62602278.png",
+    "file": "C:/Users/ibarr/3RO INGLES/public/activity-images/hand.png",
+    "ok": true
+  },
+  {
+    "word": "Ear",
+    "slug": "ear",
+    "prompt": "Use case: illustration-story. Create ONE square high-resolution educational vocabulary illustration for EnglishKids. Subject: one human ear close-up with small surrounding patch of skin, clear outer ear shape, educational illustration. Reference image is STYLE ONLY: match its polished dimensional storybook cartoon rendering, rich soft textures, gentle golden lighting, appealing rounded forms and professional quality. Do NOT include a lion unless requested. Center the subject with 8% safe margins, entirely visible, occupying about 80% of square, on a simple softly blurred pastel cream or pale blue backdrop appropriate to the subject. Distinct and immediately recognizable at thumbnail size, visually uncluttered. Not a flat vector, not an emoji, no collage, no border, no watermark, no labels or English word. For numeral subjects render only the requested numeral.",
+    "source": "C:\\Users\\ibarr\\.codex\\generated_images\\01a09d15-e495-7b72-b4d1-73a0d15c3b9e\\exec-1571faab-523a-4a70-bfbb-81728b532a2c.png",
+    "file": "C:/Users/ibarr/3RO INGLES/public/activity-images/ear.png",
+    "ok": true
+  },
+  {
+    "word": "Park",
+    "slug": "park",
+    "prompt": "Use case: illustration-story. Create ONE square high-resolution educational vocabulary illustration for EnglishKids. Subject: a beautiful small public park with playground swing slide path and bench among trees. Reference image is STYLE ONLY: match its polished dimensional storybook cartoon rendering, rich soft textures, gentle golden lighting, appealing rounded forms and professional quality. Do NOT include a lion unless requested. Center the subject with 8% safe margins, entirely visible, occupying about 80% of square, on a simple softly blurred pastel cream or pale blue backdrop appropriate to the subject. Distinct and immediately recognizable at thumbnail size, visually uncluttered. Not a flat vector, not an emoji, no collage, no border, no watermark, no labels or English word. For numeral subjects render only the requested numeral.",
+    "source": "C:\\Users\\ibarr\\.codex\\generated_images\\01a09d15-e495-7b72-b4d1-73a0d15c3b9e\\exec-6e377487-021f-48b7-b32d-d84cfae8197b.png",
+    "file": "C:/Users/ibarr/3RO INGLES/public/activity-images/park.png",
+    "ok": true
+  },
+  {
+    "word": "Arm",
+    "slug": "arm",
+    "prompt": "Use case: illustration-story. Create ONE square high-resolution educational vocabulary illustration for EnglishKids. Subject: a child's single whole arm from shoulder to hand, elbow gently bent, normal proportions, educational illustration. Reference image is STYLE ONLY: match its polished dimensional storybook cartoon rendering, rich soft textures, gentle golden lighting, appealing rounded forms and professional quality. Do NOT include a lion unless requested. Center the subject with 8% safe margins, entirely visible, occupying about 80% of square, on a simple softly blurred pastel cream or pale blue backdrop appropriate to the subject. Distinct and immediately recognizable at thumbnail size, visually uncluttered. Not a flat vector, not an emoji, no collage, no border, no watermark, no labels or English word. For numeral subjects render only the requested numeral.",
+    "source": "C:\\Users\\ibarr\\.codex\\generated_images\\01a09d15-e495-7b72-b4d1-73a0d15c3b9e\\exec-5dd910ff-4304-4462-92c5-6522284283e4.png",
+    "file": "C:/Users/ibarr/3RO INGLES/public/activity-images/arm.png",
+    "ok": true
+  },
+  {
+    "word": "Head",
+    "slug": "head",
+    "prompt": "Use case: illustration-story. Create ONE square high-resolution educational vocabulary illustration for EnglishKids. Subject: a friendly child's whole head portrait, hair face ears and chin all visible, no body below neck. Reference image is STYLE ONLY: match its polished dimensional storybook cartoon rendering, rich soft textures, gentle golden lighting, appealing rounded forms and professional quality. Do NOT include a lion unless requested. Center the subject with 8% safe margins, entirely visible, occupying about 80% of square, on a simple softly blurred pastel cream or pale blue backdrop appropriate to the subject. Distinct and immediately recognizable at thumbnail size, visually uncluttered. Not a flat vector, not an emoji, no collage, no border, no watermark, no labels or English word. For numeral subjects render only the requested numeral.",
+    "source": "C:\\Users\\ibarr\\.codex\\generated_images\\01a09d15-e495-7b72-b4d1-73a0d15c3b9e\\exec-d27808da-1b79-4bc2-b8a1-21807d80f70b.png",
+    "file": "C:/Users/ibarr/3RO INGLES/public/activity-images/head.png",
+    "ok": true
+  },
+  {
+    "word": "Hospital",
+    "slug": "hospital",
+    "prompt": "Use case: illustration-story. Create ONE square high-resolution educational vocabulary illustration for EnglishKids. Subject: a friendly hospital building exterior with a prominent blue medical cross and ambulance, no lettering. Reference image is STYLE ONLY: match its polished dimensional storybook cartoon rendering, rich soft textures, gentle golden lighting, appealing rounded forms and professional quality. Do NOT include a lion unless requested. Center the subject with 8% safe margins, entirely visible, occupying about 80% of square, on a simple softly blurred pastel cream or pale blue backdrop appropriate to the subject. Distinct and immediately recognizable at thumbnail size, visually uncluttered. Not a flat vector, not an emoji, no collage, no border, no watermark, no labels or English word. For numeral subjects render only the requested numeral.",
+    "source": "C:\\Users\\ibarr\\.codex\\generated_images\\01a09d15-e495-7b72-b4d1-73a0d15c3b9e\\exec-b2eca1ec-8bae-4666-af2c-e2a54ab0f4ec.png",
+    "file": "C:/Users/ibarr/3RO INGLES/public/activity-images/hospital.png",
+    "ok": true
+  },
+  {
+    "word": "Beach",
+    "slug": "beach",
+    "prompt": "Use case: illustration-story. Create ONE square high-resolution educational vocabulary illustration for EnglishKids. Subject: a sunny sandy beach with turquoise ocean waves seashell and colorful beach umbrella. Reference image is STYLE ONLY: match its polished dimensional storybook cartoon rendering, rich soft textures, gentle golden lighting, appealing rounded forms and professional quality. Do NOT include a lion unless requested. Center the subject with 8% safe margins, entirely visible, occupying about 80% of square, on a simple softly blurred pastel cream or pale blue backdrop appropriate to the subject. Distinct and immediately recognizable at thumbnail size, visually uncluttered. Not a flat vector, not an emoji, no collage, no border, no watermark, no labels or English word. For numeral subjects render only the requested numeral.",
+    "source": "C:\\Users\\ibarr\\.codex\\generated_images\\01a09d15-e495-7b72-b4d1-73a0d15c3b9e\\exec-c39835e8-5c17-49ab-bd2f-59aa04b407c3.png",
+    "file": "C:/Users/ibarr/3RO INGLES/public/activity-images/beach.png",
+    "ok": true
+  },
+  {
+    "word": "Store",
+    "slug": "store",
+    "prompt": "Use case: illustration-story. Create ONE square high-resolution educational vocabulary illustration for EnglishKids. Subject: a charming small grocery store exterior with striped awning and fruit baskets, no lettering. Reference image is STYLE ONLY: match its polished dimensional storybook cartoon rendering, rich soft textures, gentle golden lighting, appealing rounded forms and professional quality. Do NOT include a lion unless requested. Center the subject with 8% safe margins, entirely visible, occupying about 80% of square, on a simple softly blurred pastel cream or pale blue backdrop appropriate to the subject. Distinct and immediately recognizable at thumbnail size, visually uncluttered. Not a flat vector, not an emoji, no collage, no border, no watermark, no labels or English word. For numeral subjects render only the requested numeral.",
+    "source": "C:\\Users\\ibarr\\.codex\\generated_images\\01a09d15-e495-7b72-b4d1-73a0d15c3b9e\\exec-00a0a708-a13f-4b63-a627-b11c045053d8.png",
+    "file": "C:/Users/ibarr/3RO INGLES/public/activity-images/store.png",
+    "ok": true
+  },
+  {
+    "word": "House",
+    "slug": "house",
+    "prompt": "Use case: illustration-story. Create ONE square high-resolution educational vocabulary illustration for EnglishKids. Subject: one cozy family house with front door windows pitched roof and small garden. Reference image is STYLE ONLY: match its polished dimensional storybook cartoon rendering, rich soft textures, gentle golden lighting, appealing rounded forms and professional quality. Do NOT include a lion unless requested. Center the subject with 8% safe margins, entirely visible, occupying about 80% of square, on a simple softly blurred pastel cream or pale blue backdrop appropriate to the subject. Distinct and immediately recognizable at thumbnail size, visually uncluttered. Not a flat vector, not an emoji, no collage, no border, no watermark, no labels or English word. For numeral subjects render only the requested numeral.",
+    "source": "C:\\Users\\ibarr\\.codex\\generated_images\\01a09d15-e495-7b72-b4d1-73a0d15c3b9e\\exec-1a72e142-6c52-473e-bd50-049c6aa12716.png",
+    "file": "C:/Users/ibarr/3RO INGLES/public/activity-images/house.png",
+    "ok": true
+  },
+  {
+    "word": "Christmas",
+    "slug": "christmas",
+    "prompt": "Use case: illustration-story. Create ONE square high-resolution educational vocabulary illustration for EnglishKids. Subject: a decorated Christmas tree with golden star and wrapped presents, warm festive scene. Reference image is STYLE ONLY: match its polished dimensional storybook cartoon rendering, rich soft textures, gentle golden lighting, appealing rounded forms and professional quality. Do NOT include a lion unless requested. Center the subject with 8% safe margins, entirely visible, occupying about 80% of square, on a simple softly blurred pastel cream or pale blue backdrop appropriate to the subject. Distinct and immediately recognizable at thumbnail size, visually uncluttered. Not a flat vector, not an emoji, no collage, no border, no watermark, no labels or English word. For numeral subjects render only the requested numeral.",
+    "source": "C:\\Users\\ibarr\\.codex\\generated_images\\01a09d15-e495-7b72-b4d1-73a0d15c3b9e\\exec-6eb6ea10-30b1-47aa-9e06-cd35d364003b.png",
+    "file": "C:/Users/ibarr/3RO INGLES/public/activity-images/christmas.png",
+    "ok": true
+  },
+  {
+    "word": "New Year",
+    "slug": "new-year",
+    "prompt": "Use case: illustration-story. Create ONE square high-resolution educational vocabulary illustration for EnglishKids. Subject: colorful fireworks bursting above a festive town at night with confetti, no dates or text. Reference image is STYLE ONLY: match its polished dimensional storybook cartoon rendering, rich soft textures, gentle golden lighting, appealing rounded forms and professional quality. Do NOT include a lion unless requested. Center the subject with 8% safe margins, entirely visible, occupying about 80% of square, on a simple softly blurred pastel cream or pale blue backdrop appropriate to the subject. Distinct and immediately recognizable at thumbnail size, visually uncluttered. Not a flat vector, not an emoji, no collage, no border, no watermark, no labels or English word. For numeral subjects render only the requested numeral.",
+    "source": "C:\\Users\\ibarr\\.codex\\generated_images\\01a09d15-e495-7b72-b4d1-73a0d15c3b9e\\exec-77d4d6c3-cf15-4063-a798-e72985a05438.png",
+    "file": "C:/Users/ibarr/3RO INGLES/public/activity-images/new-year.png",
+    "ok": true
+  },
+  {
+    "word": "Zoo",
+    "slug": "zoo",
+    "prompt": "Use case: illustration-story. Create ONE square high-resolution educational vocabulary illustration for EnglishKids. Subject: a welcoming zoo entrance with animals visible in spacious lush habitats, giraffe elephant and zebra, no lettering. Reference image is STYLE ONLY: match its polished dimensional storybook cartoon rendering, rich soft textures, gentle golden lighting, appealing rounded forms and professional quality. Do NOT include a lion unless requested. Center the subject with 8% safe margins, entirely visible, occupying about 80% of square, on a simple softly blurred pastel cream or pale blue backdrop appropriate to the subject. Distinct and immediately recognizable at thumbnail size, visually uncluttered. Not a flat vector, not an emoji, no collage, no border, no watermark, no labels or English word. For numeral subjects render only the requested numeral.",
+    "source": "C:\\Users\\ibarr\\.codex\\generated_images\\01a09d15-e495-7b72-b4d1-73a0d15c3b9e\\exec-563cb27f-b99e-433c-ad77-0de7cd668cdd.png",
+    "file": "C:/Users/ibarr/3RO INGLES/public/activity-images/zoo.png",
+    "ok": true
+  },
+  {
+    "word": "Birthday",
+    "slug": "birthday",
+    "prompt": "Use case: illustration-story. Create ONE square high-resolution educational vocabulary illustration for EnglishKids. Subject: a birthday cake with lit candles colorful balloons and a small wrapped gift. Reference image is STYLE ONLY: match its polished dimensional storybook cartoon rendering, rich soft textures, gentle golden lighting, appealing rounded forms and professional quality. Do NOT include a lion unless requested. Center the subject with 8% safe margins, entirely visible, occupying about 80% of square, on a simple softly blurred pastel cream or pale blue backdrop appropriate to the subject. Distinct and immediately recognizable at thumbnail size, visually uncluttered. Not a flat vector, not an emoji, no collage, no border, no watermark, no labels or English word. For numeral subjects render only the requested numeral.",
+    "source": "C:\\Users\\ibarr\\.codex\\generated_images\\01a09d15-e495-7b72-b4d1-73a0d15c3b9e\\exec-6789c293-31ad-4bf5-9d60-baf2bdecfeca.png",
+    "file": "C:/Users/ibarr/3RO INGLES/public/activity-images/birthday.png",
+    "ok": true
+  },
+  {
+    "word": "Halloween",
+    "slug": "halloween",
+    "prompt": "Use case: illustration-story. Create ONE square high-resolution educational vocabulary illustration for EnglishKids. Subject: a friendly smiling carved pumpkin with warm glow, cute little ghost, cheerful not scary. Reference image is STYLE ONLY: match its polished dimensional storybook cartoon rendering, rich soft textures, gentle golden lighting, appealing rounded forms and professional quality. Do NOT include a lion unless requested. Center the subject with 8% safe margins, entirely visible, occupying about 80% of square, on a simple softly blurred pastel cream or pale blue backdrop appropriate to the subject. Distinct and immediately recognizable at thumbnail size, visually uncluttered. Not a flat vector, not an emoji, no collage, no border, no watermark, no labels or English word. For numeral subjects render only the requested numeral.",
+    "source": "C:\\Users\\ibarr\\.codex\\generated_images\\01a09d15-e495-7b72-b4d1-73a0d15c3b9e\\exec-8ef79bfa-46ca-4245-a780-d1ff868b73ed.png",
+    "file": "C:/Users/ibarr/3RO INGLES/public/activity-images/halloween.png",
+    "ok": true
+  },
+  {
+    "word": "Library",
+    "slug": "library",
+    "prompt": "Use case: illustration-story. Create ONE square high-resolution educational vocabulary illustration for EnglishKids. Subject: a cozy library interior with tall bookshelves full of books and a reading table, no lettering. Reference image is STYLE ONLY: match its polished dimensional storybook cartoon rendering, rich soft textures, gentle golden lighting, appealing rounded forms and professional quality. Do NOT include a lion unless requested. Center the subject with 8% safe margins, entirely visible, occupying about 80% of square, on a simple softly blurred pastel cream or pale blue backdrop appropriate to the subject. Distinct and immediately recognizable at thumbnail size, visually uncluttered. Not a flat vector, not an emoji, no collage, no border, no watermark, no labels or English word. For numeral subjects render only the requested numeral.",
+    "source": "C:\\Users\\ibarr\\.codex\\generated_images\\01a09d15-e495-7b72-b4d1-73a0d15c3b9e\\exec-e142158e-5349-495e-b6b3-45081eae0c36.png",
+    "file": "C:/Users/ibarr/3RO INGLES/public/activity-images/library.png",
+    "ok": true
+  },
+  {
+    "word": "Easter",
+    "slug": "easter",
+    "prompt": "Use case: illustration-story. Create ONE square high-resolution educational vocabulary illustration for EnglishKids. Subject: a cute chick beside a basket of pastel decorated Easter eggs on spring grass. Reference image is STYLE ONLY: match its polished dimensional storybook cartoon rendering, rich soft textures, gentle golden lighting, appealing rounded forms and professional quality. Do NOT include a lion unless requested. Center the subject with 8% safe margins, entirely visible, occupying about 80% of square, on a simple softly blurred pastel cream or pale blue backdrop appropriate to the subject. Distinct and immediately recognizable at thumbnail size, visually uncluttered. Not a flat vector, not an emoji, no collage, no border, no watermark, no labels or English word. For numeral subjects render only the requested numeral.",
+    "source": "C:\\Users\\ibarr\\.codex\\generated_images\\01a09d15-e495-7b72-b4d1-73a0d15c3b9e\\exec-b7c17e54-adac-4fbc-9dd8-a95344e85bc1.png",
+    "file": "C:/Users/ibarr/3RO INGLES/public/activity-images/easter.png",
+    "ok": true
+  },
+  {
+    "word": "Party",
+    "slug": "party",
+    "prompt": "Use case: illustration-story. Create ONE square high-resolution educational vocabulary illustration for EnglishKids. Subject: colorful party hats bunting balloons and confetti, festive table, no birthday cake. Reference image is STYLE ONLY: match its polished dimensional storybook cartoon rendering, rich soft textures, gentle golden lighting, appealing rounded forms and professional quality. Do NOT include a lion unless requested. Center the subject with 8% safe margins, entirely visible, occupying about 80% of square, on a simple softly blurred pastel cream or pale blue backdrop appropriate to the subject. Distinct and immediately recognizable at thumbnail size, visually uncluttered. Not a flat vector, not an emoji, no collage, no border, no watermark, no labels or English word. For numeral subjects render only the requested numeral.",
+    "source": "C:\\Users\\ibarr\\.codex\\generated_images\\01a09d15-e495-7b72-b4d1-73a0d15c3b9e\\exec-ad0f5acc-d122-4401-9712-41b2169cf4e4.png",
+    "file": "C:/Users/ibarr/3RO INGLES/public/activity-images/party.png",
+    "ok": true
+  },
+  {
+    "word": "Gift",
+    "slug": "gift",
+    "prompt": "Use case: illustration-story. Create ONE square high-resolution educational vocabulary illustration for EnglishKids. Subject: one beautifully wrapped turquoise gift box with a big golden ribbon bow. Reference image is STYLE ONLY: match its polished dimensional storybook cartoon rendering, rich soft textures, gentle golden lighting, appealing rounded forms and professional quality. Do NOT include a lion unless requested. Center the subject with 8% safe margins, entirely visible, occupying about 80% of square, on a simple softly blurred pastel cream or pale blue backdrop appropriate to the subject. Distinct and immediately recognizable at thumbnail size, visually uncluttered. Not a flat vector, not an emoji, no collage, no border, no watermark, no labels or English word. For numeral subjects render only the requested numeral.",
+    "source": "C:\\Users\\ibarr\\.codex\\generated_images\\01a09d15-e495-7b72-b4d1-73a0d15c3b9e\\exec-2f21e541-3939-4aae-af17-aee4c0be35ce.png",
+    "file": "C:/Users/ibarr/3RO INGLES/public/activity-images/gift.png",
+    "ok": true
+  },
+  {
+    "word": "Balloon",
+    "slug": "balloon",
+    "prompt": "Use case: illustration-story. Create ONE square high-resolution educational vocabulary illustration for EnglishKids. Subject: one shiny red balloon with string, floating, full balloon visible. Reference image is STYLE ONLY: match its polished dimensional storybook cartoon rendering, rich soft textures, gentle golden lighting, appealing rounded forms and professional quality. Do NOT include a lion unless requested. Center the subject with 8% safe margins, entirely visible, occupying about 80% of square, on a simple softly blurred pastel cream or pale blue backdrop appropriate to the subject. Distinct and immediately recognizable at thumbnail size, visually uncluttered. Not a flat vector, not an emoji, no collage, no border, no watermark, no labels or English word. For numeral subjects render only the requested numeral.",
+    "source": "C:\\Users\\ibarr\\.codex\\generated_images\\01a09d15-e495-7b72-b4d1-73a0d15c3b9e\\exec-f2faaea0-9d4e-4cbe-b980-49343042b5e6.png",
+    "file": "C:/Users/ibarr/3RO INGLES/public/activity-images/balloon.png",
+    "ok": true
+  },
+  {
+    "word": "Father",
+    "slug": "father",
+    "prompt": "Use case: illustration-story. Create ONE square high-resolution educational vocabulary illustration for EnglishKids. Subject: a smiling adult father with a child hugging him at his side. Reference image is STYLE ONLY: match its polished dimensional storybook cartoon rendering, rich soft textures, gentle golden lighting, appealing rounded forms and professional quality. Do NOT include a lion. Center the subject with 8% safe margins, entirely visible, occupying about 80% of square, on a simple softly blurred pastel cream or pale blue backdrop appropriate to the subject. Distinct and immediately recognizable at thumbnail size, visually uncluttered. Not a flat vector, not an emoji, no collage, no border, no watermark, no labels or English word. For numeral subjects render only the requested numeral.",
+    "source": "C:\\Users\\ibarr\\.codex\\generated_images\\01a09d15-e495-7b72-b4d1-73a0d15c3b9e\\exec-0718419a-19b8-46ad-94e4-f2473ea99b64.png",
+    "ok": true
+  },
+  {
+    "word": "Grandmother",
+    "slug": "grandmother",
+    "prompt": "Use case: illustration-story. Create ONE square high-resolution educational vocabulary illustration for EnglishKids. Subject: a smiling elderly grandmother with silver hair glasses and cardigan. Reference image is STYLE ONLY: match its polished dimensional storybook cartoon rendering, rich soft textures, gentle golden lighting, appealing rounded forms and professional quality. Do NOT include a lion. Center the subject with 8% safe margins, entirely visible, occupying about 80% of square, on a simple softly blurred pastel cream or pale blue backdrop appropriate to the subject. Distinct and immediately recognizable at thumbnail size, visually uncluttered. Not a flat vector, not an emoji, no collage, no border, no watermark, no labels or English word. For numeral subjects render only the requested numeral.",
+    "source": "C:\\Users\\ibarr\\.codex\\generated_images\\01a09d15-e495-7b72-b4d1-73a0d15c3b9e\\exec-51d5e679-60d5-4e35-bdfc-bf76c90de6fa.png",
+    "ok": true
+  },
+  {
+    "word": "Sister",
+    "slug": "sister",
+    "prompt": "Use case: illustration-story. Create ONE square high-resolution educational vocabulary illustration for EnglishKids. Subject: a school-age girl standing smiling, friendly full-body portrait. Reference image is STYLE ONLY: match its polished dimensional storybook cartoon rendering, rich soft textures, gentle golden lighting, appealing rounded forms and professional quality. Do NOT include a lion. Center the subject with 8% safe margins, entirely visible, occupying about 80% of square, on a simple softly blurred pastel cream or pale blue backdrop appropriate to the subject. Distinct and immediately recognizable at thumbnail size, visually uncluttered. Not a flat vector, not an emoji, no collage, no border, no watermark, no labels or English word. For numeral subjects render only the requested numeral.",
+    "source": "C:\\Users\\ibarr\\.codex\\generated_images\\01a09d15-e495-7b72-b4d1-73a0d15c3b9e\\exec-c1bbff93-a5f2-4a3d-a38a-4f8fd026b4c6.png",
+    "ok": true
+  },
+  {
+    "word": "Grandfather",
+    "slug": "grandfather",
+    "prompt": "Use case: illustration-story. Create ONE square high-resolution educational vocabulary illustration for EnglishKids. Subject: a smiling elderly grandfather with silver hair moustache and sweater. Reference image is STYLE ONLY: match its polished dimensional storybook cartoon rendering, rich soft textures, gentle golden lighting, appealing rounded forms and professional quality. Do NOT include a lion. Center the subject with 8% safe margins, entirely visible, occupying about 80% of square, on a simple softly blurred pastel cream or pale blue backdrop appropriate to the subject. Distinct and immediately recognizable at thumbnail size, visually uncluttered. Not a flat vector, not an emoji, no collage, no border, no watermark, no labels or English word. For numeral subjects render only the requested numeral.",
+    "source": "C:\\Users\\ibarr\\.codex\\generated_images\\01a09d15-e495-7b72-b4d1-73a0d15c3b9e\\exec-7becaddd-75e0-488b-8784-74510fa224f0.png",
+    "ok": true
+  },
+  {
+    "word": "Brother",
+    "slug": "brother",
+    "prompt": "Use case: illustration-story. Create ONE square high-resolution educational vocabulary illustration for EnglishKids. Subject: a school-age boy standing smiling, friendly full-body portrait. Reference image is STYLE ONLY: match its polished dimensional storybook cartoon rendering, rich soft textures, gentle golden lighting, appealing rounded forms and professional quality. Do NOT include a lion. Center the subject with 8% safe margins, entirely visible, occupying about 80% of square, on a simple softly blurred pastel cream or pale blue backdrop appropriate to the subject. Distinct and immediately recognizable at thumbnail size, visually uncluttered. Not a flat vector, not an emoji, no collage, no border, no watermark, no labels or English word. For numeral subjects render only the requested numeral.",
+    "source": "C:\\Users\\ibarr\\.codex\\generated_images\\01a09d15-e495-7b72-b4d1-73a0d15c3b9e\\exec-699ed91b-9517-4942-9cb5-8b76122d9b84.png",
+    "ok": true
+  },
+  {
+    "word": "Milk",
+    "slug": "milk",
+    "prompt": "Use case: illustration-story. Create ONE square high-resolution educational vocabulary illustration for EnglishKids. Subject: a clear glass full of white milk beside a small plain milk bottle. Reference image is STYLE ONLY: match its polished dimensional storybook cartoon rendering, rich soft textures, gentle golden lighting, appealing rounded forms and professional quality. Do NOT include a lion. Center the subject with 8% safe margins, entirely visible, occupying about 80% of square, on a simple softly blurred pastel cream or pale blue backdrop appropriate to the subject. Distinct and immediately recognizable at thumbnail size, visually uncluttered. Not a flat vector, not an emoji, no collage, no border, no watermark, no labels or English word. For numeral subjects render only the requested numeral.",
+    "source": "C:\\Users\\ibarr\\.codex\\generated_images\\01a09d15-e495-7b72-b4d1-73a0d15c3b9e\\exec-1c2c2652-8d4d-48c0-874d-1d8ca367070f.png",
+    "ok": true
+  },
+  {
+    "word": "Baby",
+    "slug": "baby",
+    "prompt": "Use case: illustration-story. Create ONE square high-resolution educational vocabulary illustration for EnglishKids. Subject: an adorable baby sitting in a onesie, full body, smiling. Reference image is STYLE ONLY: match its polished dimensional storybook cartoon rendering, rich soft textures, gentle golden lighting, appealing rounded forms and professional quality. Do NOT include a lion. Center the subject with 8% safe margins, entirely visible, occupying about 80% of square, on a simple softly blurred pastel cream or pale blue backdrop appropriate to the subject. Distinct and immediately recognizable at thumbnail size, visually uncluttered. Not a flat vector, not an emoji, no collage, no border, no watermark, no labels or English word. For numeral subjects render only the requested numeral.",
+    "source": "C:\\Users\\ibarr\\.codex\\generated_images\\01a09d15-e495-7b72-b4d1-73a0d15c3b9e\\exec-91fe2706-f64b-426b-8b59-c403f3a5f542.png",
+    "ok": true
+  },
+  {
+    "word": "Juice",
+    "slug": "juice",
+    "prompt": "Use case: illustration-story. Create ONE square high-resolution educational vocabulary illustration for EnglishKids. Subject: a clear glass of orange juice with straw and half orange beside it. Reference image is STYLE ONLY: match its polished dimensional storybook cartoon rendering, rich soft textures, gentle golden lighting, appealing rounded forms and professional quality. Do NOT include a lion. Center the subject with 8% safe margins, entirely visible, occupying about 80% of square, on a simple softly blurred pastel cream or pale blue backdrop appropriate to the subject. Distinct and immediately recognizable at thumbnail size, visually uncluttered. Not a flat vector, not an emoji, no collage, no border, no watermark, no labels or English word. For numeral subjects render only the requested numeral.",
+    "source": "C:\\Users\\ibarr\\.codex\\generated_images\\01a09d15-e495-7b72-b4d1-73a0d15c3b9e\\exec-e58a5040-57b3-41c3-a7ec-03743d2ea7d7.png",
+    "ok": true
+  },
+  {
+    "word": "Bread",
+    "slug": "bread",
+    "prompt": "Use case: illustration-story. Create ONE square high-resolution educational vocabulary illustration for EnglishKids. Subject: one warm golden loaf of bread with a sliced piece showing fluffy crumb. Reference image is STYLE ONLY: match its polished dimensional storybook cartoon rendering, rich soft textures, gentle golden lighting, appealing rounded forms and professional quality. Do NOT include a lion. Center the subject with 8% safe margins, entirely visible, occupying about 80% of square, on a simple softly blurred pastel cream or pale blue backdrop appropriate to the subject. Distinct and immediately recognizable at thumbnail size, visually uncluttered. Not a flat vector, not an emoji, no collage, no border, no watermark, no labels or English word. For numeral subjects render only the requested numeral.",
+    "source": "C:\\Users\\ibarr\\.codex\\generated_images\\01a09d15-e495-7b72-b4d1-73a0d15c3b9e\\exec-615cd21c-9e73-435c-811d-740fd44c752c.png",
+    "ok": true
+  },
+  {
+    "word": "Cake",
+    "slug": "cake",
+    "prompt": "Use case: illustration-story. Create ONE square high-resolution educational vocabulary illustration for EnglishKids. Subject: a delicious slice of layered strawberry cake with frosting, no candles. Reference image is STYLE ONLY: match its polished dimensional storybook cartoon rendering, rich soft textures, gentle golden lighting, appealing rounded forms and professional quality. Do NOT include a lion. Center the subject with 8% safe margins, entirely visible, occupying about 80% of square, on a simple softly blurred pastel cream or pale blue backdrop appropriate to the subject. Distinct and immediately recognizable at thumbnail size, visually uncluttered. Not a flat vector, not an emoji, no collage, no border, no watermark, no labels or English word. For numeral subjects render only the requested numeral.",
+    "source": "C:\\Users\\ibarr\\.codex\\generated_images\\01a09d15-e495-7b72-b4d1-73a0d15c3b9e\\exec-2af760f9-fe53-4661-bc2c-7bb9a5fb7514.png",
+    "ok": true
+  },
+  {
+    "word": "Egg",
+    "slug": "egg",
+    "prompt": "Use case: illustration-story. Create ONE square high-resolution educational vocabulary illustration for EnglishKids. Subject: one chicken egg beside a half hard-boiled egg showing yellow yolk. Reference image is STYLE ONLY: match its polished dimensional storybook cartoon rendering, rich soft textures, gentle golden lighting, appealing rounded forms and professional quality. Do NOT include a lion. Center the subject with 8% safe margins, entirely visible, occupying about 80% of square, on a simple softly blurred pastel cream or pale blue backdrop appropriate to the subject. Distinct and immediately recognizable at thumbnail size, visually uncluttered. Not a flat vector, not an emoji, no collage, no border, no watermark, no labels or English word. For numeral subjects render only the requested numeral.",
+    "source": "C:\\Users\\ibarr\\.codex\\generated_images\\01a09d15-e495-7b72-b4d1-73a0d15c3b9e\\exec-99419752-81a0-4f82-b45a-1f800b45e5a6.png",
+    "ok": true
+  },
+  {
+    "word": "Flower",
+    "slug": "flower",
+    "prompt": "Use case: illustration-story. Create ONE square high-resolution educational vocabulary illustration for EnglishKids. Subject: one pink flower with yellow center green stem and leaves, full plant. Reference image is STYLE ONLY: match its polished dimensional storybook cartoon rendering, rich soft textures, gentle golden lighting, appealing rounded forms and professional quality. Do NOT include a lion. Center the subject with 8% safe margins, entirely visible, occupying about 80% of square, on a simple softly blurred pastel cream or pale blue backdrop appropriate to the subject. Distinct and immediately recognizable at thumbnail size, visually uncluttered. Not a flat vector, not an emoji, no collage, no border, no watermark, no labels or English word. For numeral subjects render only the requested numeral.",
+    "source": "C:\\Users\\ibarr\\.codex\\generated_images\\01a09d15-e495-7b72-b4d1-73a0d15c3b9e\\exec-7c695242-d2d1-48d2-8573-8fdc23948d8f.png",
+    "ok": true
+  },
+  {
+    "word": "Rice",
+    "slug": "rice",
+    "prompt": "Use case: illustration-story. Create ONE square high-resolution educational vocabulary illustration for EnglishKids. Subject: a small ceramic bowl of cooked white rice, individual grains visible. Reference image is STYLE ONLY: match its polished dimensional storybook cartoon rendering, rich soft textures, gentle golden lighting, appealing rounded forms and professional quality. Do NOT include a lion. Center the subject with 8% safe margins, entirely visible, occupying about 80% of square, on a simple softly blurred pastel cream or pale blue backdrop appropriate to the subject. Distinct and immediately recognizable at thumbnail size, visually uncluttered. Not a flat vector, not an emoji, no collage, no border, no watermark, no labels or English word. For numeral subjects render only the requested numeral.",
+    "source": "C:\\Users\\ibarr\\.codex\\generated_images\\01a09d15-e495-7b72-b4d1-73a0d15c3b9e\\exec-dbd3c582-0f26-4d82-84be-85d152ffc4c2.png",
+    "ok": true
+  },
+  {
+    "word": "Moon",
+    "slug": "moon",
+    "prompt": "Use case: illustration-story. Create ONE square high-resolution educational vocabulary illustration for EnglishKids. Subject: a beautiful golden crescent moon in a softly blue night sky with tiny stars. Reference image is STYLE ONLY: match its polished dimensional storybook cartoon rendering, rich soft textures, gentle golden lighting, appealing rounded forms and professional quality. Do NOT include a lion. Center the subject with 8% safe margins, entirely visible, occupying about 80% of square, on a simple softly blurred pastel cream or pale blue backdrop appropriate to the subject. Distinct and immediately recognizable at thumbnail size, visually uncluttered. Not a flat vector, not an emoji, no collage, no border, no watermark, no labels or English word. For numeral subjects render only the requested numeral.",
+    "source": "C:\\Users\\ibarr\\.codex\\generated_images\\01a09d15-e495-7b72-b4d1-73a0d15c3b9e\\exec-c7554903-e8e3-4974-bda9-850fa6a9518f.png",
+    "ok": true
+  },
+  {
+    "word": "Mountain",
+    "slug": "mountain",
+    "prompt": "Use case: illustration-story. Create ONE square high-resolution educational vocabulary illustration for EnglishKids. Subject: one tall mountain with snowy peak, foothills and soft sky. Reference image is STYLE ONLY: match its polished dimensional storybook cartoon rendering, rich soft textures, gentle golden lighting, appealing rounded forms and professional quality. Do NOT include a lion. Center the subject with 8% safe margins, entirely visible, occupying about 80% of square, on a simple softly blurred pastel cream or pale blue backdrop appropriate to the subject. Distinct and immediately recognizable at thumbnail size, visually uncluttered. Not a flat vector, not an emoji, no collage, no border, no watermark, no labels or English word. For numeral subjects render only the requested numeral.",
+    "source": "C:\\Users\\ibarr\\.codex\\generated_images\\01a09d15-e495-7b72-b4d1-73a0d15c3b9e\\exec-bb544051-8ed0-43f2-bd22-2df5668713c1.png",
+    "ok": true
+  },
+  {
+    "word": "Cloud",
+    "slug": "cloud",
+    "prompt": "Use case: illustration-story. Create ONE square high-resolution educational vocabulary illustration for EnglishKids. Subject: one big fluffy white cloud floating in pale blue sky. Reference image is STYLE ONLY: match its polished dimensional storybook cartoon rendering, rich soft textures, gentle golden lighting, appealing rounded forms and professional quality. Do NOT include a lion. Center the subject with 8% safe margins, entirely visible, occupying about 80% of square, on a simple softly blurred pastel cream or pale blue backdrop appropriate to the subject. Distinct and immediately recognizable at thumbnail size, visually uncluttered. Not a flat vector, not an emoji, no collage, no border, no watermark, no labels or English word. For numeral subjects render only the requested numeral.",
+    "source": "C:\\Users\\ibarr\\.codex\\generated_images\\01a09d15-e495-7b72-b4d1-73a0d15c3b9e\\exec-e35c4d72-8a98-40b3-85cd-918559bc109d.png",
+    "ok": true
+  },
+  {
+    "word": "River",
+    "slug": "river",
+    "prompt": "Use case: illustration-story. Create ONE square high-resolution educational vocabulary illustration for EnglishKids. Subject: a clear winding blue river flowing through green banks, water prominent. Reference image is STYLE ONLY: match its polished dimensional storybook cartoon rendering, rich soft textures, gentle golden lighting, appealing rounded forms and professional quality. Do NOT include a lion. Center the subject with 8% safe margins, entirely visible, occupying about 80% of square, on a simple softly blurred pastel cream or pale blue backdrop appropriate to the subject. Distinct and immediately recognizable at thumbnail size, visually uncluttered. Not a flat vector, not an emoji, no collage, no border, no watermark, no labels or English word. For numeral subjects render only the requested numeral.",
+    "source": "C:\\Users\\ibarr\\.codex\\generated_images\\01a09d15-e495-7b72-b4d1-73a0d15c3b9e\\exec-1192145f-8eed-4707-b9b5-ee7dc7f990df.png",
+    "ok": true
+  },
+  {
+    "word": "Rainbow",
+    "slug": "rainbow",
+    "prompt": "Use case: illustration-story. Create ONE square high-resolution educational vocabulary illustration for EnglishKids. Subject: a bright complete rainbow arch with seven natural colors between soft clouds. Reference image is STYLE ONLY: match its polished dimensional storybook cartoon rendering, rich soft textures, gentle golden lighting, appealing rounded forms and professional quality. Do NOT include a lion. Center the subject with 8% safe margins, entirely visible, occupying about 80% of square, on a simple softly blurred pastel cream or pale blue backdrop appropriate to the subject. Distinct and immediately recognizable at thumbnail size, visually uncluttered. Not a flat vector, not an emoji, no collage, no border, no watermark, no labels or English word. For numeral subjects render only the requested numeral.",
+    "source": "C:\\Users\\ibarr\\.codex\\generated_images\\01a09d15-e495-7b72-b4d1-73a0d15c3b9e\\exec-457164b2-2793-49b3-a046-d6c4b801cce0.png",
+    "ok": true
+  },
+  {
+    "word": "Red",
+    "slug": "red",
+    "prompt": "Use case: illustration-story. Create ONE square high-resolution educational vocabulary illustration for EnglishKids. Subject: one large glossy RED paint blob with a small red paintbrush, red is the only saturated color. Reference image is STYLE ONLY: match its polished dimensional storybook cartoon rendering, rich soft textures, gentle golden lighting, appealing rounded forms and professional quality. Do NOT include a lion. Center the subject with 8% safe margins, entirely visible, occupying about 80% of square, on a simple softly blurred pastel cream or pale blue backdrop appropriate to the subject. Distinct and immediately recognizable at thumbnail size, visually uncluttered. Not a flat vector, not an emoji, no collage, no border, no watermark, no labels or English word. For numeral subjects render only the requested numeral.",
+    "source": "C:\\Users\\ibarr\\.codex\\generated_images\\01a09d15-e495-7b72-b4d1-73a0d15c3b9e\\exec-42d6a75f-bc35-4a87-bb1a-bc159318f89f.png",
+    "ok": true
+  },
+  {
+    "word": "Green",
+    "slug": "green",
+    "prompt": "Use case: illustration-story. Create ONE square high-resolution educational vocabulary illustration for EnglishKids. Subject: one large glossy GREEN paint blob with a small green paintbrush, green is the only saturated color. Reference image is STYLE ONLY: match its polished dimensional storybook cartoon rendering, rich soft textures, gentle golden lighting, appealing rounded forms and professional quality. Do NOT include a lion. Center the subject with 8% safe margins, entirely visible, occupying about 80% of square, on a simple softly blurred pastel cream or pale blue backdrop appropriate to the subject. Distinct and immediately recognizable at thumbnail size, visually uncluttered. Not a flat vector, not an emoji, no collage, no border, no watermark, no labels or English word. For numeral subjects render only the requested numeral.",
+    "source": "C:\\Users\\ibarr\\.codex\\generated_images\\01a09d15-e495-7b72-b4d1-73a0d15c3b9e\\exec-fc214ae9-9a64-4423-a0e1-65ebc1d5022d.png",
+    "ok": true
+  },
+  {
+    "word": "Blue",
+    "slug": "blue",
+    "prompt": "Use case: illustration-story. Create ONE square high-resolution educational vocabulary illustration for EnglishKids. Subject: one large glossy BLUE paint blob with a small blue paintbrush, blue is the only saturated color. Reference image is STYLE ONLY: match its polished dimensional storybook cartoon rendering, rich soft textures, gentle golden lighting, appealing rounded forms and professional quality. Do NOT include a lion. Center the subject with 8% safe margins, entirely visible, occupying about 80% of square, on a simple softly blurred pastel cream or pale blue backdrop appropriate to the subject. Distinct and immediately recognizable at thumbnail size, visually uncluttered. Not a flat vector, not an emoji, no collage, no border, no watermark, no labels or English word. For numeral subjects render only the requested numeral.",
+    "source": "C:\\Users\\ibarr\\.codex\\generated_images\\01a09d15-e495-7b72-b4d1-73a0d15c3b9e\\exec-6c478c93-d835-4bea-98bc-d43c96e89b2f.png",
+    "ok": true
+  },
+  {
+    "word": "Circle",
+    "slug": "circle",
+    "prompt": "Use case: illustration-story. Create ONE square high-resolution educational vocabulary illustration for EnglishKids. Subject: one thick rounded circular blue toy disk facing straight forward, perfect circular outline. Reference image is STYLE ONLY: match its polished dimensional storybook cartoon rendering, rich soft textures, gentle golden lighting, appealing rounded forms and professional quality. Do NOT include a lion. Center the subject with 8% safe margins, entirely visible, occupying about 80% of square, on a simple softly blurred pastel cream or pale blue backdrop appropriate to the subject. Distinct and immediately recognizable at thumbnail size, visually uncluttered. Not a flat vector, not an emoji, no collage, no border, no watermark, no labels or English word. For numeral subjects render only the requested numeral.",
+    "source": "C:\\Users\\ibarr\\.codex\\generated_images\\01a09d15-e495-7b72-b4d1-73a0d15c3b9e\\exec-cc7d7334-7c20-4a4b-9844-e9791e4a10df.png",
+    "ok": true
+  },
+  {
+    "word": "Yellow",
+    "slug": "yellow",
+    "prompt": "Use case: illustration-story. Create ONE square high-resolution educational vocabulary illustration for EnglishKids. Subject: one large glossy YELLOW paint blob with a small yellow paintbrush, yellow is the only saturated color. Reference image is STYLE ONLY: match its polished dimensional storybook cartoon rendering, rich soft textures, gentle golden lighting, appealing rounded forms and professional quality. Do NOT include a lion. Center the subject with 8% safe margins, entirely visible, occupying about 80% of square, on a simple softly blurred pastel cream or pale blue backdrop appropriate to the subject. Distinct and immediately recognizable at thumbnail size, visually uncluttered. Not a flat vector, not an emoji, no collage, no border, no watermark, no labels or English word. For numeral subjects render only the requested numeral.",
+    "source": "C:\\Users\\ibarr\\.codex\\generated_images\\01a09d15-e495-7b72-b4d1-73a0d15c3b9e\\exec-288e780b-4180-4317-963e-b19511755d5d.png",
+    "ok": true
+  },
+  {
+    "word": "Square",
+    "slug": "square",
+    "prompt": "Use case: illustration-story. Create ONE square high-resolution educational vocabulary illustration for EnglishKids. Subject: one thick rounded orange square toy tile facing straight forward, four equal sides. Reference image is STYLE ONLY: match its polished dimensional storybook cartoon rendering, rich soft textures, gentle golden lighting, appealing rounded forms and professional quality. Do NOT include a lion. Center the subject with 8% safe margins, entirely visible, occupying about 80% of square, on a simple softly blurred pastel cream or pale blue backdrop appropriate to the subject. Distinct and immediately recognizable at thumbnail size, visually uncluttered. Not a flat vector, not an emoji, no collage, no border, no watermark, no labels or English word. For numeral subjects render only the requested numeral.",
+    "source": "C:\\Users\\ibarr\\.codex\\generated_images\\01a09d15-e495-7b72-b4d1-73a0d15c3b9e\\exec-a019bb3d-b8b5-41f4-876f-2e99ad45044f.png",
+    "ok": true
+  },
+  {
+    "word": "Triangle",
+    "slug": "triangle",
+    "prompt": "Use case: illustration-story. Create ONE square high-resolution educational vocabulary illustration for EnglishKids. Subject: one thick red triangular toy tile facing straight forward, three clear sides. Reference image is STYLE ONLY: match its polished dimensional storybook cartoon rendering, rich soft textures, gentle golden lighting, appealing rounded forms and professional quality. Do NOT include a lion. Center the subject with 8% safe margins, entirely visible, occupying about 80% of square, on a simple softly blurred pastel cream or pale blue backdrop appropriate to the subject. Distinct and immediately recognizable at thumbnail size, visually uncluttered. Not a flat vector, not an emoji, no collage, no border, no watermark, no labels or English word. For numeral subjects render only the requested numeral.",
+    "source": "C:\\Users\\ibarr\\.codex\\generated_images\\01a09d15-e495-7b72-b4d1-73a0d15c3b9e\\exec-1599099e-212e-435e-83e3-a1ae93c92684.png",
+    "ok": true
+  },
+  {
+    "word": "Star",
+    "slug": "star",
+    "prompt": "Use case: illustration-story. Create ONE square high-resolution educational vocabulary illustration for EnglishKids. Subject: one golden five-pointed toy star, full shape, gently rounded edges. Reference image is STYLE ONLY: match its polished dimensional storybook cartoon rendering, rich soft textures, gentle golden lighting, appealing rounded forms and professional quality. Do NOT include a lion. Center the subject with 8% safe margins, entirely visible, occupying about 80% of square, on a simple softly blurred pastel cream or pale blue backdrop appropriate to the subject. Distinct and immediately recognizable at thumbnail size, visually uncluttered. Not a flat vector, not an emoji, no collage, no border, no watermark, no labels or English word. For numeral subjects render only the requested numeral.",
+    "source": "C:\\Users\\ibarr\\.codex\\generated_images\\01a09d15-e495-7b72-b4d1-73a0d15c3b9e\\exec-d3c9fe96-8abd-4dc1-a247-0be8e561e93c.png",
+    "ok": true
+  },
+  {
+    "word": "One",
+    "slug": "one",
+    "prompt": "Use case: illustration-story. Create ONE square high-resolution educational vocabulary illustration for EnglishKids. Subject: one large playful dimensional numeral 1, centered, only this numeral and no other text. Reference image is STYLE ONLY: match its polished dimensional storybook cartoon rendering, rich soft textures, gentle golden lighting, appealing rounded forms and professional quality. Do NOT include a lion. Center the subject with 8% safe margins, entirely visible, occupying about 80% of square, on a simple softly blurred pastel cream or pale blue backdrop appropriate to the subject. Distinct and immediately recognizable at thumbnail size, visually uncluttered. Not a flat vector, not an emoji, no collage, no border, no watermark, no labels or English word. For numeral subjects render only the requested numeral.",
+    "source": "C:\\Users\\ibarr\\.codex\\generated_images\\01a09d15-e495-7b72-b4d1-73a0d15c3b9e\\exec-e66fd85d-68cc-4fa1-8aec-dc15414ec75b.png",
+    "ok": true
+  },
+  {
+    "word": "Three",
+    "slug": "three",
+    "prompt": "Use case: illustration-story. Create ONE square high-resolution educational vocabulary illustration for EnglishKids. Subject: one large playful dimensional numeral 3, centered, only this numeral and no other text. Reference image is STYLE ONLY: match its polished dimensional storybook cartoon rendering, rich soft textures, gentle golden lighting, appealing rounded forms and professional quality. Do NOT include a lion. Center the subject with 8% safe margins, entirely visible, occupying about 80% of square, on a simple softly blurred pastel cream or pale blue backdrop appropriate to the subject. Distinct and immediately recognizable at thumbnail size, visually uncluttered. Not a flat vector, not an emoji, no collage, no border, no watermark, no labels or English word. For numeral subjects render only the requested numeral.",
+    "source": "C:\\Users\\ibarr\\.codex\\generated_images\\01a09d15-e495-7b72-b4d1-73a0d15c3b9e\\exec-3e53b917-b684-4002-86b5-8a7fb6b188a0.png",
+    "ok": true
+  },
+  {
+    "word": "Two",
+    "slug": "two",
+    "prompt": "Use case: illustration-story. Create ONE square high-resolution educational vocabulary illustration for EnglishKids. Subject: one large playful dimensional numeral 2, centered, only this numeral and no other text. Reference image is STYLE ONLY: match its polished dimensional storybook cartoon rendering, rich soft textures, gentle golden lighting, appealing rounded forms and professional quality. Do NOT include a lion. Center the subject with 8% safe margins, entirely visible, occupying about 80% of square, on a simple softly blurred pastel cream or pale blue backdrop appropriate to the subject. Distinct and immediately recognizable at thumbnail size, visually uncluttered. Not a flat vector, not an emoji, no collage, no border, no watermark, no labels or English word. For numeral subjects render only the requested numeral.",
+    "source": "C:\\Users\\ibarr\\.codex\\generated_images\\01a09d15-e495-7b72-b4d1-73a0d15c3b9e\\exec-9a0f4c4a-3ebc-4157-9ffb-fba6fe83a147.png",
+    "ok": true
+  },
+  {
+    "word": "Four",
+    "slug": "four",
+    "prompt": "Use case: illustration-story. Create ONE square high-resolution educational vocabulary illustration for EnglishKids. Subject: one large playful dimensional numeral 4, centered, only this numeral and no other text. Reference image is STYLE ONLY: match its polished dimensional storybook cartoon rendering, rich soft textures, gentle golden lighting, appealing rounded forms and professional quality. Do NOT include a lion. Center the subject with 8% safe margins, entirely visible, occupying about 80% of square, on a simple softly blurred pastel cream or pale blue backdrop appropriate to the subject. Distinct and immediately recognizable at thumbnail size, visually uncluttered. Not a flat vector, not an emoji, no collage, no border, no watermark, no labels or English word. For numeral subjects render only the requested numeral.",
+    "source": "C:\\Users\\ibarr\\.codex\\generated_images\\01a09d15-e495-7b72-b4d1-73a0d15c3b9e\\exec-3c1e2c51-f190-46db-80f4-9258cf5ce705.png",
+    "ok": true
+  },
+  {
+    "word": "Five",
+    "slug": "five",
+    "prompt": "Use case: illustration-story. Create ONE square high-resolution educational vocabulary illustration for EnglishKids. Subject: one large playful dimensional numeral 5, centered, only this numeral and no other text. Reference image is STYLE ONLY: match its polished dimensional storybook cartoon rendering, rich soft textures, gentle golden lighting, appealing rounded forms and professional quality. Do NOT include a lion. Center the subject with 8% safe margins, entirely visible, occupying about 80% of square, on a simple softly blurred pastel cream or pale blue backdrop appropriate to the subject. Distinct and immediately recognizable at thumbnail size, visually uncluttered. Not a flat vector, not an emoji, no collage, no border, no watermark, no labels or English word. For numeral subjects render only the requested numeral.",
+    "source": "C:\\Users\\ibarr\\.codex\\generated_images\\01a09d15-e495-7b72-b4d1-73a0d15c3b9e\\exec-3f9859d7-6120-4b4a-a8ab-ff120fc9fa88.png",
+    "ok": true
+  },
+  {
+    "word": "Six",
+    "slug": "six",
+    "prompt": "Use case: illustration-story. Create ONE square high-resolution educational vocabulary illustration for EnglishKids. Subject: one large playful dimensional numeral 6, centered, only this numeral and no other text. Reference image is STYLE ONLY: match its polished dimensional storybook cartoon rendering, rich soft textures, gentle golden lighting, appealing rounded forms and professional quality. Do NOT include a lion. Center the subject with 8% safe margins, entirely visible, occupying about 80% of square, on a simple softly blurred pastel cream or pale blue backdrop appropriate to the subject. Distinct and immediately recognizable at thumbnail size, visually uncluttered. Not a flat vector, not an emoji, no collage, no border, no watermark, no labels or English word. For numeral subjects render only the requested numeral.",
+    "source": "C:\\Users\\ibarr\\.codex\\generated_images\\01a09d15-e495-7b72-b4d1-73a0d15c3b9e\\exec-9febc769-3ae1-47e5-9ab8-52d0bd3ed2b1.png",
+    "ok": true
+  },
+  {
+    "word": "Seven",
+    "slug": "seven",
+    "prompt": "Use case: illustration-story. Create ONE square high-resolution educational vocabulary illustration for EnglishKids. Subject: one large playful dimensional numeral 7, centered, only this numeral and no other text. Reference image is STYLE ONLY: match its polished dimensional storybook cartoon rendering, rich soft textures, gentle golden lighting, appealing rounded forms and professional quality. Do NOT include a lion. Center the subject with 8% safe margins, entirely visible, occupying about 80% of square, on a simple softly blurred pastel cream or pale blue backdrop appropriate to the subject. Distinct and immediately recognizable at thumbnail size, visually uncluttered. Not a flat vector, not an emoji, no collage, no border, no watermark, no labels or English word. For numeral subjects render only the requested numeral.",
+    "source": "C:\\Users\\ibarr\\.codex\\generated_images\\01a09d15-e495-7b72-b4d1-73a0d15c3b9e\\exec-ef7ac4f9-6a22-4e95-9440-e0f1fbaf9830.png",
+    "ok": true
+  }
+]

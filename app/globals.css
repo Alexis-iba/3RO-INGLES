@@ -122,27 +122,47 @@ main { background: linear-gradient(180deg, #e4f6ff 0, #fff 330px); }
 .catalog-page aside button { padding: 12px; }
 .catalog-page .book-cover { height: 245px; }
 .catalog-page .book-cover svg { height: 180px; }
-.detail-grid { grid-template-columns: minmax(220px,0.8fr) minmax(0,1.2fr); align-items: start; gap: 24px 36px; }
+.detail-grid { grid-template-columns: minmax(0,.8fr) minmax(0,1.2fr) minmax(220px,.72fr); align-items: start; gap: 24px 30px; }
 .detail-cover { grid-column: 1; grid-row: 1; border-radius: 10px; }
 .detail-description { grid-column: 2; grid-row: 1 / span 2; }
 .detail-description > .card { background: #fff8e2; box-shadow: none; }
-.detail-info { grid-column: 1; grid-row: 2; background: #edf7ff; box-shadow: none; }
-.preview-link { background: #2684fa; color: white; border-radius: 10px; }
-.about-illustration { max-width: 760px; margin: 12px auto 0; gap: 16px; }
-.about-illustration > p { max-width: 680px; margin: auto; text-align: center; }
-.about-page > p:last-child { background: #ffeaa1; padding: 25px; border-radius: 16px; font-weight: 800; }
+.detail-info { grid-column: 3; grid-row: 1; background: #fff; box-shadow: none; }
+.about-hero { position: relative; margin-top: 32px; border-radius: 28px; overflow: hidden; background: linear-gradient(180deg, #cfeeff 0%, #e9f6ff 38%, #fff4d6 100%); padding-bottom: 56px; }
+.about-hero-clouds { position: absolute; inset: 0; z-index: 0; pointer-events: none;
+  background:
+    radial-gradient(ellipse 90px 38px at 8% 80%, #ffffffcc 0 100%, transparent 101%),
+    radial-gradient(ellipse 70px 30px at 92% 72%, #ffffffbb 0 100%, transparent 101%),
+    radial-gradient(ellipse 120px 44px at 50% 94%, #ffffffaa 0 100%, transparent 101%),
+    radial-gradient(ellipse 60px 26px at 20% 97%, #ffffffcc 0 100%, transparent 101%),
+    radial-gradient(ellipse 80px 32px at 80% 95%, #ffffffcc 0 100%, transparent 101%);
+}
+.about-hero-art { position: relative; z-index: 1; width: 100%; aspect-ratio: 1536 / 1024; }
+.about-hero-cards { position: relative; z-index: 2; margin: -18% 20px 0; display: grid; gap: 18px; grid-template-columns: repeat(3, minmax(0,1fr)); }
+.about-hero-quote { position: relative; z-index: 2; display: flex; width: fit-content; max-width: 90%; align-items: center; gap: 10px; margin: 26px auto 0; border-radius: 999px; background: #ffeaa1; padding: 16px 30px; font-family: var(--font-heading); font-weight: 800; font-style: italic; color: #1e2a4d; font-size: clamp(15px, 1.8vw, 20px); box-shadow: 0 10px 24px rgba(30,42,77,.15); }
+.about-hero-quote span:last-child { font-size: 1.3em; font-style: normal; }
+.about-lead { max-width: 680px; margin: 28px auto 0; text-align: center; }
+@media (max-width: 700px) {
+  .about-hero-cards { grid-template-columns: 1fr; margin: -18% 16px 0; gap: 14px; }
+}
 .contact-page > .grid { grid-template-columns: 1fr; }
-.contact-overview { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 24px; }
-.contact-overview > .card { box-shadow: none; background: transparent; }
-.contact-overview > .card:first-child > div { background: white; border: 0; margin-bottom: 12px; padding: 18px; border-radius: 12px; }
-.contact-art { background: linear-gradient(#e8f8ff,#fff0af) !important; }
+.contact-hero { position: relative; overflow: hidden; border-radius: 26px; background: linear-gradient(160deg, #dcf1ff 0%, #eef8ff 45%, #fff3cf 100%); padding: 26px; display: grid; grid-template-columns: 1.05fr 0.95fr; grid-template-areas: "info art" "quote art"; align-items: start; gap: 8px 22px; }
+.contact-hero-clouds { position: absolute; inset: 0; z-index: 0; pointer-events: none;
+  background:
+    radial-gradient(ellipse 80px 34px at 10% 88%, #ffffffcc 0 100%, transparent 101%),
+    radial-gradient(ellipse 60px 26px at 30% 96%, #ffffffbb 0 100%, transparent 101%),
+    radial-gradient(ellipse 90px 36px at 55% 90%, #ffffffaa 0 100%, transparent 101%);
+}
+.contact-hero-info { position: relative; z-index: 1; grid-area: info; display: flex; flex-direction: column; gap: 14px; }
+.contact-hero-art { position: relative; z-index: 1; grid-area: art; align-self: center; justify-self: center; width: 100%; max-width: 340px; aspect-ratio: 1145 / 1373; }
+.contact-hero-art img { mix-blend-mode: multiply; }
+.contact-hero-quote { position: relative; z-index: 1; grid-area: quote; align-self: start; margin: 14px 0 0; font-family: var(--font-heading); font-weight: 800; color: #12224f; font-size: clamp(16px, 1.8vw, 20px); line-height: 1.3; }
 .contact-page > .grid > .card { max-width: 760px; width: 100%; justify-self: center; }
 .reader-page { background: #20394a; color: white; max-width: 1120px; margin-top: 24px; border-radius: 14px; padding-top: 20px; padding-bottom: 24px; }
 .reader-page > a { color: #c4e9ff; }
 .reader-page > .card { background: #172f40; color: white; box-shadow: none; }
 .reader-page > div:nth-of-type(2) { background: #152b3b; border-radius: 4px; overflow: auto; }
 .reader-page > div:nth-of-type(2) > div { color: #073471; border-radius: 2px; }
-.resources-page > .grid > .card > div:first-child { height: 165px; font-size: 64px; background: linear-gradient(145deg,#bdefff,#fff0a5); }
+.resources-page > .grid > .card > div:first-child { aspect-ratio: 3 / 2; font-size: 64px; background: linear-gradient(145deg,#bdefff,#fff0a5); }
 .activities-page > .grid > button:nth-child(1) { background: #eef7ff; }
 .activities-page > .grid > button:nth-child(2) { background: #f5edff; }
 .activities-page > .grid > button:nth-child(3) { background: #fff9e9; }
@@ -159,12 +179,17 @@ footer { margin-top: 32px !important; background: #103456 !important; }
   .catalog-page aside button { flex-shrink: 0; }
   .detail-grid { grid-template-columns: 1fr; }
   .detail-cover, .detail-description, .detail-info { grid-column: auto; grid-row: auto; }
-  .contact-overview { grid-template-columns: 1fr; }
+  .contact-hero { padding: 20px; gap: 8px 16px; }
+  .contact-hero-art { max-width: 230px; }
   .book-cover, .catalog-page .book-cover { height: 195px; }
   .book-cover svg, .catalog-page .book-cover svg { height: 130px; }
   .book-cover-title { font-size: 21px; }
   .reader-page { margin: 12px; }
   .home-banner > div { padding: 24px 50px; }
+}
+@media (max-width: 520px) {
+  .contact-hero { grid-template-columns: 1fr; grid-template-areas: "art" "info" "quote"; }
+  .contact-hero-art { max-width: 220px; margin: 0 auto; }
 }
 
 @media print {

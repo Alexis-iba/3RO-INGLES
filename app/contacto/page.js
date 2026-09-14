@@ -1,7 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import ContactIllustration from "@/components/illustrations/ContactIllustration";
+import Image from "next/image";
+import UiIcon from "@/components/icons/UiIcon";
 
 const FIELDS = [
   { name: "name", label: "Nombre", type: "text", placeholder: "Tu nombre", validate: (v) => v.trim().length >= 2, error: "Por favor escribe tu nombre." },
@@ -54,16 +55,23 @@ export default function ContactoPage() {
       </p>
 
       <div className="mt-8 grid gap-8 lg:grid-cols-2">
-        <div className="contact-overview">
-          <div className="card mb-4 p-6">
-            <InfoRow icon="✉️" label="Correo electrónico" value="info@englishkids.com" />
-            <InfoRow icon="📍" label="Ubicación" value="Morelia, Michoacán, México" />
-            <InfoRow icon="🕒" label="Horario de atención" value="Lunes a viernes, 9:00 a.m. - 6:00 p.m." last />
+        <div className="contact-hero">
+          <div className="contact-hero-clouds" aria-hidden="true" />
+          <div className="contact-hero-info">
+            <InfoRow icon="mail" color="text-brand-blue" label="Correo electrónico" value="info@englishkids.com" />
+            <InfoRow icon="pin" color="text-brand-pink" label="Ubicación" value="Morelia, Michoacán, México" />
+            <InfoRow icon="clock" color="text-brand-blue" label="Horario de atención" value="Lunes a viernes, 9:00 a.m. - 6:00 p.m." />
           </div>
-          <div className="contact-art card p-6 text-center">
-            <ContactIllustration />
-            <p className="mt-3.5 font-heading font-bold">&quot;Better learners, brighter tomorrows.&quot;</p>
+          <div className="contact-hero-art">
+            <Image
+              src="/contact-images/contact-illustration.png"
+              alt="Niña sonriente abrazando un libro, sobre una pila de libros que dicen Explore, Learn, Grow, junto a un globo terráqueo, con una burbuja de diálogo que dice ¡Hablemos!"
+              fill
+              sizes="(max-width: 700px) 240px, 300px"
+              className="object-contain"
+            />
           </div>
+          <p className="contact-hero-quote">&quot;Better learners, brighter tomorrows.&quot;</p>
         </div>
 
         <div className="card p-7">
@@ -117,10 +125,12 @@ export default function ContactoPage() {
   );
 }
 
-function InfoRow({ icon, label, value, last }) {
+function InfoRow({ icon, color, label, value }) {
   return (
-    <div className={`flex items-start gap-3.5 py-3 ${last ? "" : "border-b border-[#eef1f8]"}`}>
-      <span className="grid h-10 w-10 flex-shrink-0 place-items-center rounded-xl bg-blue-light text-lg">{icon}</span>
+    <div className="flex items-start gap-3.5 rounded-2xl bg-white p-4 shadow-[0_4px_14px_rgba(30,42,77,0.08)]">
+      <span className={`grid h-10 w-10 flex-shrink-0 place-items-center rounded-xl bg-blue-light ${color}`}>
+        <UiIcon name={icon} size={20} />
+      </span>
       <span>
         <strong className="block text-sm">{label}</strong>
         <span className="text-[13px] text-navy/60">{value}</span>

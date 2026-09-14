@@ -2,6 +2,7 @@
 
 import { useRef, useState } from "react";
 import { createPortal } from "react-dom";
+import Image from "next/image";
 import Link from "next/link";
 import { RESOURCES, getAllVocab } from "@/lib/data";
 import { shuffle } from "@/lib/shuffle";
@@ -109,8 +110,12 @@ export default function RecursosPage() {
       <div className="mt-6 grid grid-cols-2 gap-4 lg:grid-cols-3">
         {list.map((r) => (
           <div key={r.id} className="card overflow-hidden">
-            <div className="relative flex h-28 items-center justify-center bg-blue-light text-4xl">
-              {r.emoji}
+            <div className="relative overflow-hidden bg-blue-light" style={r.image ? { aspectRatio: r.imageAspect || "3 / 2" } : undefined}>
+              {r.image ? (
+                <Image src={r.image} alt={r.title} fill sizes="(max-width: 767px) 50vw, 33vw" className="object-cover" />
+              ) : (
+                <div className="flex h-full items-center justify-center text-4xl">{r.emoji}</div>
+              )}
               {r.duration && (
                 <span className="absolute bottom-2 right-2 rounded-md bg-black/60 px-2 py-0.5 text-[11px] text-white">
                   {r.duration}
@@ -145,7 +150,13 @@ export default function RecursosPage() {
             <button onClick={closeModal} className="absolute right-4 top-3.5 text-2xl">
               ✕
             </button>
-            <div className="mb-2.5 text-6xl">{modalResource.emoji}</div>
+            {modalResource.image ? (
+              <div className="relative mx-auto mb-2.5 h-24 w-24 overflow-hidden rounded-2xl">
+                <Image src={modalResource.image} alt={modalResource.title} fill sizes="96px" className="object-cover" />
+              </div>
+            ) : (
+              <div className="mb-2.5 text-6xl">{modalResource.emoji}</div>
+            )}
             <h3 className="font-heading text-xl font-extrabold">{modalResource.title}</h3>
             <p className="mt-1.5 text-sm text-[#b9c3dd]">
               {playing ? `Diciendo: "${words[wordIndex] || ""}"` : "Pausado"}
