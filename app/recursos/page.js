@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import Image from "next/image";
 import Link from "next/link";
@@ -14,6 +14,24 @@ const TABS = [
   { id: "juego", label: "Juegos" },
 ];
 
+// El navegador no da acceso a voces de terceros (como Duolingo): solo a las
+// instaladas en el sistema/navegador. Elegimos la más natural disponible
+// (las voces "Online (Natural)" de Edge o "Google" suenan más profesionales
+// que la voz robótica por defecto).
+const VOICE_RANK_PATTERNS = [/natural/i, /online/i, /google us english/i, /samantha|aria|jenny|emma|ava/i];
+
+function pickBestVoice(voices) {
+  const enVoices = voices.filter((v) => v.lang?.toLowerCase().startsWith("en"));
+  if (!enVoices.length) return null;
+  for (const pattern of VOICE_RANK_PATTERNS) {
+    const match = enVoices.find((v) => pattern.test(v.name));
+    if (match) return match;
+  }
+  return enVoices.find((v) => v.lang === "en-US") || enVoices[0];
+}
+
+const WORD_PAUSE_MS = 550;
+
 export default function RecursosPage() {
   const [filter, setFilter] = useState("todos");
   const [modalResource, setModalResource] = useState(null);
@@ -21,6 +39,18 @@ export default function RecursosPage() {
   const [playing, setPlaying] = useState(false);
   const [printItems, setPrintItems] = useState(null);
   const cancelledRef = useRef(false);
+  const voiceRef = useRef(null);
+  const pauseTimeoutRef = useRef(null);
+
+  useEffect(() => {
+    if (typeof window === "undefined" || !("speechSynthesis" in window)) return;
+    function loadVoice() {
+      voiceRef.current = pickBestVoice(window.speechSynthesis.getVoices());
+    }
+    loadVoice();
+    window.speechSynthesis.addEventListener("voiceschanged", loadVoice);
+    return () => window.speechSynthesis.removeEventListener("voiceschanged", loadVoice);
+  }, []);
 
   const list = RESOURCES.filter((r) => filter === "todos" || r.type === filter);
 
@@ -31,8 +61,15 @@ export default function RecursosPage() {
     }
     const utter = new SpeechSynthesisUtterance(text);
     utter.lang = "en-US";
-    utter.rate = 0.9;
-    utter.onend = () => !cancelledRef.current && onEnd?.();
+    utter.rate = 0.8;
+    utter.pitch = 1.05;
+    if (voiceRef.current) utter.voice = voiceRef.current;
+    utter.onend = () => {
+      if (cancelledRef.current) return;
+      pauseTimeoutRef.current = setTimeout(() => {
+        if (!cancelledRef.current) onEnd?.();
+      }, WORD_PAUSE_MS);
+    };
     window.speechSynthesis.speak(utter);
   }
 
@@ -56,6 +93,7 @@ export default function RecursosPage() {
 
   function closeModal() {
     cancelledRef.current = true;
+    clearTimeout(pauseTimeoutRef.current);
     setPlaying(false);
     if (typeof window !== "undefined") window.speechSynthesis?.cancel();
     setModalResource(null);
@@ -64,6 +102,7 @@ export default function RecursosPage() {
   function togglePlayPause() {
     if (playing) {
       cancelledRef.current = true;
+      clearTimeout(pauseTimeoutRef.current);
       window.speechSynthesis?.cancel();
       setPlaying(false);
     } else {
@@ -75,6 +114,7 @@ export default function RecursosPage() {
 
   function replay() {
     cancelledRef.current = false;
+    clearTimeout(pauseTimeoutRef.current);
     window.speechSynthesis?.cancel();
     setPlaying(true);
     playFrom(modalResource, 0);
