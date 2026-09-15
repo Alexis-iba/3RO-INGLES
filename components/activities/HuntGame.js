@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { getActivityVocab } from "@/lib/activity-vocab";
 import { shuffle } from "@/lib/shuffle";
 import { pickRoundWords, readRoundHistory, writeRoundHistory } from "@/lib/quiz-round";
@@ -30,7 +30,6 @@ export default function HuntGame({ mode = "visual" }) {
   const [round, setRound] = useState(() => pickRoundWords(ALL_VOCAB, readRoundHistory(HISTORY_KEY), TOTAL));
   const targets = round.items;
   const [index, setIndex] = useState(0);
-  const [grid, setGrid] = useState(() => buildGrid(targets[0]));
   const [score, setScore] = useState(0);
   const [streak, setStreak] = useState(0);
   const [bestStreak, setBestStreak] = useState(0);
@@ -43,37 +42,36 @@ export default function HuntGame({ mode = "visual" }) {
 
   useEffect(() => {
     writeRoundHistory(HISTORY_KEY, round.history);
-  }, [round]);
+  }, [HISTORY_KEY, round]);
 
   const target = targets[index];
+  const grid = useMemo(() => (target ? buildGrid(target) : []), [target]);
   const answered = found || timedOut;
 
   useEffect(() => {
     if (finished || !target) return;
-    setGrid(buildGrid(target));
-    setFound(false);
-    setTimedOut(false);
-    setWrongWord(null);
     timerRef.current = setTimeout(() => {
       setTimedOut(true);
       setStreak(0);
     }, DURATION);
     if (mode === "audio") speak(target.word);
     return () => clearTimeout(timerRef.current);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [index, round, finished]);
+  }, [finished, mode, target]);
 
   useEffect(() => {
     if (!answered) return;
     advanceRef.current = setTimeout(() => {
-      setIndex((i) => {
-        if (i + 1 < TOTAL) return i + 1;
+      if (index + 1 < TOTAL) {
+        setFound(false);
+        setTimedOut(false);
+        setWrongWord(null);
+        setIndex(index + 1);
+      } else {
         setFinished(true);
-        return i;
-      });
+      }
     }, 900);
     return () => clearTimeout(advanceRef.current);
-  }, [answered]);
+  }, [answered, index]);
 
   function tap(word) {
     if (answered) return;

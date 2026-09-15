@@ -35,15 +35,6 @@ export default function ScrambleGame() {
 
   const current = questions[index];
 
-  useEffect(() => {
-    if (current) {
-      setTray(scrambleWord(current.word));
-      setAnswer([]);
-      setChecked(false);
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [current]);
-
   function pickLetter(tile) {
     if (checked) return;
     setTray((t) => t.filter((l) => l.id !== tile.id));
@@ -64,16 +55,23 @@ export default function ScrambleGame() {
 
   function handleNext() {
     if (index + 1 < TOTAL) {
-      setIndex((i) => i + 1);
+      const next = questions[index + 1];
+      setTray(scrambleWord(next.word));
+      setAnswer([]);
+      setChecked(false);
+      setIndex(index + 1);
     } else {
       setFinished(true);
     }
   }
 
   function restart() {
-    setRound(pickRoundWords(ALL_VOCAB, round.history, TOTAL));
+    const nextRound = pickRoundWords(ALL_VOCAB, round.history, TOTAL);
+    setRound(nextRound);
     setIndex(0);
     setScore(0);
+    setTray(scrambleWord(nextRound.items[0]?.word || ""));
+    setAnswer([]);
     setChecked(false);
     setFinished(false);
   }

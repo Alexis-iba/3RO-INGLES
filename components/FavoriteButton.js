@@ -1,21 +1,20 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import UiIcon from "./icons/UiIcon";
 
 const STORAGE_KEY = "englishkids-favorites";
 
 export default function FavoriteButton({ bookId }) {
-  const [active, setActive] = useState(false);
-
-  useEffect(() => {
+  const [active, setActive] = useState(() => {
+    if (typeof window === "undefined") return false;
     try {
       const saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]");
-      setActive(saved.includes(bookId));
+      return saved.includes(bookId);
     } catch {
-      setActive(false);
+      return false;
     }
-  }, [bookId]);
+  });
 
   function toggle() {
     try {

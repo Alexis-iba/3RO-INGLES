@@ -36,28 +36,27 @@ export default function SpeedGame() {
   // Cronómetro de la pregunta actual: si nadie contesta a tiempo, cuenta como fallo.
   useEffect(() => {
     if (finished || !current) return;
-    setSelected(null);
-    setTimedOut(false);
     timerRef.current = setTimeout(() => {
       setTimedOut(true);
       setStreak(0);
     }, DURATION);
     return () => clearTimeout(timerRef.current);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [index, round, finished]);
+  }, [current, finished]);
 
   // Al responder (bien, mal o por tiempo), avanza sola tras un breve respiro.
   useEffect(() => {
     if (!answered) return;
     advanceRef.current = setTimeout(() => {
-      setIndex((i) => {
-        if (i + 1 < TOTAL) return i + 1;
+      if (index + 1 < TOTAL) {
+        setSelected(null);
+        setTimedOut(false);
+        setIndex(index + 1);
+      } else {
         setFinished(true);
-        return i;
-      });
+      }
     }, REVEAL_MS);
     return () => clearTimeout(advanceRef.current);
-  }, [answered]);
+  }, [answered, index]);
 
   function handleAnswer(word) {
     if (answered) return;

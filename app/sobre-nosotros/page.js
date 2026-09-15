@@ -24,27 +24,34 @@ export default function SobreNosotrosPage() {
         </div>
 
         <div className="about-hero-cards">
-          <div className="card p-6">
-            <h3 className="mb-3 font-heading text-[17px] font-extrabold">Nuestra misión</h3>
-            <p className="text-sm text-navy/60">
+          <div className="card p-6 border border-purple-100 shadow-[0_4px_16px_rgba(7,52,113,0.06)] bg-white/95 backdrop-blur-xs">
+            <span className="inline-block px-3 py-1 rounded-full bg-purple-100 text-purple-700 text-xs font-black uppercase tracking-wider mb-3">
+              Misión
+            </span>
+            <h3 className="mb-2 font-heading text-lg font-extrabold text-navy">Nuestra misión</h3>
+            <p className="text-sm text-navy/70 leading-relaxed">
               Hacer del aprendizaje del inglés una experiencia divertida, accesible y significativa para los niños.
             </p>
           </div>
-          <div className="card p-6">
-            <h3 className="mb-3 font-heading text-[17px] font-extrabold">Nuestros valores</h3>
-            <ul className="flex flex-col gap-1.5 text-sm">
-              <li>🔴 Educación de calidad</li>
-              <li>🟢 Aprendizaje divertido</li>
-              <li>🔵 Inclusión</li>
-              <li>💗 Creatividad</li>
-              <li>❤️ Un mejor futuro</li>
+          <div className="card p-6 border border-emerald-100 shadow-[0_4px_16px_rgba(7,52,113,0.06)] bg-white/95 backdrop-blur-xs">
+            <span className="inline-block px-3 py-1 rounded-full bg-emerald-100 text-emerald-700 text-xs font-black uppercase tracking-wider mb-3">
+              Pilares
+            </span>
+            <h3 className="mb-2 font-heading text-lg font-extrabold text-navy">Nuestros valores</h3>
+            <ul className="flex flex-col gap-1.5 text-sm font-bold text-navy/80">
+              <li className="flex items-center gap-2"><span>🌟</span> Educación de calidad</li>
+              <li className="flex items-center gap-2"><span>🎮</span> Aprendizaje lúdico</li>
+              <li className="flex items-center gap-2"><span>🤝</span> Inclusión y calidez</li>
+              <li className="flex items-center gap-2"><span>💡</span> Creatividad activa</li>
             </ul>
           </div>
-          <div className="card p-6">
-            <h3 className="mb-3 font-heading text-[17px] font-extrabold">Nuestro propósito</h3>
-            <p className="text-sm text-navy/60">
-              Acompañar a los niños en sus primeras etapas de aprendizaje del inglés, preparándolos para un
-              mundo lleno de posibilidades.
+          <div className="card p-6 border border-amber-100 shadow-[0_4px_16px_rgba(7,52,113,0.06)] bg-white/95 backdrop-blur-xs">
+            <span className="inline-block px-3 py-1 rounded-full bg-amber-100 text-amber-700 text-xs font-black uppercase tracking-wider mb-3">
+              Objetivo
+            </span>
+            <h3 className="mb-2 font-heading text-lg font-extrabold text-navy">Nuestro propósito</h3>
+            <p className="text-sm text-navy/70 leading-relaxed">
+              Acompañar a los niños en sus primeras etapas de aprendizaje del inglés, preparándolos para un mundo lleno de posibilidades.
             </p>
           </div>
         </div>

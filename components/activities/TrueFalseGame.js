@@ -48,7 +48,6 @@ export default function TrueFalseGame({ mode = "image" }) {
 
   useEffect(() => {
     if (mode === "audio" && q) speak(q.label);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [q, mode]);
 
   function answer(guessMatch) {

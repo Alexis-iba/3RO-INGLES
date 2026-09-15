@@ -1,73 +1,487 @@
-.detail-page { position:relative; max-width:1200px; background:linear-gradient(145deg,#f6fcff,white 45%,#f4fbff); padding:28px 5% 18px; }
-.detail-grid { grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr) minmax(220px,.72fr); gap:18px 30px; align-items:start; }
+.detail-page {
+  position: relative;
+  width: 100%;
+  max-width: 1300px;
+  background: linear-gradient(145deg, #f6fcff, white 45%, #f4fbff);
+  padding: 28px 20px 24px;
+  box-sizing: border-box;
+}
 
-/* --- Cover: hardcover book with a ridged spine --- */
-.detail-book { position:relative; grid-column:1; grid-row:1; padding-left:16px; border-radius:12px; filter:drop-shadow(0 16px 28px rgba(20,45,90,0.22)); }
-.detail-book::before { content:""; position:absolute; left:0; top:0; bottom:0; width:16px; border-radius:10px 0 0 10px; background:repeating-linear-gradient(0deg,#729c48,#729c48 6px,#5c8639 6px,#5c8639 9px); }
+/* --------------------------------------------------------------------------
+   DESKTOP GRID (PORTADA + INFO ARRIBA, APRENDERÁS DEBAJO, FICHA A LA DERECHA)
+   -------------------------------------------------------------------------- */
+.detail-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1.35fr) minmax(270px, 0.95fr);
+  grid-template-rows: auto 1fr;
+  gap: 20px 28px;
+  align-items: stretch;
+  width: 100%;
+}
+
+/* --- Portada: libro estilo tapa dura con lomo --- */
+.detail-book {
+  position: relative;
+  grid-column: 1;
+  grid-row: 1;
+  padding-left: 16px;
+  border-radius: 8px;
+  align-self: start;
+  filter: drop-shadow(0 14px 24px rgba(20, 45, 90, 0.16));
+}
+
+.detail-book::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 16px;
+  border-radius: 8px 0 0 8px;
+  background: repeating-linear-gradient(0deg, #729c48, #729c48 6px, #5c8639 6px, #5c8639 9px);
+}
+
 .detail-book .catalog-cover,
-.detail-book .detail-uploaded-cover { border-radius:0 10px 10px 0; overflow:hidden; }
-.detail-cover .catalog-cover h2 { font-size:clamp(25px,3vw,40px); height:92px; }
-.detail-cover .catalog-scene { height:clamp(190px,25vw,320px); }
-.detail-uploaded-cover { background:#fff; aspect-ratio:3 / 2; }
-.detail-uploaded-cover img { display:block; width:100%; height:100%; object-fit:cover; object-position:center; }
-
-.detail-description { grid-column:2; grid-row:1 / span 2; padding-right:10px; }
-.detail-description h1 { font-size:clamp(23px,2.8vw,34px); line-height:1.1; padding-right:26px; }
-.detail-unit { font-size:14px; font-weight:800; margin:8px 0; color:#345579; }
-.detail-description .tag { background:#e0e3ff; color:#3952a5; padding:3px 10px; font-size:12px; }
-.detail-rating { display:flex; align-items:center; gap:4px; margin-bottom:14px; font-size:14px; color:#345579; }
-.detail-rating svg { width:17px; height:17px; }
-.detail-rating .star-filled { color:#ffc93c; }
-.detail-rating .star-empty { color:#e2e8f5; }
-.detail-rating strong { margin-left:4px; color:#1e2a4d; }
-.detail-description > p:not(.detail-unit) { color:#345579; font-size:15px; line-height:1.55; }
-.detail-description > .card { background:linear-gradient(135deg,#fffbee,#fbf6e5); border-radius:12px; padding:20px; }
-.detail-learn-star { color:#3ec6a8; }
-.detail-description li { color:#355777; font-size:14px; padding:3px 0; }
-.detail-description li > span.learning-check { color:#5dab64; }
-
-/* --- Right rail: info + action buttons --- */
-.detail-info { grid-column:3; grid-row:1; padding:18px; background:#fff; border-radius:14px; }
-.detail-info > div { border:0; padding:11px 0; }
-.detail-info > div > span:first-child { color:#285acc; }
-.detail-info > div > span:last-child > span:first-child { color:#7488a6; font-weight:700; }
-.detail-info > div > span:last-child > span:last-child { color:#23446a; font-weight:800; }
-.detail-actions { display:flex; flex-direction:column; gap:10px; margin-top:14px; }
-.detail-actions > * { display:flex; align-items:center; justify-content:center; gap:10px; width:100%; border-radius:12px; padding:13px; font-size:14px; font-weight:800; border:0; cursor:pointer; }
-.btn-read { background:linear-gradient(120deg,#5d9bff,#4c8dff); color:#fff; box-shadow:0 8px 18px rgba(76,141,255,0.35); }
-.btn-download { background:#eaf3ff; color:#2f5fb0; }
-.btn-download:disabled { opacity:0.65; cursor:not-allowed; }
-.btn-favorite { background:#ffe6ec; color:#c23f63; }
-.btn-favorite.is-active { background:#ff8fa3; color:#fff; }
-
-.detail-recommendations { margin-top:34px; position:relative; }
-.detail-recommendations-heading { display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:18px; }
-.detail-recommendations-heading h2 { display:flex; align-items:center; gap:8px; font-size:25px; }
-.detail-recs-star { width:22px; height:22px; color:#ffc93c; }
-.detail-recommendations-heading > a { font-weight:800; color:#236cc3; font-size:14px; white-space:nowrap; }
-.detail-recommendations .catalog-book { background:#fff; }
-
-/* --- Bottom promo banner --- */
-.promo-banner { position:relative; overflow:hidden; margin-top:38px; border-radius:20px; padding:34px 5%; display:flex; align-items:center; justify-content:space-between; gap:20px; background:linear-gradient(160deg,#eaf6ff,#fff2cf); }
-.promo-rocket { position:relative; z-index:2; width:70px; height:70px; flex-shrink:0; transform:rotate(-18deg); }
-.promo-star { position:absolute; z-index:1; width:20px; height:20px; color:#ffc93c; }
-.promo-star-1 { left:14%; top:20%; }
-.promo-star-2 { left:22%; bottom:22%; width:14px; height:14px; }
-.promo-star-3 { left:44%; top:14%; width:16px; height:16px; }
-.promo-copy { position:relative; z-index:2; flex:1; text-align:center; min-width:0; }
-.promo-copy h2 { font-size:clamp(20px,2.6vw,32px); line-height:1.15; margin:0; color:#1e2a4d; }
-.promo-copy h2 span { background:linear-gradient(90deg,#4c8dff,#3ec6a8,#ff9f5a); -webkit-background-clip:text; background-clip:text; color:transparent; }
-.promo-copy p { margin:8px 0 0; font-size:14px; font-weight:700; color:#4a6a8c; }
-.promo-sun { position:relative; z-index:2; flex-shrink:0; display:flex; align-items:center; gap:10px; }
-.promo-sun-text { text-align:right; font-size:13px; font-weight:800; line-height:1.25; color:#1e2a4d; }
-.promo-sun-art { width:66px; height:66px; }
-.promo-clouds { position:absolute; z-index:1; left:0; right:0; bottom:-1px; height:26px; background:radial-gradient(ellipse at 10% 120%,#ffffff 0 40%,transparent 41%),radial-gradient(ellipse at 30% 120%,#ffffff 0 45%,transparent 46%),radial-gradient(ellipse at 85% 120%,#ffffff 0 50%,transparent 51%); }
-
-@media(max-width:1080px) {
- .detail-grid { grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr); }
- .detail-info { grid-column:1 / span 2; grid-row:3; }
+.detail-book .detail-uploaded-cover {
+  border-radius: 0 8px 8px 0;
+  overflow: hidden;
 }
-@media(max-width:767px) {
- .detail-page { padding:20px 14px 10px; }.detail-grid { grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr); gap:12px 15px; }.detail-description { padding-right:0; }.detail-description h1 { font-size:20px; padding-right:0; }.detail-cover .catalog-cover h2 { font-size:22px; height:65px; }.detail-cover .catalog-scene { height:155px; }.detail-description > .card { padding:12px; }.detail-description > p:not(.detail-unit) { font-size:13px; }.detail-description li { font-size:12px; }.detail-description .tag { font-size:11px; padding:2px 6px; }.detail-rating { font-size:12px; }.detail-info { padding:12px; }.detail-info > div { font-size:12px; }.detail-actions > * { font-size:13px; padding:11px; }.detail-recommendations-heading h2 { font-size:20px; }.promo-banner { flex-direction:column; text-align:center; padding:26px 6%; }.promo-sun-text { text-align:center; }
+
+.detail-cover .catalog-cover h2 {
+  font-size: clamp(22px, 2.8vw, 36px);
+  height: 84px;
 }
-@media(max-width:359px) { .detail-grid { grid-template-columns:1fr; }.detail-book,.detail-description,.detail-info { grid-column:auto; grid-row:auto; } }
+
+.detail-cover .catalog-scene {
+  height: clamp(170px, 22vw, 290px);
+}
+
+.detail-uploaded-cover {
+  background: #fff;
+  aspect-ratio: 1.35;
+  width: 100%;
+}
+
+.detail-uploaded-cover img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 0 8px 8px 0;
+}
+
+/* --- Columna Central: Título, Unidad, Tags y Descripción --- */
+.detail-description {
+  grid-column: 2;
+  grid-row: 1;
+  width: 100%;
+  min-width: 0;
+  align-self: start;
+}
+
+.detail-description h1 {
+  font-size: clamp(24px, 2.8vw, 34px);
+  line-height: 1.15;
+  color: #073471;
+  margin-bottom: 4px;
+}
+
+.detail-unit {
+  font-size: 14px;
+  font-weight: 800;
+  margin: 6px 0 10px;
+  color: #537599;
+}
+
+.detail-description .tag {
+  background: #eef2ff;
+  color: #3f59ad;
+  padding: 4px 12px;
+  font-size: 12px;
+  font-weight: 800;
+  border-radius: 6px;
+}
+
+.detail-description p {
+  color: #3b5a7d;
+  font-size: 15.5px;
+  line-height: 1.6;
+}
+
+/* --- Tarjeta Qué Aprenderás (Debajo de Portada y Descripción) --- */
+.detail-learn-card {
+  grid-column: 1 / span 2;
+  grid-row: 2;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #fffcf0, #fff7d6) !important;
+  border: 1px solid #f6e9ad !important;
+  border-radius: 8px !important;
+  box-shadow: 0 4px 14px rgba(120, 90, 6, 0.04) !important;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* --- Columna Derecha: Información de Ficha y Botones --- */
+.detail-info {
+  grid-column: 3;
+  grid-row: 1 / span 2;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  background: #ffffff;
+  border: 1px solid #e8f0fa;
+  border-radius: 8px;
+  box-shadow: 0 4px 18px rgba(15, 45, 90, 0.05);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.detail-info > div:not(.detail-actions) {
+  border-bottom: 1px solid #f0f4fa;
+  padding: 10px 0;
+}
+
+.detail-data-icon {
+  color: #285acc;
+}
+
+.detail-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: auto;
+  padding-top: 14px;
+  width: 100%;
+}
+
+.detail-actions > * {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  border-radius: 8px;
+  padding: 13px;
+  font-size: 14px;
+  font-weight: 800;
+  border: 0;
+  cursor: pointer;
+  box-sizing: border-box;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.detail-actions > *:hover {
+  transform: translateY(-2px);
+}
+
+.btn-read {
+  background: linear-gradient(120deg, #5d9bff, #4c8dff);
+  color: #ffffff;
+  box-shadow: 0 8px 18px rgba(76, 141, 255, 0.35);
+}
+
+.btn-download {
+  background: #edf5ff;
+  color: #245ab5;
+}
+
+.btn-download:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.btn-favorite {
+  background: #ffe8ee;
+  color: #bf345b;
+}
+
+.btn-favorite.is-active {
+  background: #ff8fa3;
+  color: #ffffff;
+}
+
+/* --- Sección Otras Recomendaciones --- */
+.detail-recommendations {
+  margin-top: 48px;
+  position: relative;
+  width: 100%;
+}
+
+.detail-recommendations-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.detail-recommendations-heading h2 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 22px;
+  color: #073471;
+}
+
+.detail-recs-star {
+  width: 22px;
+  height: 22px;
+  color: #ffc93c;
+}
+
+.detail-recommendations-heading > a {
+  font-weight: 800;
+  color: #236cc3;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+/* --- Banner inferior de aventura --- */
+.promo-banner {
+  position: relative;
+  overflow: hidden;
+  margin-top: 42px;
+  border-radius: 12px;
+  padding: 34px 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  background: linear-gradient(160deg, #eaf6ff, #fff2cf);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.promo-rocket {
+  position: relative;
+  z-index: 2;
+  width: 70px;
+  height: 70px;
+  flex-shrink: 0;
+  transform: rotate(-18deg);
+}
+
+.promo-star {
+  position: absolute;
+  z-index: 1;
+  width: 20px;
+  height: 20px;
+  color: #ffc93c;
+}
+
+.promo-star-1 { left: 14%; top: 20%; }
+.promo-star-2 { left: 22%; bottom: 22%; width: 14px; height: 14px; }
+.promo-star-3 { left: 44%; top: 14%; width: 16px; height: 16px; }
+
+.promo-copy {
+  position: relative;
+  z-index: 2;
+  flex: 1;
+  text-align: center;
+  min-width: 0;
+}
+
+.promo-copy h2 {
+  font-size: clamp(20px, 2.6vw, 32px);
+  line-height: 1.15;
+  margin: 0;
+  color: #1e2a4d;
+}
+
+.promo-copy h2 span {
+  background: linear-gradient(90deg, #4c8dff, #3ec6a8, #ff9f5a);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.promo-copy p {
+  margin: 8px 0 0;
+  font-size: 14px;
+  font-weight: 700;
+  color: #4a6a8c;
+}
+
+.promo-sun {
+  position: relative;
+  z-index: 2;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.promo-sun-text {
+  text-align: right;
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 1.25;
+  color: #1e2a4d;
+}
+
+.promo-sun-art {
+  width: 66px;
+  height: 66px;
+}
+
+.promo-clouds {
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 26px;
+  background:
+    radial-gradient(ellipse at 10% 120%, #ffffff 0 40%, transparent 41%),
+    radial-gradient(ellipse at 30% 120%, #ffffff 0 45%, transparent 46%),
+    radial-gradient(ellipse at 85% 120%, #ffffff 0 50%, transparent 51%);
+}
+
+/* --------------------------------------------------------------------------
+   RESPONSIVE: TABLET (768px - 1080px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 1080px) {
+  .detail-grid {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
+    grid-template-rows: auto auto auto;
+    gap: 20px;
+    align-items: stretch;
+  }
+  .detail-book {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .detail-description {
+    grid-column: 2;
+    grid-row: 1;
+  }
+  .detail-learn-card {
+    grid-column: 1 / span 2;
+    grid-row: 2;
+    height: auto;
+  }
+  .detail-info {
+    grid-column: 1 / span 2;
+    grid-row: 3;
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   RESPONSIVE: MÓVIL (< 768px) - ANCHO COMPLETO AL 100%
+   -------------------------------------------------------------------------- */
+@media (max-width: 767px) {
+  .detail-page {
+    padding: 16px 12px 20px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  /* El layout pasa a 1 sola columna que toma el 100% del ancho */
+  .detail-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    gap: 18px !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Portada arriba centrada y grande */
+  .detail-book {
+    width: 100% !important;
+    max-width: 340px !important;
+    margin: 0 auto 4px !important;
+    padding-left: 14px !important;
+    border-radius: 8px !important;
+    box-sizing: border-box !important;
+  }
+
+  .detail-cover .catalog-cover h2 {
+    font-size: 24px;
+    height: 70px;
+  }
+
+  .detail-cover .catalog-scene {
+    height: 180px;
+  }
+
+  /* Sección de descripción al 100% */
+  .detail-description {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding-right: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  .detail-description h1 {
+    font-size: 25px;
+    padding-right: 0;
+  }
+
+  .detail-unit {
+    font-size: 13px;
+  }
+
+  .detail-description > div > p:last-child {
+    font-size: 14.5px;
+  }
+
+  /* Tarjeta Qué Aprenderás */
+  .detail-learn-card {
+    width: 100% !important;
+    padding: 16px !important;
+    border-radius: 8px !important;
+    box-sizing: border-box !important;
+    height: auto !important;
+  }
+
+  /* Tarjeta de ficha técnica al 100% del ancho */
+  .detail-info {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 18px !important;
+    border-radius: 8px !important;
+    box-sizing: border-box !important;
+    margin: 0 !important;
+    height: auto !important;
+  }
+
+  .detail-actions {
+    width: 100% !important;
+  }
+
+  .detail-actions > * {
+    width: 100% !important;
+    font-size: 14px;
+    padding: 14px;
+    border-radius: 8px !important;
+  }
+
+  .detail-recommendations-heading h2 {
+    font-size: 20px;
+  }
+
+  .promo-banner {
+    flex-direction: column;
+    text-align: center;
+    padding: 24px 16px;
+    gap: 16px;
+    width: 100% !important;
+    border-radius: 12px !important;
+    box-sizing: border-box !important;
+  }
+
+  .promo-sun-text {
+    text-align: center;
+  }
+}
+

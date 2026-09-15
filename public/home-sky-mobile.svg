@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 780" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="sky" x2="0" y2="1">
+      <stop stop-color="#aedcf9" />
+      <stop offset="1" stop-color="#e8f7ff" />
+    </linearGradient>
+    <linearGradient id="sun" x2="0" y2="1">
+      <stop stop-color="#ffe778" />
+      <stop offset="1" stop-color="#fff6b3" />
+    </linearGradient>
+    <g id="cloud" fill="#ffffff">
+      <ellipse cx="100" cy="65" rx="100" ry="40" />
+      <circle cx="60" cy="35" r="38" />
+      <circle cx="115" cy="30" r="47" />
+      <circle cx="160" cy="49" r="38" />
+    </g>
+  </defs>
+
+  <!-- Cielo base -->
+  <path fill="url(#sky)" d="M0 0h500v780H0z" />
+
+  <!-- Nube en la orilla izquierda superior (bien al borde) -->
+  <use href="#cloud" x="-145" y="15" transform="scale(0.85)" opacity="0.95" />
+
+  <!-- Nube en la orilla derecha superior (bien a la orilla del borde derecho) -->
+  <use href="#cloud" x="435" y="20" transform="scale(0.85)" opacity="0.95" />
+
+  <!-- Avioncito de papel arriba bien a la orilla derecha -->
+  <g transform="translate(405, 55) scale(0.55)">
+    <path d="m55 10 91-31-35 65-17-24-28 10 15-21 65-30-52 41" fill="#ffdc54" stroke="#edbe43" stroke-width="2" />
+    <path d="M66 47c5 62-81 13-77 57 3 33 42 33 30 72" fill="none" stroke="white" stroke-width="4" stroke-dasharray="8 9" />
+  </g>
+
+  <!-- Nube en la orilla izquierda media -->
+  <use href="#cloud" x="-150" y="260" transform="scale(0.75)" opacity="0.85" />
+
+  <!-- Nube en la orilla derecha media (bien al borde) -->
+  <use href="#cloud" x="445" y="270" transform="scale(0.75)" opacity="0.85" />
+
+  <!-- Sol amarillo centrado exactamente detrás del niño (zona inferior) -->
+  <circle cx="250" cy="570" r="155" fill="url(#sun)" />
+
+  <!-- Colinas verdes a los lados de la base -->
+  <path d="M0 640C40 590 90 610 100 690c50-55 100-25 120 30 60-70 130-60 160 20 70-50 100-10 120 50H0Z" fill="#aadfbe" opacity="0.85" />
+  <path d="M0 700c50-70 90-25 100 25 50-40 90-10 110 30 50-45 110-20 140 30H0Z" fill="#80c9af" opacity="0.9" />
+
+  <!-- Nubes en la base -->
+  <g fill="#ffffff" opacity="0.95">
+    <ellipse cx="50" cy="775" rx="80" ry="25" />
+    <ellipse cx="450" cy="775" rx="80" ry="25" />
+  </g>
+</svg>

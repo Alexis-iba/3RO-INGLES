@@ -9,7 +9,7 @@ import { shuffle } from "@/lib/shuffle";
 
 const TABS = [
   { id: "todos", label: "Todos" },
-  { id: "video", label: "Videos" },
+  { id: "audio", label: "Audios" },
   { id: "imprimible", label: "Imprimibles" },
   { id: "juego", label: "Juegos" },
 ];
@@ -90,16 +90,23 @@ export default function RecursosPage() {
 
   return (
     <div className="resources-page section-container py-8 md:py-12">
-      <h1 className="font-heading text-3xl font-extrabold text-navy md:text-[34px]">Recursos para aprender más</h1>
-      <p className="mt-2 text-navy/60">Materiales adicionales que complementan los libros.</p>
+      <div className="mb-6">
+        <span className="inline-block rounded-full bg-brand-yellow/20 px-3.5 py-1 text-xs font-black text-navy uppercase tracking-wider mb-2">
+          MATERIALES & PRÁCTICA
+        </span>
+        <h1 className="font-heading text-3xl font-extrabold text-navy md:text-[34px]">Recursos para aprender más</h1>
+        <p className="mt-1 text-navy/60 font-semibold">Materiales didácticos y actividades que complementan los libros.</p>
+      </div>
 
-      <div className="mt-7 flex flex-wrap gap-2">
+      <div className="mt-6 flex flex-wrap gap-2.5">
         {TABS.map((t) => (
           <button
             key={t.id}
             onClick={() => setFilter(t.id)}
-            className={`rounded-full px-5 py-2.5 text-sm font-extrabold shadow-softer ${
-              filter === t.id ? "bg-brand-blue text-white" : "bg-white text-navy"
+            className={`rounded-full px-5 py-2 text-sm font-extrabold transition-all duration-200 cursor-pointer ${
+              filter === t.id 
+                ? "bg-[#073471] text-white shadow-md" 
+                : "bg-white text-navy border border-slate-200/80 hover:bg-slate-50"
             }`}
           >
             {t.label}
@@ -107,35 +114,42 @@ export default function RecursosPage() {
         ))}
       </div>
 
-      <div className="mt-6 grid grid-cols-2 gap-4 lg:grid-cols-3">
+      <div className="mt-7 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
         {list.map((r) => (
-          <div key={r.id} className="card overflow-hidden">
-            <div className="relative overflow-hidden bg-blue-light" style={r.image ? { aspectRatio: r.imageAspect || "3 / 2" } : undefined}>
-              {r.image ? (
-                <Image src={r.image} alt={r.title} fill sizes="(max-width: 767px) 50vw, 33vw" className="object-cover" />
-              ) : (
-                <div className="flex h-full items-center justify-center text-4xl">{r.emoji}</div>
-              )}
-              {r.duration && (
-                <span className="absolute bottom-2 right-2 rounded-md bg-black/60 px-2 py-0.5 text-[11px] text-white">
-                  {r.duration}
+          <div key={r.id} className="card overflow-hidden border border-slate-200/70 shadow-[0_4px_16px_rgba(7,52,113,0.06)] hover:shadow-[0_12px_28px_rgba(7,52,113,0.12)] hover:-translate-y-1 transition-all duration-200 flex flex-col justify-between">
+            <div>
+              <div className="relative overflow-hidden bg-blue-light/50" style={r.image ? { aspectRatio: r.imageAspect || "3 / 2" } : { aspectRatio: "3 / 2" }}>
+                {r.image ? (
+                  <Image src={r.image} alt={r.title} fill sizes="(max-width: 767px) 100vw, (max-width: 1024px) 50vw, 33vw" className="object-cover" />
+                ) : (
+                  <div className="flex h-full items-center justify-center text-5xl bg-gradient-to-br from-blue-50 to-amber-50">{r.emoji}</div>
+                )}
+                {r.duration && (
+                  <span className="absolute bottom-2.5 right-2.5 rounded-full bg-black/70 backdrop-blur-xs px-2.5 py-0.5 text-[11px] font-bold text-white">
+                    {r.duration}
+                  </span>
+                )}
+                <span className="absolute top-2.5 left-2.5 rounded-full bg-white/90 backdrop-blur-xs px-2.5 py-0.5 text-[10px] font-black text-navy uppercase tracking-wider shadow-xs">
+                  {r.type === "audio" ? "Audio" : r.type === "imprimible" ? "Ficha" : "Juego"}
                 </span>
-              )}
+              </div>
+              <div className="p-4">
+                <h4 className="font-heading text-base font-extrabold text-navy line-clamp-2">{r.title}</h4>
+              </div>
             </div>
-            <div className="p-3.5">
-              <h4 className="font-heading text-sm font-extrabold">{r.title}</h4>
-              {r.type === "video" && (
-                <button onClick={() => openModal(r)} className="btn btn-outline btn-sm btn-block mt-2.5">
-                  ▶ Reproducir
+            <div className="p-4 pt-0">
+              {r.type === "audio" && (
+                <button onClick={() => openModal(r)} className="btn btn-outline btn-sm btn-block rounded-xl font-extrabold hover:bg-brand-yellow/30 hover:border-brand-yellow cursor-pointer">
+                  🔊 Escuchar palabras
                 </button>
               )}
               {r.type === "imprimible" && (
-                <button onClick={() => openPrintable(r)} className="btn btn-outline btn-sm btn-block mt-2.5">
+                <button onClick={() => openPrintable(r)} className="btn btn-outline btn-sm btn-block rounded-xl font-extrabold hover:bg-brand-yellow/30 hover:border-brand-yellow cursor-pointer">
                   🖨 Ver e imprimir
                 </button>
               )}
               {r.type === "juego" && (
-                <Link href="/actividades" className="btn btn-outline btn-sm btn-block mt-2.5">
+                <Link href="/actividades" className="btn btn-primary btn-sm btn-block rounded-xl font-extrabold text-navy cursor-pointer">
                   🎮 Jugar ahora
                 </Link>
               )}

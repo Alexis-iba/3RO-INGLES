@@ -33,14 +33,9 @@ export default function ContactoPage() {
     e.preventDefault();
     if (!validateAll()) return;
 
-    try {
-      const stored = JSON.parse(localStorage.getItem("englishkids_messages") || "[]");
-      stored.push({ ...values, date: new Date().toISOString() });
-      localStorage.setItem("englishkids_messages", JSON.stringify(stored));
-    } catch {
-      /* localStorage no disponible; el envío sigue mostrando confirmación */
-    }
-
+    const subject = encodeURIComponent(values.subject.trim());
+    const body = encodeURIComponent(`Nombre: ${values.name.trim()}\nCorreo: ${values.email.trim()}\n\n${values.message.trim()}`);
+    window.location.href = `mailto:info@englishkids.com?subject=${subject}&body=${body}`;
     setSuccess(true);
     setValues({ name: "", email: "", subject: "", message: "" });
     setErrors({});
@@ -74,16 +69,16 @@ export default function ContactoPage() {
           <p className="contact-hero-quote">&quot;Better learners, brighter tomorrows.&quot;</p>
         </div>
 
-        <div className="card p-7">
+        <div className="card p-7 border border-slate-200/80 shadow-[0_4px_20px_rgba(7,52,113,0.06)] bg-white">
           {success && (
-            <div className="mb-4 rounded-xl bg-[#e3f7ee] px-4.5 py-3.5 font-bold text-[#1c7a4d]">
-              ✅ ¡Gracias! Tu mensaje ha sido enviado. Te responderemos pronto.
+            <div className="mb-4 rounded-xl bg-[#e3f7ee] border border-[#a3e6c5] px-4.5 py-3.5 font-bold text-[#1c7a4d]">
+              ✉️ ¡Listo! Abrimos tu aplicación de correo para que envíes el mensaje a EnglishKids.
             </div>
           )}
           <form onSubmit={handleSubmit} noValidate>
             {FIELDS.map((f) => (
               <div key={f.name} className="mb-4">
-                <label htmlFor={f.name} className="mb-1.5 block text-[13px] font-extrabold">
+                <label htmlFor={f.name} className="mb-1.5 block text-[13px] font-extrabold text-navy">
                   {f.label}
                 </label>
                 <input
@@ -92,30 +87,34 @@ export default function ContactoPage() {
                   value={values[f.name]}
                   onChange={(e) => update(f.name, e.target.value)}
                   placeholder={f.placeholder}
-                  className={`w-full rounded-xl border-2 px-3.5 py-3 text-sm focus:outline-none focus:border-brand-blue ${
-                    errors[f.name] ? "border-[#d64545]" : "border-blue-light"
+                  className={`w-full rounded-xl border px-3.5 py-3 text-sm focus:outline-none transition-colors ${
+                    errors[f.name] 
+                      ? "border-[#d64545] bg-red-50/20" 
+                      : "border-slate-200 focus:border-[#073471] focus:ring-2 focus:ring-[#073471]/10 bg-slate-50/50"
                   }`}
                 />
-                {errors[f.name] && <span className="mt-1 block text-xs text-[#d64545]">{errors[f.name]}</span>}
+                {errors[f.name] && <span className="mt-1 block text-xs font-bold text-[#d64545]">{errors[f.name]}</span>}
               </div>
             ))}
-            <div className="mb-4">
-              <label htmlFor="message" className="mb-1.5 block text-[13px] font-extrabold">
+            <div className="mb-5">
+              <label htmlFor="message" className="mb-1.5 block text-[13px] font-extrabold text-navy">
                 Mensaje
               </label>
               <textarea
                 id="message"
-                rows={5}
+                rows={4}
                 value={values.message}
                 onChange={(e) => update("message", e.target.value)}
                 placeholder="Escribe tu mensaje aquí..."
-                className={`w-full rounded-xl border-2 px-3.5 py-3 text-sm focus:outline-none focus:border-brand-blue ${
-                  errors.message ? "border-[#d64545]" : "border-blue-light"
+                className={`w-full rounded-xl border px-3.5 py-3 text-sm focus:outline-none transition-colors ${
+                  errors.message 
+                    ? "border-[#d64545] bg-red-50/20" 
+                    : "border-slate-200 focus:border-[#073471] focus:ring-2 focus:ring-[#073471]/10 bg-slate-50/50"
                 }`}
               />
-              {errors.message && <span className="mt-1 block text-xs text-[#d64545]">{errors.message}</span>}
+              {errors.message && <span className="mt-1 block text-xs font-bold text-[#d64545]">{errors.message}</span>}
             </div>
-            <button type="submit" className="btn btn-primary btn-block">
+            <button type="submit" className="btn btn-primary btn-block rounded-xl font-black text-navy cursor-pointer">
               Enviar mensaje →
             </button>
           </form>
@@ -127,13 +126,13 @@ export default function ContactoPage() {
 
 function InfoRow({ icon, color, label, value }) {
   return (
-    <div className="flex items-start gap-3.5 rounded-2xl bg-white p-4 shadow-[0_4px_14px_rgba(30,42,77,0.08)]">
+    <div className="flex items-start gap-3.5 rounded-2xl bg-white/95 backdrop-blur-xs p-4 border border-slate-200/60 shadow-[0_2px_10px_rgba(7,52,113,0.04)]">
       <span className={`grid h-10 w-10 flex-shrink-0 place-items-center rounded-xl bg-blue-light ${color}`}>
         <UiIcon name={icon} size={20} />
       </span>
       <span>
-        <strong className="block text-sm">{label}</strong>
-        <span className="text-[13px] text-navy/60">{value}</span>
+        <strong className="block text-sm text-navy">{label}</strong>
+        <span className="text-[13px] text-navy/60 font-semibold">{value}</span>
       </span>
     </div>
   );

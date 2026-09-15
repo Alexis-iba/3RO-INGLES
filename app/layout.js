@@ -2,6 +2,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import MobileBottomNav from "@/components/MobileBottomNav";
 
 const baloo = localFont({
   src: "./fonts/baloo-2-latin.woff2",
@@ -20,6 +21,9 @@ const nunito = localFont({
 export const metadata = {
   title: "EnglishKids — Aprende inglés jugando",
   description: "Libros y recursos de inglés para niños de 3° de primaria.",
+  icons: {
+    icon: "/favicon.ico?v=20260914",
+  },
 };
 
 export default function RootLayout({ children }) {
@@ -27,8 +31,9 @@ export default function RootLayout({ children }) {
     <html lang="es" className={`${baloo.variable} ${nunito.variable}`}>
       <body className="flex min-h-screen flex-col bg-bg-page text-navy antialiased">
         <Header />
-        <main className="flex-1">{children}</main>
+        <main className="flex-1 pb-16 md:pb-0">{children}</main>
         <Footer />
+        <MobileBottomNav />
       </body>
     </html>
   );

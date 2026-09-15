@@ -1,13 +1,13 @@
 import Link from "next/link";
 import UiIcon from "@/components/icons/UiIcon";
 import Star from "@/components/icons/Star";
-import FavoriteButton from "@/components/FavoriteButton";
 import DownloadPdfButton from "@/components/DownloadPdfButton";
 import PromoBanner from "@/components/PromoBanner";
 import { notFound } from "next/navigation";
-import { BOOKS, getBookById, UPLOADED_COVERS } from "@/lib/data";
+import { BOOKS, getBookById, getBookPalette, UPLOADED_COVERS } from "@/lib/data";
 import Image from "next/image";
 import CatalogCover from "@/components/CatalogCover";
+import { ArrowRight } from "lucide-react";
 import "@/app/catalogo/catalog.css";
 import "./detail.css";
 
@@ -37,7 +37,7 @@ export default async function BookDetailPage({ params }) {
         <UiIcon name="left" size={16} /> Volver al catálogo
       </Link>
 
-      <div className="detail-grid grid gap-7">
+      <div className="detail-grid">
         <div id="pdf-cover" className="detail-cover detail-book">
           {UPLOADED_COVERS.has(book.id) ? (
             <div className="detail-uploaded-cover">
@@ -59,26 +59,7 @@ export default async function BookDetailPage({ params }) {
                 </span>
               ))}
             </div>
-            <div className="detail-rating">
-              {Array.from({ length: 5 }).map((_, i) => (
-                <Star key={i} className={i < Math.round(book.rating) ? "star-filled" : "star-empty"} />
-              ))}
-              <strong>{book.rating.toFixed(1)}</strong> ({book.reviews} reseñas)
-            </div>
-            <p className="mb-5 leading-relaxed text-navy/60">{book.description}</p>
-          </div>
-
-          <div id="pdf-learn" className="card p-5">
-            <h3 className="mb-3.5 flex items-center gap-2 font-heading text-[17px] font-extrabold">
-              <UiIcon name="all" size={18} className="detail-learn-star" /> ¿Qué aprenderás?
-            </h3>
-            <ul className="flex flex-col gap-1.5">
-              {book.learn.map((item) => (
-                <li key={item} className="flex items-start gap-2.5 text-sm">
-                  <UiIcon name="check" className="learning-check" size={18} /> {item}
-                </li>
-              ))}
-            </ul>
+            <p className="leading-relaxed text-navy/60">{book.description}</p>
           </div>
         </div>
 
@@ -93,9 +74,21 @@ export default async function BookDetailPage({ params }) {
             <Link href={`/vista-previa/${book.id}`} className="btn-read">
               <UiIcon name="book" size={18} /> Leer ahora
             </Link>
-            <DownloadPdfButton key={book.id} book={book} />
-            <FavoriteButton bookId={book.id} />
+            <DownloadPdfButton key={`download-${book.id}`} book={book} />
           </div>
+        </div>
+
+        <div id="pdf-learn" className="detail-learn-card card p-5 sm:p-6">
+          <h3 className="mb-3.5 flex items-center gap-2 font-heading text-[17px] font-extrabold text-[#785a06]">
+            <UiIcon name="all" size={18} className="detail-learn-star text-[#d8981a]" /> ¿Qué aprenderás?
+          </h3>
+          <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-3">
+            {book.learn.map((item) => (
+              <li key={item} className="flex items-start gap-2.5 text-sm font-bold text-[#594711]">
+                <UiIcon name="check" className="learning-check text-[#15803d]" size={18} /> {item}
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
 
@@ -106,33 +99,74 @@ export default async function BookDetailPage({ params }) {
           </h2>
           <Link href="/catalogo">Ver todos →</Link>
         </div>
-        <div className="grid grid-cols-2 gap-5 sm:grid-cols-3 lg:grid-cols-5">
-          {relatedBooks.map((b) => (
-            <Link key={b.id} href={`/libros/${b.id}`} className="catalog-book" aria-label={`Ver ${b.title}`}>
-              {UPLOADED_COVERS.has(b.id) ? (
-                <div className="catalog-uploaded-cover">
-                  <Image src={`/catalog-images/${b.id}.png`} alt={`Portada de ${b.title}`} width={1536} height={1024} sizes="(max-width: 767px) 45vw, 18vw" />
+        <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5">
+          {relatedBooks.map((b) => {
+            const palette = getBookPalette(b.id);
+            return (
+              <Link
+                key={b.id}
+                href={`/libros/${b.id}`}
+                className="clean-book-card catalog-book-card"
+                aria-label={`Ver libro ${b.title}`}
+              >
+                <div
+                  className="clean-book-cover-wrap"
+                  style={{ backgroundColor: palette.bg }}
+                >
+                  <div className="clean-book-tags">
+                    <span className="clean-book-grade">3° PRIMARIA</span>
+                    <span className="clean-book-unit" style={{ color: palette.ink }}>
+                      {b.unit || "Unidad 1 - 6"}
+                    </span>
+                  </div>
+                  <div className="clean-book-image-box">
+                    <Image
+                      src={`/catalog-images/${b.id}.png`}
+                      alt={`Portada de ${b.title}`}
+                      fill
+                      sizes="(max-width: 640px) 48vw, (max-width: 1024px) 30vw, 240px"
+                    />
+                  </div>
                 </div>
-              ) : (
-                <CatalogCover book={b} />
-              )}
-              <div className="catalog-book-info">
-                <strong>{b.title}</strong>
-                <span className="catalog-unit">{b.unit}</span>
-                <div className="catalog-tags">
-                  {b.topics.slice(0, 2).map((t) => (
-                    <span key={t}>{t}</span>
-                  ))}
+
+                <div className="clean-book-details">
+                  <div className="clean-book-meta-top">
+                    <span
+                      className="clean-book-category-tag"
+                      style={{ backgroundColor: palette.catBg, color: palette.catColor }}
+                    >
+                      {b.category}
+                    </span>
+                  </div>
+
+                  <h3 className="clean-book-title" title={b.title}>
+                    {b.title}
+                  </h3>
+
+                  {b.topics && b.topics.length > 0 && (
+                    <div className="clean-book-topics-list">
+                      {b.topics.slice(0, 2).map((t) => (
+                        <span key={t} className="clean-book-topic-chip">
+                          {t}
+                        </span>
+                      ))}
+                    </div>
+                  )}
+
+                  <div className="clean-book-action">
+                    <span className="clean-book-btn">
+                      Ver libro
+                      <ArrowRight size={14} strokeWidth={2.5} />
+                    </span>
+                  </div>
                 </div>
-              </div>
-            </Link>
-          ))}
+              </Link>
+            );
+          })}
         </div>
       </div>
 
       <PromoBanner />
-
-      <p className="catalog-credit">Ilustraciones: <a href="https://openmoji.org/">OpenMoji</a> · <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></p>
     </div>
   );
 }

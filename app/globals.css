@@ -14,7 +14,7 @@
   --color-brand-purple: #9b8cff;
   --color-bg-page: #f5fcff;
 
-  --font-heading: var(--font-baloo), "Baloo 2", sans-serif;
+  --font-heading: var(--font-baloo), sans-serif;
   --font-body: var(--font-nunito), "Nunito", sans-serif;
 
   --shadow-soft: 0 10px 30px rgba(30, 42, 77, 0.1);
@@ -29,6 +29,19 @@ body {
 
 h1, h2, h3, h4 {
   font-family: var(--font-heading);
+}
+
+input,
+select,
+textarea,
+button {
+  outline: none;
+}
+
+input:focus,
+input:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
 }
 
 @layer components {
@@ -76,25 +89,6 @@ h1, h2, h3, h4 {
 .animate-shake {
   animation: shake 0.4s;
 }
-
-/* Page structure follows the supplied EnglishKids reference. */
-body { margin: 0; }
-main { background: linear-gradient(180deg, #e4f6ff 0, #fff 330px); }
-.section-container { max-width: 1120px; }
-.card { border-radius: 14px; }
-.site-header { border-bottom: 2px solid #dcf4ff; }
-.site-header nav a { color: #073471; border-radius: 0; background: transparent; }
-.site-header nav a:hover { color: #148ad1; background: #edfaff; }
-.site-header nav a.bg-brand-yellow { border-bottom: 2px solid #79cce9; }
-.site-header > div > a span span:last-child { color: #426d91; }
-.site-header form { background: #eff9ff; }
-.site-header input { color: #073471; }
-.site-header input::placeholder { color: #53799d; }
-.site-header button > span { background-color: #073471; }
-.site-header > div:last-child { background: white; }
-.home-hero { padding: 30px 0 0; background: linear-gradient(140deg,#def6ff,#bce9fc 65%,#fff5c5); overflow: hidden; }
-.home-hero > div { gap: 24px; grid-template-columns: 0.9fr 1.1fr; }
-.home-hero h1 { font-size: clamp(32px,4.2vw,56px); line-height: 1.08; }
 .home-hero p { color: #174979; font-weight: 600; }
 .home-hero > div > div:last-child { align-self: end; }
 .home-features { padding-top: 24px; padding-bottom: 20px; }
@@ -108,26 +102,6 @@ main { background: linear-gradient(180deg, #e4f6ff 0, #fff 330px); }
 .book-cover svg { height: 150px; }
 .book-cover-title { font-family: var(--font-heading); font-size: 26px; font-weight: 800; text-align: center; line-height: 1.05; max-width: 210px; padding: 8px; }
 .book-card > div:last-child { padding: 12px; gap: 4px; }
-.book-card > div:last-child h3 { display: none; }
-.tag { padding: 2px 10px; }
-.home-banner { padding-bottom: 0; }
-.home-banner > div { background: #ffeb97; color: #073471; border-radius: 18px; padding: 22px 80px; }
-.home-banner svg:first-child { color: #f6bb28; }
-.home-banner svg:nth-of-type(3) { position: absolute; left: 22px; bottom: 10px; }
-.home-banner h2 { margin: 0; }
-.home-banner p, .home-banner > div > div { display: none; }
-.catalog-page > div { grid-template-columns: 210px minmax(0,1fr); }
-.catalog-page aside { border-radius: 0; background: #f4fbff; box-shadow: none; }
-.catalog-page aside h4 { color: #073471; text-transform: none; font-size: 16px; }
-.catalog-page aside button { padding: 12px; }
-.catalog-page .book-cover { height: 245px; }
-.catalog-page .book-cover svg { height: 180px; }
-.detail-grid { grid-template-columns: minmax(0,.8fr) minmax(0,1.2fr) minmax(220px,.72fr); align-items: start; gap: 24px 30px; }
-.detail-cover { grid-column: 1; grid-row: 1; border-radius: 10px; }
-.detail-description { grid-column: 2; grid-row: 1 / span 2; }
-.detail-description > .card { background: #fff8e2; box-shadow: none; }
-.detail-info { grid-column: 3; grid-row: 1; background: #fff; box-shadow: none; }
-.about-hero { position: relative; margin-top: 32px; border-radius: 28px; overflow: hidden; background: linear-gradient(180deg, #cfeeff 0%, #e9f6ff 38%, #fff4d6 100%); padding-bottom: 56px; }
 .about-hero-clouds { position: absolute; inset: 0; z-index: 0; pointer-events: none;
   background:
     radial-gradient(ellipse 90px 38px at 8% 80%, #ffffffcc 0 100%, transparent 101%),
@@ -167,8 +141,9 @@ main { background: linear-gradient(180deg, #e4f6ff 0, #fff 330px); }
 .activities-page > .grid > button:nth-child(2) { background: #f5edff; }
 .activities-page > .grid > button:nth-child(3) { background: #fff9e9; }
 .activities-page > .grid > button:nth-child(4) { background: #edf8ff; }
-footer { margin-top: 32px !important; background: #103456 !important; }
-:focus-visible { outline: 3px solid #1984e8; outline-offset: 4px; }
+footer { background: #103456 !important; }
+body:not(:has(.reference-home)) footer { margin-top: 32px !important; }
+
 @media (max-width: 767px) {
   .section-container { padding-left: 18px; padding-right: 18px; }
   .home-hero > div { grid-template-columns: 1fr; }
@@ -204,10 +179,10 @@ footer { margin-top: 32px !important; background: #103456 !important; }
 .ui-icon { display:inline-block; flex-shrink:0; vertical-align:middle; }
 .detail-data-icon { color:#304fc4; display:grid; place-items:center; padding-top:2px; }
 .learning-check { color:#60b66a; margin-top:2px; }
-.site-header button[type=submit] { background:transparent; color:#0a2e70; }
+.site-header button[type=submit] { background:transparent; color:#e30613; }
 .catalog-page aside .ui-icon { color:#3563ba; }
 .catalog-page aside button[aria-pressed=true] .ui-icon { color:#3262ed; }
 .reference-feature svg { filter:drop-shadow(0 2px 1px #122a5814); }
 .reference-feature:nth-child(1) svg { fill:#b292f533; stroke-width:2.3; }
-.reference-feature:nth-child(2) svg { fill:#16a584; stroke:#fff; stroke-width:1.5; border-radius:10px; background:#16a584; }
+.reference-feature:nth-child(2) svg { fill:none; stroke:#16a584; stroke-width:2.3; border-radius:0; background:transparent; }
 .reference-feature:nth-child(3) svg { fill:#ffd15d; stroke:#d8981a; }

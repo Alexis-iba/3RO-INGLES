@@ -1,19 +1,509 @@
-.book-preview-page{max-width:1120px;margin:24px auto;padding:0 24px 32px;color:#20396b}.reader-back{display:inline-block;margin-bottom:16px;font-weight:800;color:#3763b6}.reader-heading{margin-bottom:14px}.reader-heading h1{font-size:26px;font-weight:900}.reader-heading p{font-size:15px;margin-top:4px;color:#617598}.book-reader{padding:12px 16px 16px;border-radius:18px;background:linear-gradient(135deg,#3e5f8a,#24364e 65%);box-shadow:0 16px 40px #19325426;color:white}.book-reader:fullscreen{overflow:auto;border-radius:0;display:flex;flex-direction:column;justify-content:center}.reader-toolbar{display:flex;justify-content:center;align-items:center;gap:14px;min-height:48px;margin-bottom:8px}.reader-toolbar button{width:32px;height:30px;border-radius:7px;background:#192b42;color:white;font-size:21px;cursor:pointer}.reader-toolbar button:disabled,.reader-arrow:disabled{opacity:.35;cursor:default}.reader-counter{font-size:13px;min-width:46px}.reader-zoom{display:flex;align-items:center;background:#192b42;border-radius:7px;gap:8px}.reader-zoom span{font-size:12px;min-width:38px;text-align:center}.reader-stage{position:relative;padding:22px 30px;background:#142432;border:1px solid #7793b23d;box-shadow:inset 0 0 30px #0005}.reader-scroll{overflow:auto;padding:8px 12px 14px}.reader-sheet{min-width:70%;margin:auto;transition:width .15s}.lesson-label{text-align:center;font-size:2.5cqw;font-weight:900}.lesson-cover{margin:0 -10%;overflow:hidden;border-radius:12px;box-shadow:0 4px 10px #695a1e22}.lesson-cover img{width:100%;height:auto;display:block}.lesson-bubbles{display:flex;justify-content:center;flex-wrap:wrap;gap:8px;margin-top:10%;font-size:2cqw;font-weight:800}.lesson-bubbles span{padding:5% 7%;border:2px solid #779dde;border-radius:50%;background:#fff}.lesson-motto{font-size:2.3cqw;font-weight:900;text-align:center;margin-top:auto;padding-top:8%}.book-leaf h3{font-size:2.8cqw;line-height:1.2;font-weight:900;border-left:3px solid #a1c9f5;padding-left:7%;margin:2% 0 12%}.reader-word-list{list-style:none;display:flex;flex-direction:column;gap:1.8cqw;padding:0;margin:0}.reader-word-list li{display:flex;align-items:center;gap:8%;font-size:2cqw;line-height:1.25}.reader-word-list li>span{font-size:3.5cqw;min-width:4cqw;text-align:center}.reader-arrow{position:absolute;top:47%;width:28px;height:28px;border-radius:50%;background:#fff;color:#405bbc;font-size:30px;line-height:22px;z-index:2;cursor:pointer}.reader-prev{left:4px}.reader-next{right:4px}.reader-thumbnails{display:flex;justify-content:center;gap:14px;padding:20px 6px 4px;overflow-x:auto}.reader-thumbnails>button{flex:0 0 16%;max-width:146px;min-width:70px;cursor:pointer;border-radius:6px;padding:4px;color:white}.thumbnail-paper{border:3px solid transparent;border-radius:5px;padding:4px;background:#c8d2dc;overflow:hidden}.selected .thumbnail-paper{border-color:#7794ff;background:#e1e8ff;box-shadow:0 0 12px #93b7fb66}.miniature-book{pointer-events:none;box-shadow:none}.reader-thumbnails>button>span{display:block;border-radius:20px;margin:8px auto 0;font-size:12px;width:65%;padding:2px}.reader-thumbnails>.selected>span{background:#5a7ef1}.reader-caption{text-align:center;color:#c3d3e7;font-size:12px;margin:10px 0 0}.picture-grid{display:grid;grid-template-columns:1fr 1fr;gap:2cqw;margin-top:5%}.picture-word{display:flex;flex-direction:column;align-items:center;background:#ffffffd9;border:1px solid #dbe7ed;border-radius:8px;padding:10% 3%;gap:1cqw}.picture-word>span{font-size:6cqw}.picture-word strong{font-size:1.8cqw;text-align:center}.exercise-instruction{font-size:1.9cqw;margin:0 0 12%}.exercise-list{gap:2.4cqw}.exercise-list small{margin-left:auto}.practice-note{font-size:2cqw;text-align:center;font-weight:800;margin-top:auto;padding-top:8%}.book-reader button:focus-visible,.reader-scroll:focus-visible{outline:3px solid #fed66b;outline-offset:3px}@media(max-width:650px){.book-preview-page{margin:14px auto;padding:0 10px 22px}.book-reader{padding:8px 6px 12px;border-radius:12px}.reader-heading h1{font-size:22px}.reader-stage{padding:14px 19px}.reader-scroll{padding:6px 8px 12px}.reader-toolbar{gap:9px}.reader-arrow{width:23px;height:23px;font-size:25px}.reader-prev{left:1px}.reader-next{right:1px}.reader-thumbnails{justify-content:flex-start;gap:6px;padding-top:14px}.reader-thumbnails>button{flex:1 0 17%;min-width:52px;padding:1px}.thumbnail-paper{padding:1px}.lesson-bubbles{gap:3px}.lesson-bubbles span{border-width:1px}.reader-caption{font-size:10px}.book-leaf h3{border-left-width:2px}}
-@media(max-width:650px){.reader-sheet{min-width:720px}.reader-toolbar{flex-wrap:wrap;gap:8px}.reader-scroll{max-height:75vh}.reader-caption{font-size:11px}.workbook-solutions{font-size:13px}}
-.reader-mobile-hint{display:none}@media(max-width:650px){.reader-mobile-hint{display:block;text-align:center;font-size:12px;color:#d7e6fa;padding:0 8px 8px}}
+/* ==========================================================================
+   LECTOR DE LIBRO INTERACTIVO - 3D PAGE FLIPBOOK & TOP HEADER
+   ========================================================================== */
 
-/* Let the illustrated book be the frame; keep controls light and separate. */
-.book-preview-page{max-width:1440px;padding:0 18px 32px}
-.reader-heading{display:none}
-.book-reader{padding:0;background:transparent;box-shadow:none;border-radius:0;color:#244779}
-.book-reader:fullscreen{background:#f4fbff;padding:12px}
-.reader-toolbar{width:fit-content;max-width:100%;margin:0 auto 14px;padding:4px 12px;border:1px solid #d9eaf5;border-radius:999px;background:#ffffffec;box-shadow:0 3px 12px #2d62900a}
-.reader-toolbar button,.reader-zoom{background:#edf6ff;color:#28579b}
-.reader-stage{padding:0 24px;background:transparent;border:0;box-shadow:none}
-.reader-scroll{padding:0 0 12px}
-.reader-arrow{background:#fff;color:#2c72c6;border:1px solid #d6e8f7;box-shadow:0 3px 10px #295f9122;width:30px;height:30px}
-.reader-prev{left:0}.reader-next{right:0}
-.reader-thumbnails>button{color:#335e92}
-.thumbnail-paper{background:transparent;padding:0}
-.reader-caption,.reader-mobile-hint{color:#557795}
-@media(max-width:650px){.book-preview-page{padding:0 6px 22px}.book-reader{padding:0}.reader-stage{padding:0 16px}.reader-scroll{padding:0 0 10px}.reader-toolbar{gap:7px;padding:4px 9px}.reader-arrow{width:24px;height:24px}.reader-mobile-hint{color:#557795}.reader-sheet{min-width:760px}}
+.book-preview-page {
+  max-width: 1320px;
+  margin: 14px auto 30px;
+  padding: 0 16px 40px;
+  color: #1e3a68;
+}
+
+/* --------------------------------------------------------------------------
+   NUEVA BARRA SUPERIOR INTEGRADA DEL LECTOR
+   -------------------------------------------------------------------------- */
+.reader-top-navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 10px 18px;
+  margin-bottom: 20px;
+  background: #ffffff;
+  border: 1.5px solid #e1edf8;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(15, 45, 90, 0.06);
+  flex-wrap: wrap;
+}
+
+/* Botón Volver */
+.reader-back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 18px;
+  border-radius: 999px;
+  background: #f0f7fe;
+  color: #1a4277;
+  font-size: 13.5px;
+  font-weight: 800;
+  border: 1px solid #d5e6f6;
+  cursor: pointer;
+  transition: all 0.15s cubic-bezier(0.34, 1.56, 0.64, 1);
+  white-space: nowrap;
+}
+
+.reader-back-btn:hover {
+  background: #ffd83d;
+  color: #073471;
+  border-color: #f0cb30;
+  transform: translateX(-3px);
+  box-shadow: 0 4px 12px rgba(255, 216, 61, 0.4);
+}
+
+/* Título Central y Barra de Progreso */
+.reader-book-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  flex: 1;
+  min-width: 200px;
+}
+
+.reader-book-title {
+  font-size: 15px;
+  font-weight: 900;
+  color: #073471;
+  margin: 0;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.reader-grade-badge {
+  background: #eef6ff;
+  color: #2458a2;
+  font-size: 10.5px;
+  font-weight: 800;
+  padding: 2px 8px;
+  border-radius: 999px;
+  border: 1px solid #d5e7fa;
+}
+
+.reader-progress-track {
+  width: min(100%, 220px);
+  height: 4px;
+  background: #e5f0fa;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.reader-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #4c8dff, #3ec6a8);
+  border-radius: 999px;
+  transition: width 0.3s ease;
+}
+
+/* Cluster de Herramientas */
+.reader-controls-cluster {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.reader-tool-btn {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #f1f7fe;
+  color: #24589c;
+  border: 1px solid #dcebf8;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.reader-tool-btn:hover {
+  background: #e1effe;
+  color: #073471;
+  transform: translateY(-1.5px);
+}
+
+.reader-tool-btn.is-active {
+  background: #ffd83d;
+  color: #073471;
+  border-color: #f0cb30;
+  box-shadow: 0 2px 8px rgba(255, 216, 61, 0.4);
+}
+
+.reader-counter-pill {
+  font-size: 12.5px;
+  font-weight: 800;
+  color: #173b6a;
+  background: #f1f7fe;
+  border: 1px solid #dcebf8;
+  padding: 6px 12px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.reader-zoom-pill {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: #f1f7fe;
+  border: 1px solid #dcebf8;
+  border-radius: 999px;
+  padding: 3px 6px;
+}
+
+.reader-zoom-pill button {
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #ffffff;
+  color: #24589c;
+  border: none;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.reader-zoom-pill button:hover:not(:disabled) {
+  background: #dbeafe;
+}
+
+.reader-zoom-pill button:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.reader-zoom-pill span {
+  font-size: 12px;
+  font-weight: 800;
+  color: #1e3a68;
+  min-width: 38px;
+  text-align: center;
+}
+
+/* --------------------------------------------------------------------------
+   RESPONSIVE NAVBAR SUPERIOR (MÓVIL)
+   -------------------------------------------------------------------------- */
+@media (max-width: 767px) {
+  .reader-top-navbar {
+    padding: 10px 12px;
+    gap: 10px;
+    border-radius: 16px;
+    justify-content: center;
+  }
+
+  .reader-back-btn {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+
+  .reader-book-meta {
+    order: 3;
+    width: 100%;
+    margin-top: 4px;
+  }
+
+  .reader-book-title {
+    font-size: 13.5px;
+  }
+
+  .reader-controls-cluster {
+    gap: 6px;
+  }
+
+  .reader-tool-btn {
+    width: 32px;
+    height: 32px;
+  }
+
+  .reader-counter-pill {
+    font-size: 11px;
+    padding: 4px 8px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   ESCENARIO 3D DEL LIBRO
+   -------------------------------------------------------------------------- */
+.book-reader {
+  width: 100%;
+  outline: none;
+}
+
+.reader-error-msg {
+  text-align: center;
+  font-size: 12.5px;
+  font-weight: 700;
+  color: #c92a2a;
+  margin-bottom: 8px;
+}
+
+.reader-mobile-hint {
+  display: none;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 700;
+  color: #6282a8;
+  margin-bottom: 12px;
+}
+
+@media (max-width: 767px) {
+  .reader-mobile-hint {
+    display: block;
+  }
+}
+
+.reader-stage-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 10px 52px;
+  perspective: 2200px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 767px) {
+  .reader-stage-wrapper {
+    padding: 0 4px;
+    overflow-x: auto;
+  }
+}
+
+.reader-3d-book-container {
+  position: relative;
+  width: 100%;
+  max-width: 1060px;
+  perspective: 2000px;
+}
+
+.book-3d-wrapper {
+  position: relative;
+  width: 100%;
+  border-radius: 12px;
+  background: #ffffff;
+  transform-style: preserve-3d;
+  transition: transform 0.25s ease;
+  box-shadow:
+    0 22px 50px rgba(15, 38, 75, 0.22),
+    0 6px 16px rgba(15, 38, 75, 0.1),
+    0 0 0 1px rgba(180, 210, 235, 0.6);
+}
+
+/* Pliegue central del lomo en 3D */
+.book-3d-center-fold {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 36px;
+  transform: translateX(-50%);
+  z-index: 15;
+  pointer-events: none;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.14) 0%,
+    rgba(0, 0, 0, 0.03) 38%,
+    rgba(255, 255, 255, 0.3) 50%,
+    rgba(0, 0, 0, 0.03) 62%,
+    rgba(0, 0, 0, 0.14) 100%
+  );
+}
+
+/* Sombra de profundidad en la base del libro */
+.book-3d-spine-shadow {
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  pointer-events: none;
+  z-index: 12;
+  box-shadow:
+    inset 14px 0 20px -8px rgba(0, 0, 0, 0.08),
+    inset -14px 0 20px -8px rgba(0, 0, 0, 0.08);
+}
+
+/* --------------------------------------------------------------------------
+   ANIMACIÓN 3D DE LA HOJA AL VOLTEAR (PAGE FLIP)
+   -------------------------------------------------------------------------- */
+.page-flip-leaf {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 50%;
+  z-index: 30;
+  pointer-events: none;
+  transform-style: preserve-3d;
+  background: linear-gradient(135deg, #f8fcff 0%, #ffffff 50%, #edf6fc 100%);
+  border: 1px solid #cce4f5;
+  border-radius: 6px;
+}
+
+/* Voltear hacia adelante (Página derecha gira hacia la izquierda) */
+.page-flip-next {
+  right: 0;
+  transform-origin: left center;
+  animation: pageFlipNextAnim 480ms cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+@keyframes pageFlipNextAnim {
+  0% {
+    transform: rotateY(0deg);
+    box-shadow: -15px 0 30px rgba(0, 0, 0, 0.25);
+  }
+  50% {
+    transform: rotateY(-90deg) scale(1.02);
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.35);
+    background: linear-gradient(90deg, #e4f2fc 0%, #ffffff 100%);
+  }
+  100% {
+    transform: rotateY(-180deg);
+    box-shadow: 15px 0 30px rgba(0, 0, 0, 0.15);
+  }
+}
+
+/* Voltear hacia atrás (Página izquierda gira hacia la derecha) */
+.page-flip-prev {
+  left: 0;
+  transform-origin: right center;
+  animation: pageFlipPrevAnim 480ms cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+@keyframes pageFlipPrevAnim {
+  0% {
+    transform: rotateY(0deg);
+    box-shadow: 15px 0 30px rgba(0, 0, 0, 0.25);
+  }
+  50% {
+    transform: rotateY(90deg) scale(1.02);
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.35);
+    background: linear-gradient(90deg, #ffffff 0%, #e4f2fc 100%);
+  }
+  100% {
+    transform: rotateY(180deg);
+    box-shadow: -15px 0 30px rgba(0, 0, 0, 0.15);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   FLECHAS NAVEGADORAS 3D
+   -------------------------------------------------------------------------- */
+.reader-3d-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #ffffff;
+  color: #073471;
+  font-size: 32px;
+  line-height: 1;
+  border: 1.5px solid #d5e5f5;
+  box-shadow: 0 6px 20px rgba(15, 45, 90, 0.18);
+  cursor: pointer;
+  z-index: 35;
+  transition: all 0.15s ease;
+}
+
+.reader-3d-arrow:hover:not(:disabled) {
+  background: #ffd83d;
+  color: #073471;
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 8px 24px rgba(255, 216, 61, 0.5);
+}
+
+.reader-3d-arrow:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.reader-prev-btn {
+  left: 0;
+}
+
+.reader-next-btn {
+  right: 0;
+}
+
+@media (max-width: 767px) {
+  .reader-3d-arrow {
+    width: 34px;
+    height: 34px;
+    font-size: 24px;
+  }
+  .reader-prev-btn { left: 4px; }
+  .reader-next-btn { right: 4px; }
+}
+
+/* --------------------------------------------------------------------------
+   MINIATURAS (DRAWER DE PÁGINAS)
+   -------------------------------------------------------------------------- */
+.reader-thumbnails {
+  display: flex;
+  justify-content: flex-start;
+  gap: 12px;
+  padding: 16px 8px 8px;
+  overflow-x: auto;
+  max-width: 100%;
+}
+
+.thumb-btn {
+  flex: 0 0 120px;
+  cursor: pointer;
+  border-radius: 10px;
+  padding: 6px;
+  background: #ffffff;
+  border: 2px solid #e0ecf8;
+  color: #1e3a68;
+  transition: all 0.15s ease;
+}
+
+.thumb-btn:hover {
+  border-color: #ffd83d;
+  transform: translateY(-2px);
+}
+
+.thumb-btn.selected {
+  border-color: #ffd83d;
+  background: #fffcee;
+  box-shadow: 0 4px 14px rgba(255, 216, 61, 0.4);
+}
+
+.thumbnail-paper {
+  border-radius: 6px;
+  overflow: hidden;
+  background: #f1f7fe;
+  pointer-events: none;
+}
+
+.thumb-btn span {
+  display: block;
+  font-size: 11px;
+  font-weight: 800;
+  text-align: center;
+  margin-top: 5px;
+}
+
+/* Leyenda y Descarga */
+.reader-caption {
+  text-align: center;
+  font-size: 12.5px;
+  font-weight: 700;
+  color: #6482a5;
+  margin: 18px auto 0;
+  max-width: 680px;
+}
+
+.reader-download {
+  max-width: 380px;
+  margin: 28px auto 0;
+  text-align: center;
+}
+
+.reader-download p {
+  font-size: 12px;
+  color: #6a88ab;
+  margin-top: 8px;
+}
