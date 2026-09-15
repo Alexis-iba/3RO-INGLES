@@ -6,6 +6,59 @@ import Image from "next/image";
 import Link from "next/link";
 import { RESOURCES, getAllVocab } from "@/lib/data";
 import { shuffle } from "@/lib/shuffle";
+import { ACTIVITY_ART } from "@/lib/activity-art";
+
+// No todas las palabras de los audios (letras, algunos números y animales)
+// tienen ilustración en el banco de actividades; para esas mostramos un
+// respaldo (swatch de color, número grande o emoji) en vez de fallar.
+const WORD_VISUAL_FALLBACK = {
+  Orange: { kind: "swatch", value: "#f5821f" },
+  Purple: { kind: "swatch", value: "#8b5cf6" },
+  Pink: { kind: "swatch", value: "#ff6fa5" },
+  Black: { kind: "swatch", value: "#22252b" },
+  White: { kind: "swatch", value: "#ffffff" },
+  Nine: { kind: "digit", value: "9" },
+  Ten: { kind: "digit", value: "10" },
+  Tiger: { kind: "emoji", value: "🐯" },
+  Bear: { kind: "emoji", value: "🐻" },
+  Zebra: { kind: "emoji", value: "🦓" },
+  Giraffe: { kind: "emoji", value: "🦒" },
+  Horse: { kind: "emoji", value: "🐴" },
+  Sheep: { kind: "emoji", value: "🐑" },
+  Duck: { kind: "emoji", value: "🦆" },
+  Frog: { kind: "emoji", value: "🐸" },
+};
+
+// Los textos de "speak" vienen en minúsculas ("seven", "orange"...) salvo la
+// primera palabra de cada lista, pero el banco de arte usa Mayúscula inicial.
+function titleCase(word) {
+  return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
+}
+
+function WordVisual({ word }) {
+  const key = titleCase(word);
+  const art = ACTIVITY_ART[key];
+  if (art) {
+    return (
+      <div className="relative mx-auto mb-2.5 h-24 w-24 overflow-hidden rounded-2xl">
+        <Image src={`/activity-images/${art.file}`} alt="" fill sizes="96px" className="object-cover" />
+      </div>
+    );
+  }
+  const fallback = WORD_VISUAL_FALLBACK[key];
+  if (fallback?.kind === "swatch") {
+    return <div className="mx-auto mb-2.5 h-24 w-24 rounded-2xl border-4 border-white/20" style={{ background: fallback.value }} />;
+  }
+  if (fallback?.kind === "emoji") {
+    return <div className="mb-2.5 text-6xl">{fallback.value}</div>;
+  }
+  // Letras del abecedario, números en palabra que no tienen dígito propio, etc.
+  return (
+    <div className="mx-auto mb-2.5 flex h-24 w-24 items-center justify-center rounded-2xl bg-white/10 font-heading text-4xl font-extrabold">
+      {fallback?.kind === "digit" ? fallback.value : key}
+    </div>
+  );
+}
 
 const TABS = [
   { id: "todos", label: "Todos" },
@@ -204,16 +257,10 @@ export default function RecursosPage() {
             <button onClick={closeModal} className="absolute right-4 top-3.5 text-2xl">
               ✕
             </button>
-            {modalResource.image ? (
-              <div className="relative mx-auto mb-2.5 h-24 w-24 overflow-hidden rounded-2xl">
-                <Image src={modalResource.image} alt={modalResource.title} fill sizes="96px" className="object-cover" />
-              </div>
-            ) : (
-              <div className="mb-2.5 text-6xl">{modalResource.emoji}</div>
-            )}
+            <WordVisual word={words[wordIndex]} />
             <h3 className="font-heading text-xl font-extrabold">{modalResource.title}</h3>
             <p className="mt-1.5 text-sm text-[#b9c3dd]">
-              {playing ? `Diciendo: "${words[wordIndex] || ""}"` : "Pausado"}
+              {playing ? `Diciendo: "${words[wordIndex] ? titleCase(words[wordIndex]) : ""}"` : "Pausado"}
             </p>
             <div className="my-4.5 h-2 overflow-hidden rounded-full bg-white/15">
               <div className="h-full bg-brand-yellow transition-all" style={{ width: `${progress}%` }} />
