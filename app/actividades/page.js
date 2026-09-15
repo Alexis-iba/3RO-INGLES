@@ -8,16 +8,27 @@ import "./activities.css";
 
 // Los juegos generan preguntas al azar en el primer render; se cargan solo en
 // cliente para evitar que el HTML del servidor no coincida con el del navegador.
-const QuizGame = dynamic(() => import("@/components/activities/QuizGame"), { ssr: false });
-const MatchGame = dynamic(() => import("@/components/activities/MatchGame"), { ssr: false });
-const ListenGame = dynamic(() => import("@/components/activities/ListenGame"), { ssr: false });
-const WriteGame = dynamic(() => import("@/components/activities/WriteGame"), { ssr: false });
-const SpeedGame = dynamic(() => import("@/components/activities/SpeedGame"), { ssr: false });
-const MemoryFlipGame = dynamic(() => import("@/components/activities/MemoryFlipGame"), { ssr: false });
-const TrueFalseGame = dynamic(() => import("@/components/activities/TrueFalseGame"), { ssr: false });
-const ScrambleGame = dynamic(() => import("@/components/activities/ScrambleGame"), { ssr: false });
-const SpellingChoiceGame = dynamic(() => import("@/components/activities/SpellingChoiceGame"), { ssr: false });
-const HuntGame = dynamic(() => import("@/components/activities/HuntGame"), { ssr: false });
+// `loading` reserva espacio mientras el chunk carga, para que el cambio de
+// actividad no salte de golpe (de 0px a la altura final del juego).
+function ActivityLoading() {
+  return (
+    <div className="activity-loading" role="status" aria-label="Cargando actividad">
+      <span className="activity-loading-dot" />
+      Cargando actividad…
+    </div>
+  );
+}
+
+const QuizGame = dynamic(() => import("@/components/activities/QuizGame"), { ssr: false, loading: ActivityLoading });
+const MatchGame = dynamic(() => import("@/components/activities/MatchGame"), { ssr: false, loading: ActivityLoading });
+const ListenGame = dynamic(() => import("@/components/activities/ListenGame"), { ssr: false, loading: ActivityLoading });
+const WriteGame = dynamic(() => import("@/components/activities/WriteGame"), { ssr: false, loading: ActivityLoading });
+const SpeedGame = dynamic(() => import("@/components/activities/SpeedGame"), { ssr: false, loading: ActivityLoading });
+const MemoryFlipGame = dynamic(() => import("@/components/activities/MemoryFlipGame"), { ssr: false, loading: ActivityLoading });
+const TrueFalseGame = dynamic(() => import("@/components/activities/TrueFalseGame"), { ssr: false, loading: ActivityLoading });
+const ScrambleGame = dynamic(() => import("@/components/activities/ScrambleGame"), { ssr: false, loading: ActivityLoading });
+const SpellingChoiceGame = dynamic(() => import("@/components/activities/SpellingChoiceGame"), { ssr: false, loading: ActivityLoading });
+const HuntGame = dynamic(() => import("@/components/activities/HuntGame"), { ssr: false, loading: ActivityLoading });
 
 const TYPES = [
   { id: "vocabulario", icon: "abc", title: "Vocabulario", desc: "Une palabras con imágenes" },

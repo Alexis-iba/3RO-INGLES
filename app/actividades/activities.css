@@ -28,6 +28,11 @@
 .match-word-tile, .match-image-tile { height: 116px; cursor: pointer; }
 .match-image-tile { display: flex; align-items: center; justify-content: center; padding: 4px; }
 .match-image-tile .activity-art { width: 104px; height: 104px; border-radius: 12px; }
+@media(max-width: 600px) { .match-illustrated-grid.grid { gap: 10px; } .match-word-tile, .match-image-tile { height: 88px; } .match-word-tile { font-size: 13px; padding-left: 8px; padding-right: 8px; } .match-image-tile .activity-art { width: 72px; height: 72px; } }
+
+.activity-loading { min-height: 260px; display: flex; align-items: center; justify-content: center; gap: 10px; color: #6880ac; font-weight: 800; font-size: 15px; }
+.activity-loading-dot { width: 10px; height: 10px; flex-shrink: 0; border-radius: 50%; background: #7250d7; animation: activityLoadingPulse 1s ease-in-out infinite; }
+@keyframes activityLoadingPulse { 0%,100% { transform: scale(1); opacity: .5; } 50% { transform: scale(1.4); opacity: 1; } }
 .listen-image-option .activity-art { margin: 0 auto 10px; max-width: 180px; }
 .listen-image-option { cursor: pointer; }
 .listen-image-option:disabled, .match-illustrated-grid button:disabled { cursor: default; }
