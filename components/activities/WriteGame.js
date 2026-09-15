@@ -76,7 +76,7 @@ export default function WriteGame() {
           onKeyDown={(e) => e.key === "Enter" && check()}
           placeholder="Escribe aquí..."
           autoComplete="off"
-          className="w-56 rounded-xl border-2 border-blue-light px-4 py-3 text-sm focus:border-brand-blue focus:outline-none"
+          className="w-56 rounded-xl border-2 border-blue-light px-4 py-3 text-base focus:border-brand-blue focus:outline-none"
         />
         <button onClick={check} disabled={checked} className="btn btn-primary btn-sm">
           Verificar

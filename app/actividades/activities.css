@@ -24,6 +24,7 @@
 .activity-art { display: block; width: 100%; height: auto; aspect-ratio: 1; object-fit: contain; border-radius: 18px; background: #fff3cf; }
 .quiz-demo-feedback .activity-feedback-art { display: inline-block; width: 36px; height: 36px; margin-left: 8px; vertical-align: middle; border-radius: 10px; }
 .write-illustration { width: min(240px, 70%); margin: 0 auto 20px; }
+@media(max-width: 600px) { .write-illustration { width: min(120px, 36%); margin: 0 auto 10px; } }
 .match-illustrated-grid { max-width: 660px; margin: 0 auto; }
 .match-word-tile, .match-image-tile { height: 116px; cursor: pointer; }
 .match-image-tile { display: flex; align-items: center; justify-content: center; padding: 4px; }
