@@ -2,7 +2,7 @@ import Image from "next/image";
 import { ACTIVITY_ART } from "@/lib/activity-art";
 
 // Una misma ilustración por palabra en las cuatro modalidades.
-export default function ActivityImage({ word, className = "", decorative = false, priority = false, sizes = "220px" }) {
+export default function ActivityImage({ word, className = "", decorative = false, priority = false, sizes = "220px", loading }) {
   const art = ACTIVITY_ART[word];
   if (!art) throw new Error(`Falta la ilustración de actividad: ${word}`);
 
@@ -14,6 +14,7 @@ export default function ActivityImage({ word, className = "", decorative = false
       height={512}
       sizes={sizes}
       priority={priority}
+      loading={loading}
       className={`activity-art ${className}`}
     />
   );

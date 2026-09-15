@@ -68,11 +68,22 @@ function CatalogoInner() {
   return (
     <div className="catalog-page section-container py-8 md:py-12">
       <header className="catalog-intro">
-        <div className="catalog-intro-copy">
+        <div className="catalog-intro-copy sr-only">
           <h1 className="font-heading text-3xl font-extrabold text-navy md:text-[34px]">Catálogo de libros</h1>
           <p className="mt-2 max-w-xl text-navy/60">
             Historias, vocabulario y temas diseñados especialmente para 3° de primaria.
           </p>
+        </div>
+        <div className="catalog-banner" aria-hidden="true">
+          <Image
+            src="/catalog-images/catalog-banner.png"
+            alt=""
+            width={2144}
+            height={733}
+            sizes="100vw"
+            preload
+            className="catalog-banner-image"
+          />
         </div>
       </header>
 
@@ -187,5 +198,4 @@ export default function CatalogoPage() {
     </Suspense>
   );
 }
-
 

@@ -1,0 +1,176 @@
+.open-book{position:relative;display:grid;grid-template-columns:1fr 1fr;width:100%;aspect-ratio:1.41421356;color:#123c78;background:white;container-type:inline-size}
+.book-leaf{position:relative;min-width:0;overflow:hidden;display:flex;flex-direction:column}
+/* Workbook pages share the same paper frame, with artwork sized for each task. */
+.workbook-leaf{padding:5% 6% 7%;gap:0}.workbook-kicker{font-size:1.2cqw;font-weight:800;color:#697992;border-bottom:1px solid #b8c8d7;padding-bottom:4%;margin-bottom:4%}.workbook-leaf h2{font-size:2.9cqw;margin:0 0 5%;line-height:1.15;text-align:left;color:#24467b}.workbook-instruction{font-size:1.55cqw;font-weight:800;line-height:1.4;margin-bottom:6%}.workbook-instruction small{display:block;font-size:1.25cqw;font-weight:600;color:#6a7390;margin-top:2%}.dictionary-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5cqw}.dictionary-grid>div{display:flex;align-items:center;flex-direction:column;gap:.4cqw;padding:.7cqw;border-radius:8px;background:#ffffffbb;border:1px solid #b7cce04d}.dictionary-grid strong{font-size:1.55cqw}.activity-picture{width:6cqw;height:6cqw;object-fit:contain;flex-shrink:0}.activity-emoji{font-size:5cqw;line-height:1.15;display:inline-flex;justify-content:center;align-items:center;min-width:6cqw;min-height:6cqw;flex-shrink:0}.counting-picture{display:flex;flex-wrap:wrap;align-content:center;justify-content:center;gap:.35cqw;width:6cqw;min-height:6cqw;flex-shrink:0}.counting-picture i{width:1.3cqw;height:1.3cqw;background:#4388db;border-radius:50%;border:1px solid #2567b0}.letter-bank{display:flex;flex-wrap:wrap;gap:1cqw;background:#e7f0fb;border:1px solid #bbcde4;border-radius:6px;padding:1.3cqw;margin-bottom:2cqw;font-size:1.5cqw}.letter-bank b{color:#a65435}.worksheet-rows{display:flex;flex-direction:column;gap:2cqw}.worksheet-rows>div{display:flex;align-items:center;gap:1.5cqw;padding-bottom:1cqw;border-bottom:1px dashed #b7c8db;font-size:1.8cqw}.worksheet-answer{width:8cqw;min-width:0;border:0;border-bottom:1px solid #6383aa;background:#ffffffa8;color:#1d447c;font-size:1.7cqw;border-radius:0;padding:.6cqw;outline-offset:2px}.worksheet-answer:focus{outline:2px solid #5e92df;background:white}.wide-answer{width:100%;margin-bottom:1cqw}.word-options{display:flex;flex-direction:column;gap:.6cqw;font-size:1.6cqw}.word-options label,.true-false-rows label,.self-check label{display:flex;align-items:center;gap:.7cqw;cursor:pointer}.word-options input,.true-false-rows input,.self-check input{width:1.5cqw;height:1.5cqw;accent-color:#4979d0;flex-shrink:0}.spelling-rows>div>div{min-width:0;flex:1}.spelling-rows p{font-size:1.7cqw;letter-spacing:.2cqw;margin-bottom:.6cqw}.sorting-pictures{display:flex;justify-content:space-around;margin-bottom:1cqw}.sorting-columns{display:grid;grid-template-columns:1fr 1fr;gap:1cqw}.sorting-columns>div{min-width:0;border:1px solid #bdcce0;background:#ffffffaa;padding:1cqw;border-radius:5px}.sorting-columns h4{font-size:1.5cqw;min-height:5cqw;color:#234e87;margin:0 0 1cqw}.story-scene{display:flex;flex-wrap:wrap;justify-content:center;gap:1cqw;padding:2cqw 1cqw;background:linear-gradient(#d5eeff,#f1f9e7);border-radius:10px;margin-bottom:2cqw}.story-scene span{font-size:4.5cqw;line-height:1.2}.workbook-story{font-size:2cqw;line-height:1.8;margin-bottom:2cqw}.story-task{padding:1.4cqw;background:#fff5d5;border-radius:6px;font-size:1.5cqw}.story-task p{margin:.6cqw 0 1cqw}.small-scene span{font-size:4cqw}.true-false-rows{display:flex;flex-direction:column;gap:2cqw}.true-false-rows>div{padding:1.2cqw;background:#ffffffaa;border:1px solid #c9d7e4;border-radius:6px;font-size:1.8cqw}.true-false-rows>div>div{display:flex;gap:3cqw;margin-top:1cqw}.creative-prompt{font-size:1.9cqw;line-height:1.6;margin-bottom:2cqw}.drawing-space{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:20cqw;background:#fff;border:2px dashed #b4c9df;border-radius:8px;color:#9aadc4;margin-bottom:1cqw}.drawing-space span{font-size:5cqw}.drawing-space small{font-size:1.3cqw}.worksheet-tip{font-size:1.6cqw;font-weight:700;line-height:1.5;margin:1.4cqw 0}.speaking-scene{display:flex;justify-content:center;align-items:center;gap:1cqw;margin:1cqw 0 3cqw}.speaking-scene>span{font-size:5cqw}.speaking-scene>div{font-size:1.7cqw;border:2px solid #abc1e3;border-radius:45%;padding:1.5cqw;background:white}.sentence-frame{font-size:1.8cqw;line-height:1.6;padding:1.4cqw;background:#e2efff;border-radius:6px}.review-pictures{display:flex;gap:2cqw}.review-pictures>div{display:flex;flex-direction:column;align-items:center;width:50%}.self-check{font-size:1.6cqw;padding:1.5cqw;background:#e9f5ea;border-radius:6px;display:flex;flex-direction:column;gap:1.4cqw;margin-top:1cqw}.workbook-finish{font-size:2.5cqw;text-align:center;font-weight:900;margin-top:auto;padding-top:1cqw;color:#348458}.mini-answer{display:block;font-size:1.5cqw;line-height:1.5;color:#9cafc3}.miniature-book .workbook-leaf{border-radius:0}.miniature-book .drawing-space{border-width:1px}.miniature-book .worksheet-rows{gap:1cqw}.workbook-solutions{margin-top:18px;background:white;border:1px solid #c5d6e8;border-radius:12px;padding:16px;font-size:14px;line-height:1.7}.workbook-solutions summary{font-weight:800;cursor:pointer}.workbook-solutions p{margin-top:8px}.reader-counter{white-space:nowrap}.reader-sheet>.open-book{aspect-ratio:1.3}.reader-caption{max-width:700px;margin:12px auto 0}
+
+/* Bright illustrated worksheets, shared by the reader and the PDF export. */
+.open-book,.reader-sheet>.open-book{aspect-ratio:1.41421356}
+.open-book .workbook-leaf{padding:2.3cqw 2.5cqw 6cqw;background:linear-gradient(170deg,#d8f2ff 0%,#f2fbff 22%,#fff 45%,#fff 90%,#e5f5d8);border:1px solid #b9e0f2;border-radius:1cqw;box-shadow:inset 0 0 1.4cqw #3889b313;color:#103a77}
+.workbook-kicker{align-self:flex-start;max-width:100%;border:0;border-radius:5cqw;background:#ffdb69;color:#17417c;padding:.65cqw 1.5cqw;margin:0 0 1.2cqw;font-size:1.2cqw;font-weight:900}
+.workbook-title-row{display:flex;align-items:center;gap:1cqw;min-height:10cqw;margin-bottom:1cqw}
+.open-book .workbook-title-row h2{flex:1;font-family:var(--font-heading);font-size:3.7cqw;line-height:1.03;font-weight:900;margin:0;letter-spacing:-.08cqw;text-shadow:0 .15cqw 0 #b8dcf5}
+.workbook-title-row h2 span:nth-child(3n+1){color:#0671d8}
+.workbook-title-row h2 span:nth-child(3n+2){color:#e83579}
+.workbook-title-row h2 span:nth-child(3n){color:#239543}
+.workbook-title-art{width:11cqw;height:9cqw;object-fit:cover;border:.3cqw solid #fff;border-radius:2cqw;box-shadow:0 .3cqw .7cqw #37689b26;transform:rotate(3deg)}
+.workbook-instruction{font-size:1.55cqw;line-height:1.4;margin:0 0 1.6cqw;font-weight:900}
+.workbook-instruction small{font-size:1.25cqw;color:#46659b;margin-top:.3cqw}
+.dictionary-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:1cqw}
+.dictionary-grid>div{padding:.6cqw .45cqw .8cqw;gap:.15cqw;background:#e9f7ff;border:.14cqw dashed #90d8fa;border-radius:1.5cqw;box-shadow:0 .3cqw .5cqw #22447510;text-align:center;justify-content:center;min-width:0}
+.dictionary-grid>div:nth-child(3n+2){background:#fff0f6;border-color:#f8adce}
+.dictionary-grid>div:nth-child(3n){background:#fff9dd;border-color:#f0d578}
+.dictionary-grid .activity-picture{width:9cqw;height:9cqw;max-width:100%;border-radius:1cqw;mix-blend-mode:multiply}
+.dictionary-grid strong{font-size:1.5cqw;line-height:1.15;font-weight:900}
+.dictionary-grid small{font-size:1.15cqw;line-height:1.3;color:#416294}
+.dictionary-grid .dictionary-motto{background:#e9f7e8;border-color:#b1dca4;font-size:1.7cqw;color:#28863e}
+.dictionary-motto span{color:#eaaa15;font-size:3.5cqw;line-height:1.2}
+.letter-bank{border:.15cqw dashed #b7adf4;background:#efedff;border-radius:1.3cqw;font-size:1.5cqw;gap:.6cqw 1.3cqw;padding:1.2cqw;margin:0 0 1.5cqw}
+.letter-bank b{color:#e83e83;font-size:1.9cqw}
+.worksheet-rows{gap:1.1cqw}
+.worksheet-rows>div{border:.13cqw dashed #9cccf3;border-radius:1.5cqw;background:#f4faff;padding:.8cqw 1.2cqw;min-height:8.4cqw;gap:2cqw}
+.worksheet-rows>div:nth-child(2n){background:#fff4f8;border-color:#efb0c9}
+.worksheet-rows>div>b{display:grid;place-items:center;width:3.6cqw;height:3.6cqw;border-radius:50%;background:#ec4789;color:#fff;font-size:2cqw;flex-shrink:0}
+.worksheet-rows>div:nth-child(2n)>b{background:#188ddb}
+.workbook-leaf .activity-picture{object-fit:contain;flex-shrink:0}
+.worksheet-rows .activity-picture{width:7cqw;height:7cqw;border-radius:1cqw;mix-blend-mode:multiply}
+.worksheet-answer{border:1px solid #8fa7e6;border-radius:.8cqw;min-height:3.5cqw;background:white}
+.worksheet-rows>div>.worksheet-answer{width:6cqw;min-height:4.6cqw;text-align:center;margin-left:auto}
+.wide-answer{width:100%;min-height:3.1cqw;margin-bottom:.7cqw}
+.printed-answer{display:inline-block;white-space:pre-wrap;overflow-wrap:anywhere;line-height:1.3}
+.workbook-story{font-size:1.85cqw;line-height:1.65;background:#ffffffcc;padding:1cqw;border-radius:1cqw}
+.story-scene{padding:1.2cqw;margin-bottom:1.2cqw}
+.true-false-rows{gap:1.2cqw}
+.creative-prompt{font-size:1.75cqw;line-height:1.5}
+.drawing-space{min-height:18cqw}
+.workbook-bottom{position:absolute;bottom:3cqw;left:2.5cqw;right:2.5cqw;display:flex;align-items:center;justify-content:space-between;gap:1cqw;font-size:1.05cqw;color:#2f7993}
+.workbook-bottom b{color:#d7497b}
+.open-book .printed-page{position:absolute;bottom:.65cqw;left:calc(50% - 2cqw);width:4cqw;border-radius:2cqw;background:white;border:1px solid #c6dfb8;text-align:center;font-size:1.4cqw;font-weight:900;color:#17427c}
+.pdf-workbook-pages{position:fixed;left:-20000px;top:0;width:1400px;pointer-events:none}
+.pdf-workbook-pages .open-book{width:1400px;height:989.9495px;aspect-ratio:auto;box-shadow:none;border-radius:0}
+.pdf-workbook-pages .workbook-leaf{border-radius:0;box-shadow:none}
+.workbook-download{width:100%}
+.workbook-download .btn-download{display:flex;width:100%;align-items:center;justify-content:center;gap:10px;padding:14px 18px;border-radius:16px;background:#eaf2ff;color:#345db2;font-weight:900;cursor:pointer}
+.workbook-download .btn-download:disabled{cursor:wait;opacity:.7}
+.pdf-status{display:block;font-size:12px;color:#466294;margin-top:4px}
+.pdf-status:empty{display:none}
+.pdf-ready-link{display:block;font-size:12px;text-decoration:underline;margin-top:5px;color:#345db2}
+.reader-download{max-width:400px;margin:22px auto;text-align:center}
+.reader-download>p{font-size:12px;color:#617598;margin-top:8px}
+
+.open-book{font-family:var(--font-body);font-weight:400;line-height:1.5;text-align:left;font-size:1.5cqw}
+.open-book .workbook-title-row{min-height:9cqw;flex-shrink:0}
+.open-book .workbook-title-row h2{font-size:3.4cqw;text-align:left}
+.open-book .workbook-leaf{min-height:0}
+.open-book .workbook-leaf>div,.open-book .workbook-leaf>p{flex-shrink:0}
+.open-book .workbook-finish{padding-top:.3cqw}
+.open-book .self-check{gap:.8cqw}
+.detail-actions>.workbook-download{display:block;padding:0;cursor:default}
+.open-book .speaking-scene{margin:.5cqw 0 1.2cqw}
+.open-book .worksheet-tip{margin:1cqw 0}
+.open-book .printed-answer{display:block}
+.open-book .dictionary-grid .activity-picture{width:8.4cqw;height:8.4cqw}
+.open-book .worksheet-rows .activity-picture{width:6.5cqw;height:6.5cqw}
+.open-book .worksheet-rows>div{min-height:8cqw}
+.open-book .workbook-finish{font-size:1.8cqw;margin:1cqw 0 0;padding:0}
+.open-book .self-check{padding:1cqw;gap:.55cqw}
+
+/* Illustrated open-book artwork: the same page layers are exported to PDF. */
+.open-book .workbook-leaf{padding:0;border:0;border-radius:0;background:transparent;box-shadow:none;isolation:isolate}
+.workbook-garden-art{position:absolute;inset:0 auto 0 0;width:200%;height:100%;max-width:none;z-index:-1;pointer-events:none}
+.words-leaf .workbook-garden-art{left:-100%}
+.open-book{background:transparent;border-radius:2cqw;overflow:hidden;filter:drop-shadow(0 .7cqw .6cqw #245d8e22)}
+.open-book .workbook-kicker{position:absolute;top:4.6%;left:11%;max-width:65%;font-size:1.1cqw;line-height:1.3;padding:.65cqw 1.3cqw;z-index:1;box-shadow:0 .2cqw 0 #e5ac2b44}
+.open-book .words-leaf .workbook-kicker{left:7%;max-width:63%}
+.open-book .workbook-title-row{position:absolute;left:11%;top:11%;width:47%;height:16%;min-height:0;margin:0;align-items:center}
+.open-book .words-leaf .workbook-title-row{left:7%;width:47%}
+.open-book .workbook-title-row h2{font-size:4.2cqw;line-height:1.03;letter-spacing:-.12cqw;text-shadow:0 .15cqw 0 #fff,0 .28cqw 0 #295ca866;font-weight:900;transform:rotate(-2deg)}
+.open-book .workbook-content{position:absolute;top:30%;left:10%;right:5%;bottom:13%;display:flex;flex-direction:column;text-align:left}
+.open-book .words-leaf .workbook-content{left:6%;right:10%;top:32%}
+.open-book .workbook-instruction{font-size:1.45cqw;line-height:1.25;margin-bottom:1cqw;background:#ffffffe6;border-radius:1cqw;padding:.4cqw .6cqw}
+.open-book .workbook-instruction small{font-size:1.12cqw;line-height:1.3}
+.open-book .dictionary-grid{gap:.65cqw}
+.open-book .dictionary-grid>div{padding:.35cqw .3cqw .45cqw;border:.2cqw solid white;outline:1px dashed #b4d8e8;box-shadow:0 .2cqw .3cqw #345f7a20;border-radius:1.3cqw}
+.open-book .dictionary-grid .activity-picture{width:7.6cqw;height:7.6cqw;mix-blend-mode:normal}
+.open-book .dictionary-grid strong{font-family:var(--font-heading);font-size:1.55cqw;line-height:1.15;color:#123f80}
+.open-book .dictionary-grid small{font-size:1.05cqw}
+.open-book .dictionary-motto b{font-size:1.6cqw;line-height:1.15}
+.open-book .letter-bank{font-size:1.3cqw;padding:.8cqw;gap:.35cqw .8cqw;margin-bottom:.85cqw;background:#efedffed}
+.open-book .letter-bank b{font-size:1.6cqw}
+.open-book .worksheet-rows{gap:.8cqw}
+.open-book .worksheet-rows>div{min-height:6.7cqw;padding:.5cqw .8cqw;gap:1cqw;background:#ffffffeb;border-width:.15cqw}
+.open-book .worksheet-rows .activity-picture{width:5.7cqw;height:5.7cqw}
+.open-book .workbook-page-1 .worksheet-rows{width:74%}
+.open-book .worksheet-rows>div>.worksheet-answer{width:5cqw;min-height:4cqw}
+.open-book .word-options{font-size:1.4cqw;gap:.4cqw}
+.open-book .spelling-rows p{font-size:1.4cqw;letter-spacing:.1cqw}
+.open-book .wide-answer{min-height:2.5cqw;padding:.35cqw .6cqw;margin-bottom:.5cqw;font-size:1.4cqw;background:#fffffff2}
+.open-book .sorting-pictures .activity-picture{width:4cqw;height:4cqw}
+.open-book .sorting-columns{background:#ffffffd9;border-radius:1cqw}
+.open-book .sorting-columns h4{min-height:3.8cqw;font-size:1.3cqw;margin-bottom:.6cqw}
+.open-book .story-scene{padding:.6cqw;margin-bottom:.7cqw}
+.open-book .story-scene span{font-size:3cqw}
+.open-book .workbook-story{font-size:1.55cqw;line-height:1.55;margin-bottom:.7cqw;padding:.65cqw;background:#fffffff2}
+.open-book .story-task{font-size:1.25cqw;padding:.8cqw;background:#fff7dfee}
+.open-book .true-false-rows{gap:.7cqw}
+.open-book .true-false-rows>div{font-size:1.5cqw;padding:.75cqw;background:#fffffff0}
+.open-book .creative-prompt{font-size:1.5cqw;line-height:1.45;margin-bottom:1cqw;background:#ffffffe6;padding:.5cqw;border-radius:.7cqw}
+.open-book .drawing-space{min-height:13cqw;background:#fffffff2}
+.open-book .speaking-scene{margin:0 0 .7cqw}
+.open-book .speaking-scene>span{font-size:3.5cqw}
+.open-book .speaking-scene>div{font-size:1.3cqw;padding:.8cqw}
+.open-book .sentence-frame{font-size:1.45cqw;line-height:1.4;padding:.8cqw}
+.open-book .worksheet-tip{font-size:1.3cqw;margin:.7cqw 0;background:#ffffffe6;border-radius:.4cqw}
+.open-book .review-pictures .activity-picture{width:4.5cqw;height:4.5cqw}
+.open-book .self-check{font-size:1.3cqw;padding:.7cqw;gap:.3cqw;background:#edf7e9f2}
+.open-book .workbook-finish{font-size:1.6cqw;margin:.6cqw 0 0}
+.open-book .workbook-bottom{display:none}
+.open-book .printed-page{bottom:3.6%;left:calc(50% - 2cqw);font-size:1.4cqw;border:0;box-shadow:0 .15cqw .4cqw #53874722}
+.pdf-workbook-pages .open-book{filter:none;border-radius:0}
+/* A white letter outline keeps colorful headings readable over the trees. */
+.open-book .workbook-title-row h2{text-shadow:-.1cqw -.1cqw 0 #fff,.1cqw -.1cqw 0 #fff,-.1cqw .1cqw 0 #fff,.1cqw .1cqw 0 #fff,0 .23cqw .1cqw #25529245}
+
+/* Short readings and concrete third-grade practice. */
+.open-book .guided-reading h3{font-size:2.05cqw;line-height:1.2;font-weight:900;margin:0 0 .7cqw;padding:0;border:0;color:#12437e;background:#fffffff2;border-radius:.7cqw}
+.open-book .reading-pictures{display:flex;justify-content:center;gap:1.5cqw;background:#ffffffef;border-radius:1cqw;padding:.5cqw;margin-bottom:.8cqw}
+.open-book .reading-pictures img{width:5.7cqw;height:5.7cqw;object-fit:contain;border-radius:.8cqw}
+.open-book .reading-text{font-size:1.65cqw;line-height:1.65;padding:.9cqw;background:#fff;border-radius:1cqw;color:#17416d;margin:0 0 .7cqw}
+.open-book .reading-glossary{display:flex;flex-wrap:wrap;gap:.4cqw 1.1cqw;font-size:1.2cqw;line-height:1.4;background:#fff3cf;padding:.7cqw;border-radius:.7cqw}
+.open-book .reading-glossary b{width:100%}
+.open-book .reading-reference{font-size:1.35cqw;line-height:1.35;background:#edf7ff;padding:.6cqw;border-radius:.7cqw;margin-bottom:.7cqw;font-weight:800}
+.open-book .reading-reference small{display:block;font-size:1.1cqw;font-weight:500}
+.open-book .reading-question{min-width:0;margin:0 0 .8cqw;border:1px solid #c8dded;border-radius:1cqw;padding:.5cqw .8cqw .7cqw;background:#fff}
+.open-book .reading-question legend{float:left;width:100%;font-size:1.5cqw;font-weight:900;margin-bottom:.4cqw;line-height:1.3}
+.open-book .reading-question label,.open-book .printed-choice{display:flex;align-items:center;gap:.7cqw;clear:both;font-size:1.4cqw;line-height:1.4;padding:.15cqw 0}
+.open-book .reading-question input{width:1.5cqw;height:1.5cqw;accent-color:#3c71c5;flex-shrink:0}
+.open-book .worksheet-review{border:1px solid #9dbbdf;background:#eff7ff;color:#204f94;border-radius:.8cqw;padding:.5cqw .8cqw;font-size:1.25cqw;font-weight:800;cursor:pointer}
+.open-book .exercise-feedback{font-size:1.2cqw;line-height:1.35;background:#fff9de;padding:.5cqw;margin-top:.5cqw;border-radius:.6cqw}
+.open-book .join-hint{font-size:1.2cqw;line-height:1.3;background:#fff8da;border-radius:.7cqw;padding:.6cqw;margin-bottom:.7cqw}
+.open-book .join-board{position:relative;display:flex;justify-content:space-between;height:calc(var(--join-rows) * 7cqw);background:#ffffffed;border-radius:1cqw}
+.open-book .join-column{width:33%;display:flex;flex-direction:column;z-index:1}
+.open-book .join-picture,.open-book .join-word{position:relative;display:flex;align-items:center;justify-content:center;height:7cqw;width:100%;padding:.5cqw .8cqw;background:transparent;border:0;font-size:1.5cqw;font-weight:900;line-height:1.2;text-align:center;color:#234d86;border-radius:.8cqw}
+.open-book button.join-picture,.open-book button.join-word{cursor:pointer}
+.open-book .join-word:disabled{color:#234d86;cursor:default;opacity:1}
+.open-book .join-picture img{width:5.7cqw;height:5.7cqw;object-fit:contain;border-radius:.8cqw}
+.open-book .selected-picture{background:#d9ecff;outline:.2cqw solid #3479d5;outline-offset:-.2cqw}
+.open-book .join-dot{position:absolute;font-size:1.1cqw;right:0;color:#4779ab;transform:translateX(50%)}
+.open-book .join-word .join-dot{left:0;right:auto;transform:translateX(-50%)}
+.open-book .join-lines{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.open-book .join-actions{display:flex;gap:.7cqw;margin-top:.8cqw}
+.open-book .sequence-tasks{display:flex;flex-direction:column;gap:1.3cqw}
+.open-book .sequence-tasks>div{display:flex;align-items:center;gap:1.2cqw;background:#fff;padding:1cqw;border-radius:1cqw;font-size:1.65cqw;line-height:1.5}
+.open-book .sequence-tasks .worksheet-answer{width:3.5cqw;flex-shrink:0;text-align:center}
+.open-book .cloze-tasks>div{background:#fff;border-radius:1cqw;margin-bottom:1.2cqw;padding:1cqw;font-size:1.7cqw;line-height:1.5}
+.open-book .cloze-tasks p{margin-bottom:.6cqw}
+.open-book .exploration-card{background:#fff;border:1px solid #d3e3f0;border-radius:.8cqw;padding:.6cqw;margin-bottom:.7cqw}
+.open-book .exploration-image{width:100%;height:10cqw;object-fit:contain;display:block;border-radius:.6cqw}
+.open-book .exploration-card label{display:block;font-size:1.2cqw;color:#345a87}
+.open-book .gallery-count-3 .exploration-image{height:6.9cqw}
+.open-book .gallery-count-1 .exploration-image{height:15cqw}
+.open-book .gallery-count-1 .drawing-space{min-height:9cqw}
+.open-book .gallery-count-1 .drawing-space small{padding:1cqw;text-align:center}
+.open-book .story-scene .activity-picture{width:4cqw;height:4cqw;border-radius:.7cqw}
+.reader-thumbnails{justify-content:flex-start}
+.reader-thumbnails>button{flex:0 0 110px}
+.open-book .gallery-count-3 .exploration-image{height:6.2cqw}
+.open-book .gallery-count-3 .exploration-card{margin-bottom:.5cqw;padding:.5cqw}
+.open-book .cloze-tasks>div{font-size:1.55cqw;margin-bottom:.8cqw;padding:.8cqw}

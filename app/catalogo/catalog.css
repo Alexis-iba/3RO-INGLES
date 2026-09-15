@@ -1,5 +1,8 @@
 .catalog-page { max-width:none; padding:0; background:white; }
-.catalog-intro { position:relative; display:flex; align-items:center; justify-content:space-between; gap:24px; padding:28px 5%; background:linear-gradient(110deg,#d9f1ff,#f2fbff); overflow:hidden; }
+.catalog-intro { position:relative; background:#dff5ff; overflow:hidden; border-bottom:1px solid #cbe9fa; }
+.catalog-banner { position:relative; width:100%; aspect-ratio:2034 / 352; overflow:hidden; }
+/* Frame the supplied artwork, hiding its white margins and left edge. */
+.catalog-banner-image { position:absolute; display:block; width:100.69%; max-width:none; height:auto; left:-0.69%; top:-54.83%; }
 .catalog-intro-copy { min-width:0; }
 .catalog-intro h1 { font-size:clamp(28px,3vw,42px); line-height:1.1; }
 .catalog-intro p { color:#244d7a; font-size:15px; max-width:420px; }
@@ -60,7 +63,9 @@
  .catalog-extra > * { flex:1 1 220px; }
 }
 @media(max-width:767px) {
- .catalog-intro { padding:22px 18px; }.catalog-intro-art { display:none; }.catalog-page > div { grid-template-columns:125px minmax(0,1fr); }.catalog-page aside.card { padding:18px 6px; position:static; }.catalog-page aside.card h4 { font-size:13px; padding:0 6px; }.catalog-page aside.card > div { flex-direction:column; overflow:visible; }.catalog-page aside.card button { font-size:12px; padding:9px 5px; gap:5px; }.catalog-main { padding:16px 10px; }.catalog-toolbar { flex-direction:column; align-items:stretch; gap:10px; }.catalog-grid-col { max-height:none; overflow-y:visible; padding-right:0; }.catalog-grid-col .grid { gap:12px; }.catalog-extra { flex-direction:column; }.catalog-book { padding:6px; }.catalog-cover h2 { font-size:clamp(15px,3vw,23px); height:52px; padding:7px 3px 0; }.catalog-scene { height:clamp(95px,22vw,155px); }.catalog-book-info strong { font-size:12px; }.catalog-unit { font-size:11px; }.catalog-tags span { font-size:10px; padding:1px 7px; }.catalog-cta { font-size:12px; padding:7px; }
+ .catalog-banner { aspect-ratio: 900 / 352; }
+ .catalog-banner-image { width:227.56%; left:-1.56%; }
+ .catalog-intro-art { display:none; }.catalog-page > div { grid-template-columns:125px minmax(0,1fr); }.catalog-page aside.card { padding:18px 6px; position:static; }.catalog-page aside.card h4 { font-size:13px; padding:0 6px; }.catalog-page aside.card > div { flex-direction:column; overflow:visible; }.catalog-page aside.card button { font-size:12px; padding:9px 5px; gap:5px; }.catalog-main { padding:16px 10px; }.catalog-toolbar { flex-direction:column; align-items:stretch; gap:10px; }.catalog-grid-col { max-height:none; overflow-y:visible; padding-right:0; }.catalog-grid-col .grid { gap:12px; }.catalog-extra { flex-direction:column; }.catalog-book { padding:6px; }.catalog-cover h2 { font-size:clamp(15px,3vw,23px); height:52px; padding:7px 3px 0; }.catalog-scene { height:clamp(95px,22vw,155px); }.catalog-book-info strong { font-size:12px; }.catalog-unit { font-size:11px; }.catalog-tags span { font-size:10px; padding:1px 7px; }.catalog-cta { font-size:12px; padding:7px; }
 }
 @media(max-width:390px) { .catalog-page > div { grid-template-columns:108px minmax(0,1fr); }.catalog-main { padding:12px 7px; }.catalog-grid-col .grid { gap:8px; }.catalog-book { padding:4px; } }
 

@@ -93,7 +93,7 @@ export default async function BookDetailPage({ params }) {
             <Link href={`/vista-previa/${book.id}`} className="btn-read">
               <UiIcon name="book" size={18} /> Leer ahora
             </Link>
-            <DownloadPdfButton book={book} />
+            <DownloadPdfButton key={book.id} book={book} />
             <FavoriteButton bookId={book.id} />
           </div>
         </div>
