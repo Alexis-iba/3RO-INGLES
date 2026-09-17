@@ -3,6 +3,8 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import MobileBottomNav from "@/components/MobileBottomNav";
+import InstallAppBanner from "@/components/InstallAppBanner";
+import PwaServiceWorker from "@/components/PwaServiceWorker";
 
 const baloo = localFont({
   src: "./fonts/baloo-2-latin.woff2",
@@ -23,7 +25,17 @@ export const metadata = {
   description: "Libros y recursos de inglés para niños de 3° de primaria.",
   icons: {
     icon: "/favicon.ico?v=20260914",
+    apple: "/icons/apple-touch-icon.png",
   },
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "default",
+    title: "EnglishKids",
+  },
+};
+
+export const viewport = {
+  themeColor: "#ffd83d",
 };
 
 export default function RootLayout({ children }) {
@@ -34,6 +46,8 @@ export default function RootLayout({ children }) {
         <main className="flex-1 pb-16 md:pb-0">{children}</main>
         <Footer />
         <MobileBottomNav />
+        <InstallAppBanner />
+        <PwaServiceWorker />
       </body>
     </html>
   );

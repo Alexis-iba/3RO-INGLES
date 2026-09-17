@@ -4,6 +4,7 @@ import { useMemo, useEffect, useState } from "react";
 import { getActivityVocab } from "@/lib/activity-vocab";
 import { shuffle } from "@/lib/shuffle";
 import { pickRoundWords, readRoundHistory, writeRoundHistory } from "@/lib/quiz-round";
+import { speakCorrect, speakIncorrect, speakResult } from "@/lib/voice-feedback";
 import ActivityImage from "./ActivityImage";
 
 const TOTAL = 8;
@@ -81,7 +82,13 @@ export default function SpellingChoiceGame() {
   function handleAnswer(option) {
     if (selected) return;
     setSelected(option);
-    if (option === current.word) setScore((s) => s + 1);
+    const correct = option === current.word;
+    if (correct) {
+      setScore((s) => s + 1);
+      speakCorrect();
+    } else {
+      speakIncorrect();
+    }
   }
   function handleNext() {
     if (index + 1 < TOTAL) {
@@ -89,6 +96,7 @@ export default function SpellingChoiceGame() {
       setSelected(null);
     } else {
       setFinished(true);
+      speakResult(score / TOTAL);
     }
   }
   function restart() {

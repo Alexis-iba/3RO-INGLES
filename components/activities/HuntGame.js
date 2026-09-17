@@ -4,6 +4,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { getActivityVocab } from "@/lib/activity-vocab";
 import { shuffle } from "@/lib/shuffle";
 import { pickRoundWords, readRoundHistory, writeRoundHistory } from "@/lib/quiz-round";
+import { speakCorrect, speakIncorrect, speakResult } from "@/lib/voice-feedback";
 import ActivityImage from "./ActivityImage";
 
 const TOTAL = 8;
@@ -31,6 +32,7 @@ export default function HuntGame({ mode = "visual" }) {
   const targets = round.items;
   const [index, setIndex] = useState(0);
   const [score, setScore] = useState(0);
+  const [correctCount, setCorrectCount] = useState(0);
   const [streak, setStreak] = useState(0);
   const [bestStreak, setBestStreak] = useState(0);
   const [found, setFound] = useState(false);
@@ -53,6 +55,7 @@ export default function HuntGame({ mode = "visual" }) {
     timerRef.current = setTimeout(() => {
       setTimedOut(true);
       setStreak(0);
+      speakIncorrect();
     }, DURATION);
     if (mode === "audio") speak(target.word);
     return () => clearTimeout(timerRef.current);
@@ -68,6 +71,7 @@ export default function HuntGame({ mode = "visual" }) {
         setIndex(index + 1);
       } else {
         setFinished(true);
+        speakResult(correctCount / TOTAL);
       }
     }, 900);
     return () => clearTimeout(advanceRef.current);
@@ -82,9 +86,12 @@ export default function HuntGame({ mode = "visual" }) {
       setStreak(nextStreak);
       setBestStreak((b) => Math.max(b, nextStreak));
       setScore((s) => s + 10 + Math.min(nextStreak, 5) * 2);
+      setCorrectCount((c) => c + 1);
+      speakCorrect();
     } else {
       setWrongWord(word);
       setStreak(0);
+      speakIncorrect();
       setTimeout(() => setWrongWord(null), 350);
     }
   }
@@ -95,6 +102,7 @@ export default function HuntGame({ mode = "visual" }) {
     setRound(pickRoundWords(ALL_VOCAB, round.history, TOTAL));
     setIndex(0);
     setScore(0);
+    setCorrectCount(0);
     setStreak(0);
     setBestStreak(0);
     setFound(false);

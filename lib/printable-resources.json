@@ -1,0 +1,17 @@
+{
+  "flashcards": {
+    "pages": 18,
+    "url": "/resources-pdfs/flashcards.pdf",
+    "description": "Tarjetas recortables para practicar y jugar."
+  },
+  "posters": {
+    "pages": 36,
+    "url": "/resources-pdfs/posters.pdf",
+    "description": "Atlas visual por temas, colores y números del 1 al 100."
+  },
+  "worksheets": {
+    "pages": 34,
+    "url": "/resources-pdfs/worksheets.pdf",
+    "description": "Une, completa, escribe, cuenta y resuelve secuencias."
+  }
+}

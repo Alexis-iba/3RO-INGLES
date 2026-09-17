@@ -1,0 +1,191 @@
+[
+  {
+    "letter": "A",
+    "label": "Abeja",
+    "image": "/resources-images/alphabet/a.png",
+    "width": 840,
+    "height": 1235
+  },
+  {
+    "letter": "B",
+    "label": "Ballena",
+    "image": "/resources-images/alphabet/b.png",
+    "width": 845,
+    "height": 1235
+  },
+  {
+    "letter": "C",
+    "label": "Conejo",
+    "image": "/resources-images/alphabet/c.png",
+    "width": 840,
+    "height": 1235
+  },
+  {
+    "letter": "D",
+    "label": "Dinosaurio",
+    "image": "/resources-images/alphabet/d.png",
+    "width": 850,
+    "height": 1235
+  },
+  {
+    "letter": "E",
+    "label": "Elefante",
+    "image": "/resources-images/alphabet/e.png",
+    "width": 855,
+    "height": 1235
+  },
+  {
+    "letter": "F",
+    "label": "Flor",
+    "image": "/resources-images/alphabet/f.png",
+    "width": 855,
+    "height": 1235
+  },
+  {
+    "letter": "G",
+    "label": "Gato",
+    "image": "/resources-images/alphabet/g.png",
+    "width": 860,
+    "height": 1235
+  },
+  {
+    "letter": "H",
+    "label": "Hipopótamo",
+    "image": "/resources-images/alphabet/h.png",
+    "width": 840,
+    "height": 1265
+  },
+  {
+    "letter": "I",
+    "label": "Iguana",
+    "image": "/resources-images/alphabet/i.png",
+    "width": 845,
+    "height": 1265
+  },
+  {
+    "letter": "J",
+    "label": "Jirafa",
+    "image": "/resources-images/alphabet/j.png",
+    "width": 840,
+    "height": 1265
+  },
+  {
+    "letter": "K",
+    "label": "Koala",
+    "image": "/resources-images/alphabet/k.png",
+    "width": 850,
+    "height": 1265
+  },
+  {
+    "letter": "L",
+    "label": "León",
+    "image": "/resources-images/alphabet/l.png",
+    "width": 855,
+    "height": 1265
+  },
+  {
+    "letter": "M",
+    "label": "Mono",
+    "image": "/resources-images/alphabet/m.png",
+    "width": 855,
+    "height": 1265
+  },
+  {
+    "letter": "N",
+    "label": "Nido",
+    "image": "/resources-images/alphabet/n.png",
+    "width": 860,
+    "height": 1265
+  },
+  {
+    "letter": "Ñ",
+    "label": "Ñandú",
+    "image": "/resources-images/alphabet/enye.png",
+    "width": 840,
+    "height": 1255
+  },
+  {
+    "letter": "O",
+    "label": "Oso",
+    "image": "/resources-images/alphabet/o.png",
+    "width": 845,
+    "height": 1255
+  },
+  {
+    "letter": "P",
+    "label": "Pato",
+    "image": "/resources-images/alphabet/p.png",
+    "width": 840,
+    "height": 1255
+  },
+  {
+    "letter": "Q",
+    "label": "Queso",
+    "image": "/resources-images/alphabet/q.png",
+    "width": 850,
+    "height": 1255
+  },
+  {
+    "letter": "R",
+    "label": "Rana",
+    "image": "/resources-images/alphabet/r.png",
+    "width": 855,
+    "height": 1255
+  },
+  {
+    "letter": "S",
+    "label": "Sol",
+    "image": "/resources-images/alphabet/s.png",
+    "width": 855,
+    "height": 1255
+  },
+  {
+    "letter": "T",
+    "label": "Tigre",
+    "image": "/resources-images/alphabet/t.png",
+    "width": 860,
+    "height": 1255
+  },
+  {
+    "letter": "U",
+    "label": "Uvas",
+    "image": "/resources-images/alphabet/u.png",
+    "width": 840,
+    "height": 1230
+  },
+  {
+    "letter": "V",
+    "label": "Vaca",
+    "image": "/resources-images/alphabet/v.png",
+    "width": 845,
+    "height": 1230
+  },
+  {
+    "letter": "W",
+    "label": "Wifi",
+    "image": "/resources-images/alphabet/w.png",
+    "width": 840,
+    "height": 1230
+  },
+  {
+    "letter": "X",
+    "label": "Xilófono",
+    "image": "/resources-images/alphabet/x.png",
+    "width": 850,
+    "height": 1230
+  },
+  {
+    "letter": "Y",
+    "label": "Yoyo",
+    "image": "/resources-images/alphabet/y.png",
+    "width": 855,
+    "height": 1230
+  },
+  {
+    "letter": "Z",
+    "label": "Zebra",
+    "image": "/resources-images/alphabet/z.png",
+    "width": 855,
+    "height": 1230
+  }
+]

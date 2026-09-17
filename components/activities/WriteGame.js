@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { getActivityVocab } from "@/lib/activity-vocab";
 import { pickRoundWords, readRoundHistory, writeRoundHistory } from "@/lib/quiz-round";
+import { speakCorrect, speakIncorrect, speakResult } from "@/lib/voice-feedback";
 import ActivityImage from "./ActivityImage";
 
 const TOTAL = 8;
@@ -27,7 +28,13 @@ export default function WriteGame() {
   function check() {
     if (checked) return;
     setChecked(true);
-    if (value.trim().toLowerCase() === current.word.toLowerCase()) setScore((s) => s + 1);
+    const correct = value.trim().toLowerCase() === current.word.toLowerCase();
+    if (correct) {
+      setScore((s) => s + 1);
+      speakCorrect();
+    } else {
+      speakIncorrect();
+    }
   }
   function next() {
     if (index + 1 < TOTAL) {
@@ -36,6 +43,7 @@ export default function WriteGame() {
       setChecked(false);
     } else {
       setFinished(true);
+      speakResult(score / TOTAL);
     }
   }
   function restart() {

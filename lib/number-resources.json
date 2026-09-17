@@ -1,0 +1,702 @@
+[
+  {
+    "number": 1,
+    "word": "One",
+    "image": "/resources-images/numbers/1.png",
+    "width": 500,
+    "height": 460
+  },
+  {
+    "number": 2,
+    "word": "Two",
+    "image": "/resources-images/numbers/2.png",
+    "width": 500,
+    "height": 460
+  },
+  {
+    "number": 3,
+    "word": "Three",
+    "image": "/resources-images/numbers/3.png",
+    "width": 500,
+    "height": 460
+  },
+  {
+    "number": 4,
+    "word": "Four",
+    "image": "/resources-images/numbers/4.png",
+    "width": 500,
+    "height": 460
+  },
+  {
+    "number": 5,
+    "word": "Five",
+    "image": "/resources-images/numbers/5.png",
+    "width": 504,
+    "height": 460
+  },
+  {
+    "number": 6,
+    "word": "Six",
+    "image": "/resources-images/numbers/6.png",
+    "width": 500,
+    "height": 460
+  },
+  {
+    "number": 7,
+    "word": "Seven",
+    "image": "/resources-images/numbers/7.png",
+    "width": 500,
+    "height": 460
+  },
+  {
+    "number": 8,
+    "word": "Eight",
+    "image": "/resources-images/numbers/8.png",
+    "width": 500,
+    "height": 460
+  },
+  {
+    "number": 9,
+    "word": "Nine",
+    "image": "/resources-images/numbers/9.png",
+    "width": 500,
+    "height": 460
+  },
+  {
+    "number": 10,
+    "word": "Ten",
+    "image": "/resources-images/numbers/10.png",
+    "width": 504,
+    "height": 460
+  },
+  {
+    "number": 11,
+    "word": "Eleven",
+    "image": "/resources-images/numbers/11.png",
+    "width": 500,
+    "height": 464
+  },
+  {
+    "number": 12,
+    "word": "Twelve",
+    "image": "/resources-images/numbers/12.png",
+    "width": 500,
+    "height": 464
+  },
+  {
+    "number": 13,
+    "word": "Thirteen",
+    "image": "/resources-images/numbers/13.png",
+    "width": 500,
+    "height": 464
+  },
+  {
+    "number": 14,
+    "word": "Fourteen",
+    "image": "/resources-images/numbers/14.png",
+    "width": 500,
+    "height": 464
+  },
+  {
+    "number": 15,
+    "word": "Fifteen",
+    "image": "/resources-images/numbers/15.png",
+    "width": 504,
+    "height": 464
+  },
+  {
+    "number": 16,
+    "word": "Sixteen",
+    "image": "/resources-images/numbers/16.png",
+    "width": 500,
+    "height": 464
+  },
+  {
+    "number": 17,
+    "word": "Seventeen",
+    "image": "/resources-images/numbers/17.png",
+    "width": 500,
+    "height": 464
+  },
+  {
+    "number": 18,
+    "word": "Eighteen",
+    "image": "/resources-images/numbers/18.png",
+    "width": 500,
+    "height": 464
+  },
+  {
+    "number": 19,
+    "word": "Nineteen",
+    "image": "/resources-images/numbers/19.png",
+    "width": 500,
+    "height": 464
+  },
+  {
+    "number": 20,
+    "word": "Twenty",
+    "image": "/resources-images/numbers/20.png",
+    "width": 504,
+    "height": 464
+  },
+  {
+    "number": 21,
+    "word": "Twenty-one",
+    "image": "/resources-images/numbers/21.png",
+    "width": 500,
+    "height": 464
+  },
+  {
+    "number": 22,
+    "word": "Twenty-two",
+    "image": "/resources-images/numbers/22.png",
+    "width": 500,
+    "height": 464
+  },
+  {
+    "number": 23,
+    "word": "Twenty-three",
+    "image": "/resources-images/numbers/23.png",
+    "width": 500,
+    "height": 464
+  },
+  {
+    "number": 24,
+    "word": "Twenty-four",
+    "image": "/resources-images/numbers/24.png",
+    "width": 500,
+    "height": 464
+  },
+  {
+    "number": 25,
+    "word": "Twenty-five",
+    "image": "/resources-images/numbers/25.png",
+    "width": 504,
+    "height": 464
+  },
+  {
+    "number": 26,
+    "word": "Twenty-six",
+    "image": "/resources-images/numbers/26.png",
+    "width": 500,
+    "height": 464
+  },
+  {
+    "number": 27,
+    "word": "Twenty-seven",
+    "image": "/resources-images/numbers/27.png",
+    "width": 500,
+    "height": 464
+  },
+  {
+    "number": 28,
+    "word": "Twenty-eight",
+    "image": "/resources-images/numbers/28.png",
+    "width": 500,
+    "height": 464
+  },
+  {
+    "number": 29,
+    "word": "Twenty-nine",
+    "image": "/resources-images/numbers/29.png",
+    "width": 500,
+    "height": 464
+  },
+  {
+    "number": 30,
+    "word": "Thirty",
+    "image": "/resources-images/numbers/30.png",
+    "width": 504,
+    "height": 464
+  },
+  {
+    "number": 31,
+    "word": "Thirty-one",
+    "image": "/resources-images/numbers/31.png",
+    "width": 500,
+    "height": 464
+  },
+  {
+    "number": 32,
+    "word": "Thirty-two",
+    "image": "/resources-images/numbers/32.png",
+    "width": 500,
+    "height": 464
+  },
+  {
+    "number": 33,
+    "word": "Thirty-three",
+    "image": "/resources-images/numbers/33.png",
+    "width": 500,
+    "height": 464
+  },
+  {
+    "number": 34,
+    "word": "Thirty-four",
+    "image": "/resources-images/numbers/34.png",
+    "width": 500,
+    "height": 464
+  },
+  {
+    "number": 35,
+    "word": "Thirty-five",
+    "image": "/resources-images/numbers/35.png",
+    "width": 504,
+    "height": 464
+  },
+  {
+    "number": 36,
+    "word": "Thirty-six",
+    "image": "/resources-images/numbers/36.png",
+    "width": 500,
+    "height": 464
+  },
+  {
+    "number": 37,
+    "word": "Thirty-seven",
+    "image": "/resources-images/numbers/37.png",
+    "width": 500,
+    "height": 464
+  },
+  {
+    "number": 38,
+    "word": "Thirty-eight",
+    "image": "/resources-images/numbers/38.png",
+    "width": 500,
+    "height": 464
+  },
+  {
+    "number": 39,
+    "word": "Thirty-nine",
+    "image": "/resources-images/numbers/39.png",
+    "width": 500,
+    "height": 464
+  },
+  {
+    "number": 40,
+    "word": "Forty",
+    "image": "/resources-images/numbers/40.png",
+    "width": 504,
+    "height": 464
+  },
+  {
+    "number": 41,
+    "word": "Forty-one",
+    "image": "/resources-images/numbers/41.png",
+    "width": 500,
+    "height": 464
+  },
+  {
+    "number": 42,
+    "word": "Forty-two",
+    "image": "/resources-images/numbers/42.png",
+    "width": 500,
+    "height": 464
+  },
+  {
+    "number": 43,
+    "word": "Forty-three",
+    "image": "/resources-images/numbers/43.png",
+    "width": 500,
+    "height": 464
+  },
+  {
+    "number": 44,
+    "word": "Forty-four",
+    "image": "/resources-images/numbers/44.png",
+    "width": 500,
+    "height": 464
+  },
+  {
+    "number": 45,
+    "word": "Forty-five",
+    "image": "/resources-images/numbers/45.png",
+    "width": 504,
+    "height": 464
+  },
+  {
+    "number": 46,
+    "word": "Forty-six",
+    "image": "/resources-images/numbers/46.png",
+    "width": 500,
+    "height": 464
+  },
+  {
+    "number": 47,
+    "word": "Forty-seven",
+    "image": "/resources-images/numbers/47.png",
+    "width": 500,
+    "height": 464
+  },
+  {
+    "number": 48,
+    "word": "Forty-eight",
+    "image": "/resources-images/numbers/48.png",
+    "width": 500,
+    "height": 464
+  },
+  {
+    "number": 49,
+    "word": "Forty-nine",
+    "image": "/resources-images/numbers/49.png",
+    "width": 500,
+    "height": 464
+  },
+  {
+    "number": 50,
+    "word": "Fifty",
+    "image": "/resources-images/numbers/50.png",
+    "width": 504,
+    "height": 464
+  },
+  {
+    "number": 51,
+    "word": "Fifty-one",
+    "image": "/resources-images/numbers/51.png",
+    "width": 500,
+    "height": 464
+  },
+  {
+    "number": 52,
+    "word": "Fifty-two",
+    "image": "/resources-images/numbers/52.png",
+    "width": 500,
+    "height": 464
+  },
+  {
+    "number": 53,
+    "word": "Fifty-three",
+    "image": "/resources-images/numbers/53.png",
+    "width": 500,
+    "height": 464
+  },
+  {
+    "number": 54,
+    "word": "Fifty-four",
+    "image": "/resources-images/numbers/54.png",
+    "width": 500,
+    "height": 464
+  },
+  {
+    "number": 55,
+    "word": "Fifty-five",
+    "image": "/resources-images/numbers/55.png",
+    "width": 504,
+    "height": 464
+  },
+  {
+    "number": 56,
+    "word": "Fifty-six",
+    "image": "/resources-images/numbers/56.png",
+    "width": 500,
+    "height": 464
+  },
+  {
+    "number": 57,
+    "word": "Fifty-seven",
+    "image": "/resources-images/numbers/57.png",
+    "width": 500,
+    "height": 464
+  },
+  {
+    "number": 58,
+    "word": "Fifty-eight",
+    "image": "/resources-images/numbers/58.png",
+    "width": 500,
+    "height": 464
+  },
+  {
+    "number": 59,
+    "word": "Fifty-nine",
+    "image": "/resources-images/numbers/59.png",
+    "width": 500,
+    "height": 464
+  },
+  {
+    "number": 60,
+    "word": "Sixty",
+    "image": "/resources-images/numbers/60.png",
+    "width": 504,
+    "height": 464
+  },
+  {
+    "number": 61,
+    "word": "Sixty-one",
+    "image": "/resources-images/numbers/61.png",
+    "width": 500,
+    "height": 464
+  },
+  {
+    "number": 62,
+    "word": "Sixty-two",
+    "image": "/resources-images/numbers/62.png",
+    "width": 500,
+    "height": 464
+  },
+  {
+    "number": 63,
+    "word": "Sixty-three",
+    "image": "/resources-images/numbers/63.png",
+    "width": 500,
+    "height": 464
+  },
+  {
+    "number": 64,
+    "word": "Sixty-four",
+    "image": "/resources-images/numbers/64.png",
+    "width": 500,
+    "height": 464
+  },
+  {
+    "number": 65,
+    "word": "Sixty-five",
+    "image": "/resources-images/numbers/65.png",
+    "width": 504,
+    "height": 464
+  },
+  {
+    "number": 66,
+    "word": "Sixty-six",
+    "image": "/resources-images/numbers/66.png",
+    "width": 500,
+    "height": 464
+  },
+  {
+    "number": 67,
+    "word": "Sixty-seven",
+    "image": "/resources-images/numbers/67.png",
+    "width": 500,
+    "height": 464
+  },
+  {
+    "number": 68,
+    "word": "Sixty-eight",
+    "image": "/resources-images/numbers/68.png",
+    "width": 500,
+    "height": 464
+  },
+  {
+    "number": 69,
+    "word": "Sixty-nine",
+    "image": "/resources-images/numbers/69.png",
+    "width": 500,
+    "height": 464
+  },
+  {
+    "number": 70,
+    "word": "Seventy",
+    "image": "/resources-images/numbers/70.png",
+    "width": 504,
+    "height": 464
+  },
+  {
+    "number": 71,
+    "word": "Seventy-one",
+    "image": "/resources-images/numbers/71.png",
+    "width": 500,
+    "height": 464
+  },
+  {
+    "number": 72,
+    "word": "Seventy-two",
+    "image": "/resources-images/numbers/72.png",
+    "width": 500,
+    "height": 464
+  },
+  {
+    "number": 73,
+    "word": "Seventy-three",
+    "image": "/resources-images/numbers/73.png",
+    "width": 500,
+    "height": 464
+  },
+  {
+    "number": 74,
+    "word": "Seventy-four",
+    "image": "/resources-images/numbers/74.png",
+    "width": 500,
+    "height": 464
+  },
+  {
+    "number": 75,
+    "word": "Seventy-five",
+    "image": "/resources-images/numbers/75.png",
+    "width": 504,
+    "height": 464
+  },
+  {
+    "number": 76,
+    "word": "Seventy-six",
+    "image": "/resources-images/numbers/76.png",
+    "width": 500,
+    "height": 464
+  },
+  {
+    "number": 77,
+    "word": "Seventy-seven",
+    "image": "/resources-images/numbers/77.png",
+    "width": 500,
+    "height": 464
+  },
+  {
+    "number": 78,
+    "word": "Seventy-eight",
+    "image": "/resources-images/numbers/78.png",
+    "width": 500,
+    "height": 464
+  },
+  {
+    "number": 79,
+    "word": "Seventy-nine",
+    "image": "/resources-images/numbers/79.png",
+    "width": 500,
+    "height": 464
+  },
+  {
+    "number": 80,
+    "word": "Eighty",
+    "image": "/resources-images/numbers/80.png",
+    "width": 504,
+    "height": 464
+  },
+  {
+    "number": 81,
+    "word": "Eighty-one",
+    "image": "/resources-images/numbers/81.png",
+    "width": 500,
+    "height": 464
+  },
+  {
+    "number": 82,
+    "word": "Eighty-two",
+    "image": "/resources-images/numbers/82.png",
+    "width": 500,
+    "height": 464
+  },
+  {
+    "number": 83,
+    "word": "Eighty-three",
+    "image": "/resources-images/numbers/83.png",
+    "width": 500,
+    "height": 464
+  },
+  {
+    "number": 84,
+    "word": "Eighty-four",
+    "image": "/resources-images/numbers/84.png",
+    "width": 500,
+    "height": 464
+  },
+  {
+    "number": 85,
+    "word": "Eighty-five",
+    "image": "/resources-images/numbers/85.png",
+    "width": 504,
+    "height": 464
+  },
+  {
+    "number": 86,
+    "word": "Eighty-six",
+    "image": "/resources-images/numbers/86.png",
+    "width": 500,
+    "height": 464
+  },
+  {
+    "number": 87,
+    "word": "Eighty-seven",
+    "image": "/resources-images/numbers/87.png",
+    "width": 500,
+    "height": 464
+  },
+  {
+    "number": 88,
+    "word": "Eighty-eight",
+    "image": "/resources-images/numbers/88.png",
+    "width": 500,
+    "height": 464
+  },
+  {
+    "number": 89,
+    "word": "Eighty-nine",
+    "image": "/resources-images/numbers/89.png",
+    "width": 500,
+    "height": 464
+  },
+  {
+    "number": 90,
+    "word": "Ninety",
+    "image": "/resources-images/numbers/90.png",
+    "width": 504,
+    "height": 464
+  },
+  {
+    "number": 91,
+    "word": "Ninety-one",
+    "image": "/resources-images/numbers/91.png",
+    "width": 500,
+    "height": 464
+  },
+  {
+    "number": 92,
+    "word": "Ninety-two",
+    "image": "/resources-images/numbers/92.png",
+    "width": 500,
+    "height": 464
+  },
+  {
+    "number": 93,
+    "word": "Ninety-three",
+    "image": "/resources-images/numbers/93.png",
+    "width": 500,
+    "height": 464
+  },
+  {
+    "number": 94,
+    "word": "Ninety-four",
+    "image": "/resources-images/numbers/94.png",
+    "width": 500,
+    "height": 464
+  },
+  {
+    "number": 95,
+    "word": "Ninety-five",
+    "image": "/resources-images/numbers/95.png",
+    "width": 504,
+    "height": 464
+  },
+  {
+    "number": 96,
+    "word": "Ninety-six",
+    "image": "/resources-images/numbers/96.png",
+    "width": 500,
+    "height": 464
+  },
+  {
+    "number": 97,
+    "word": "Ninety-seven",
+    "image": "/resources-images/numbers/97.png",
+    "width": 500,
+    "height": 464
+  },
+  {
+    "number": 98,
+    "word": "Ninety-eight",
+    "image": "/resources-images/numbers/98.png",
+    "width": 500,
+    "height": 464
+  },
+  {
+    "number": 99,
+    "word": "Ninety-nine",
+    "image": "/resources-images/numbers/99.png",
+    "width": 500,
+    "height": 464
+  },
+  {
+    "number": 100,
+    "word": "One hundred",
+    "image": "/resources-images/numbers/100.png",
+    "width": 504,
+    "height": 464
+  }
+]

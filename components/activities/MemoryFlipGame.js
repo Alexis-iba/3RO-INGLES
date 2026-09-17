@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { getActivityVocab } from "@/lib/activity-vocab";
 import { shuffle } from "@/lib/shuffle";
 import { pickRoundWords, readRoundHistory, writeRoundHistory } from "@/lib/quiz-round";
+import { speakCorrect, speakIncorrect, speakResult } from "@/lib/voice-feedback";
 import ActivityImage from "./ActivityImage";
 
 const PAIRS = 6;
@@ -44,9 +45,13 @@ export default function MemoryFlipGame() {
       const cardA = round.cards[a];
       const cardB = round.cards[b];
       if (cardA.word === cardB.word) {
+        speakCorrect();
+        const willFinish = matched.size + 1 === PAIRS;
         setMatched((prev) => new Set(prev).add(cardA.word));
         setFlipped([]);
+        if (willFinish) speakResult(1, { delay: 700 });
       } else {
+        speakIncorrect();
         setLocked(true);
         setTimeout(() => {
           setFlipped([]);

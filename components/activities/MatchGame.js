@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { getActivityVocab } from "@/lib/activity-vocab";
 import { shuffle } from "@/lib/shuffle";
 import { pickRoundWords, readRoundHistory, writeRoundHistory } from "@/lib/quiz-round";
+import { speakCorrect, speakIncorrect, speakResult } from "@/lib/voice-feedback";
 import ActivityImage from "./ActivityImage";
 import { ACTIVITY_ART } from "@/lib/activity-art";
 
@@ -37,10 +38,14 @@ export default function MatchGame() {
 
   function attemptMatch(word, image) {
     if (word === image) {
+      speakCorrect();
+      const willFinish = matched.length + 1 === COUNT;
       setMatched((m) => [...m, word]);
       setSelectedWord(null);
       setSelectedImage(null);
+      if (willFinish) speakResult(1, { delay: 700 });
     } else {
+      speakIncorrect();
       setShakeWord(word);
       setShakeImage(image);
       setTimeout(() => {

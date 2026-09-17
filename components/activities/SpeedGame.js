@@ -4,6 +4,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { getActivityVocab } from "@/lib/activity-vocab";
 import { pickOptions } from "@/lib/shuffle";
 import { pickRoundWords, readRoundHistory, writeRoundHistory } from "@/lib/quiz-round";
+import { speakCorrect, speakIncorrect, speakResult } from "@/lib/voice-feedback";
 import ActivityImage from "./ActivityImage";
 
 const TOTAL = 10;
@@ -17,6 +18,7 @@ export default function SpeedGame() {
   const questions = round.items;
   const [index, setIndex] = useState(0);
   const [score, setScore] = useState(0);
+  const [correctCount, setCorrectCount] = useState(0);
   const [streak, setStreak] = useState(0);
   const [bestStreak, setBestStreak] = useState(0);
   const [selected, setSelected] = useState(null);
@@ -39,6 +41,7 @@ export default function SpeedGame() {
     timerRef.current = setTimeout(() => {
       setTimedOut(true);
       setStreak(0);
+      speakIncorrect();
     }, DURATION);
     return () => clearTimeout(timerRef.current);
   }, [current, finished]);
@@ -53,6 +56,7 @@ export default function SpeedGame() {
         setIndex(index + 1);
       } else {
         setFinished(true);
+        speakResult(correctCount / TOTAL);
       }
     }, REVEAL_MS);
     return () => clearTimeout(advanceRef.current);
@@ -67,8 +71,11 @@ export default function SpeedGame() {
       setStreak(nextStreak);
       setBestStreak((b) => Math.max(b, nextStreak));
       setScore((s) => s + 10 + Math.min(nextStreak, 5) * 2);
+      setCorrectCount((c) => c + 1);
+      speakCorrect();
     } else {
       setStreak(0);
+      speakIncorrect();
     }
   }
 
@@ -78,6 +85,7 @@ export default function SpeedGame() {
     setRound(pickRoundWords(ALL_VOCAB, round.history, TOTAL));
     setIndex(0);
     setScore(0);
+    setCorrectCount(0);
     setStreak(0);
     setBestStreak(0);
     setSelected(null);

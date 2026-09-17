@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { getActivityVocab } from "@/lib/activity-vocab";
 import { shuffle } from "@/lib/shuffle";
 import { pickRoundWords, readRoundHistory, writeRoundHistory } from "@/lib/quiz-round";
+import { speakCorrect, speakIncorrect, speakResult } from "@/lib/voice-feedback";
 import ActivityImage from "./ActivityImage";
 
 const TOTAL = 8;
@@ -50,7 +51,13 @@ export default function ScrambleGame() {
     if (checked || answer.length !== current.word.length) return;
     setChecked(true);
     const built = answer.map((l) => l.ch).join("");
-    if (built === current.word) setScore((s) => s + 1);
+    const correct = built === current.word;
+    if (correct) {
+      setScore((s) => s + 1);
+      speakCorrect();
+    } else {
+      speakIncorrect();
+    }
   }
 
   function handleNext() {
@@ -62,6 +69,7 @@ export default function ScrambleGame() {
       setIndex(index + 1);
     } else {
       setFinished(true);
+      speakResult(score / TOTAL);
     }
   }
 

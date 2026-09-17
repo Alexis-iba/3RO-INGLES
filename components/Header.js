@@ -3,9 +3,11 @@
 import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Home, BookOpen, Gamepad2, Sparkles, Search, X } from "lucide-react";
+import { Home, BookOpen, Gamepad2, Sparkles, Search, X, Download } from "lucide-react";
 import BrandLogo from "./icons/BrandLogo";
 import InstantSearch from "./InstantSearch";
+import useInstallPrompt from "@/lib/useInstallPrompt";
+import InstallInstructionsModal from "./InstallInstructionsModal";
 
 const LINKS = [
   { href: "/", label: "Inicio", icon: Home },
@@ -16,7 +18,14 @@ const LINKS = [
 
 export default function Header() {
   const [mobileSearchOpen, setMobileSearchOpen] = useState(false);
+  const [showInstructions, setShowInstructions] = useState(false);
   const pathname = usePathname();
+  const { canInstall, hasNativePrompt, platform, install } = useInstallPrompt();
+
+  async function handleInstallClick() {
+    const installed = hasNativePrompt && (await install());
+    if (!installed) setShowInstructions(true);
+  }
 
   return (
     <header className="site-header sticky top-0 z-40 w-full bg-[#ffd83d] shadow-xs">
@@ -55,6 +64,17 @@ export default function Header() {
 
         {/* Buscador Algolia-Style */}
         <div className="flex items-center gap-2">
+          {canInstall && (
+            <button
+              type="button"
+              onClick={handleInstallClick}
+              className="hidden md:flex items-center gap-1.5 px-3.5 py-2 rounded-full text-[14.5px] font-semibold text-[#333333] hover:text-black hover:bg-black/[0.05] whitespace-nowrap transition-colors duration-150 cursor-pointer"
+            >
+              <Download size={18} strokeWidth={2.2} className="text-[#444444]" />
+              Instalar app
+            </button>
+          )}
+
           {/* Desktop Instant Search (flotante en vivo) */}
           <div className="hidden md:block w-48 lg:w-72">
             <InstantSearch />
@@ -80,6 +100,10 @@ export default function Header() {
             onCloseMobile={() => setMobileSearchOpen(false)}
           />
         </div>
+      )}
+
+      {showInstructions && (
+        <InstallInstructionsModal platform={platform} onClose={() => setShowInstructions(false)} />
       )}
     </header>
   );

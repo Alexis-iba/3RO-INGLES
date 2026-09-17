@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { getActivityVocab } from "@/lib/activity-vocab";
 import { pickRoundWords, readRoundHistory, writeRoundHistory } from "@/lib/quiz-round";
+import { speakCorrect, speakIncorrect, speakResult } from "@/lib/voice-feedback";
 import ActivityImage from "./ActivityImage";
 
 const TOTAL = 8;
@@ -53,7 +54,13 @@ export default function TrueFalseGame({ mode = "image" }) {
   function answer(guessMatch) {
     if (selected !== null) return;
     setSelected(guessMatch);
-    if (guessMatch === q.isMatch) setScore((s) => s + 1);
+    const correct = guessMatch === q.isMatch;
+    if (correct) {
+      setScore((s) => s + 1);
+      speakCorrect();
+    } else {
+      speakIncorrect();
+    }
   }
 
   function handleNext() {
@@ -62,6 +69,7 @@ export default function TrueFalseGame({ mode = "image" }) {
       setSelected(null);
     } else {
       setFinished(true);
+      speakResult(score / TOTAL);
     }
   }
 

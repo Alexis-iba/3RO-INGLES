@@ -1,12 +1,14 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { createPortal } from "react-dom";
 import Image from "next/image";
 import Link from "next/link";
-import { RESOURCES, getAllVocab } from "@/lib/data";
-import { shuffle } from "@/lib/shuffle";
+import { RESOURCES } from "@/lib/data";
+import PRINTABLE_RESOURCES from "@/lib/printable-resources.json";
 import { ACTIVITY_ART } from "@/lib/activity-art";
+import { COLOR_RESOURCES } from "@/lib/color-resources";
+import ALPHABET_RESOURCES from "@/lib/alphabet-resources.json";
+import NUMBER_RESOURCES from "@/lib/number-resources.json";
 
 // No todas las palabras de los audios (letras, algunos números y animales)
 // tienen ilustración en el banco de actividades; para esas mostramos un
@@ -35,26 +37,65 @@ function titleCase(word) {
   return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
 }
 
-function WordVisual({ word }) {
+const ANIMALS_SONG_2_IMAGES = {
+  Tiger: "tiger", Bear: "bear", Zebra: "zebra", Giraffe: "giraffe",
+  Horse: "horse", Sheep: "sheep", Duck: "duck", Frog: "frog",
+};
+
+function WordVisual({ word, isColor, isAnimalsSong2, isAlphabet, isNumber }) {
   const key = titleCase(word);
+  const number = isNumber && NUMBER_RESOURCES.find((item) => item.word.toLowerCase() === word.toLowerCase());
+  if (number) {
+    return <Image src={number.image} alt={`${number.number} — ${number.word}`} width={number.width} height={number.height} sizes="(max-width: 640px) 85vw, 480px" className="mx-auto mb-4 max-h-[50dvh] w-full rounded-2xl object-contain" />;
+  }
+  const letter = isAlphabet && ALPHABET_RESOURCES.find((item) => item.letter === key);
+  if (letter) {
+    return <Image src={letter.image} alt={`${letter.letter}: ${letter.label}`} width={letter.width} height={letter.height} sizes="(max-width: 640px) 85vw, 480px" className="mx-auto mb-4 max-h-[55dvh] w-full rounded-2xl object-contain" />;
+  }
+  const animal = isAnimalsSong2 && ANIMALS_SONG_2_IMAGES[key];
+  if (animal) {
+    return (
+      <Image
+        src={`/resources-images/animals-song-2/${animal}.png`}
+        alt={key}
+        width={1254}
+        height={1254}
+        sizes="(max-width: 640px) 85vw, 480px"
+        className="mx-auto mb-4 max-h-[50dvh] w-full rounded-2xl object-contain"
+      />
+    );
+  }
+  const color = isColor && COLOR_RESOURCES.find((item) => item.word === key);
+  if (color) {
+    return <Image src={color.image} alt={`${color.word} — ${color.label}: lámina ilustrada del color`} width={1374} height={1145} sizes="(max-width: 640px) 85vw, 480px" className="mx-auto mb-4 max-h-[50dvh] w-full rounded-2xl object-contain" />;
+  }
   const art = ACTIVITY_ART[key];
   if (art) {
     return (
-      <div className="relative mx-auto mb-2.5 h-24 w-24 overflow-hidden rounded-2xl">
-        <Image src={`/activity-images/${art.file}`} alt="" fill sizes="96px" className="object-cover" />
-      </div>
+      <Image
+        src={`/activity-images/${art.file}`}
+        alt=""
+        width={512}
+        height={512}
+        sizes="(max-width: 640px) 85vw, 480px"
+        className="mx-auto mb-4 max-h-[50dvh] w-full rounded-2xl object-contain"
+      />
     );
   }
   const fallback = WORD_VISUAL_FALLBACK[key];
   if (fallback?.kind === "swatch") {
-    return <div className="mx-auto mb-2.5 h-24 w-24 rounded-2xl border-4 border-white/20" style={{ background: fallback.value }} />;
+    return <div className="mx-auto mb-4 aspect-square max-h-[50dvh] w-full rounded-2xl border-4 border-white/20" style={{ background: fallback.value }} />;
   }
   if (fallback?.kind === "emoji") {
-    return <div className="mb-2.5 text-6xl">{fallback.value}</div>;
+    return (
+      <div className="mx-auto mb-4 flex aspect-square max-h-[50dvh] w-full items-center justify-center rounded-2xl bg-white/10 text-8xl">
+        {fallback.value}
+      </div>
+    );
   }
   // Letras del abecedario, números en palabra que no tienen dígito propio, etc.
   return (
-    <div className="mx-auto mb-2.5 flex h-24 w-24 items-center justify-center rounded-2xl bg-white/10 font-heading text-4xl font-extrabold">
+    <div className="mx-auto mb-4 flex aspect-square max-h-[50dvh] w-full items-center justify-center rounded-2xl bg-white/10 font-heading text-7xl font-extrabold">
       {fallback?.kind === "digit" ? fallback.value : key}
     </div>
   );
@@ -63,6 +104,8 @@ function WordVisual({ word }) {
 const TABS = [
   { id: "todos", label: "Todos" },
   { id: "audio", label: "Audios" },
+  { id: "colores", label: "Colores" },
+  { id: "abecedario", label: "Abecedario" },
   { id: "imprimible", label: "Imprimibles" },
   { id: "juego", label: "Juegos" },
 ];
@@ -90,7 +133,7 @@ export default function RecursosPage() {
   const [modalResource, setModalResource] = useState(null);
   const [wordIndex, setWordIndex] = useState(0);
   const [playing, setPlaying] = useState(false);
-  const [printItems, setPrintItems] = useState(null);
+  const [pdfPreview, setPdfPreview] = useState(null);
   const cancelledRef = useRef(false);
   const voiceRef = useRef(null);
   const pauseTimeoutRef = useRef(null);
@@ -105,7 +148,7 @@ export default function RecursosPage() {
     return () => window.speechSynthesis.removeEventListener("voiceschanged", loadVoice);
   }, []);
 
-  const list = RESOURCES.filter((r) => filter === "todos" || r.type === filter);
+  const list = RESOURCES.filter((r) => filter === "todos" || r.type === filter || (filter === "colores" && r.id === "r3") || (filter === "abecedario" && r.id === "r1"));
 
   function speak(text, onEnd) {
     if (typeof window === "undefined" || !("speechSynthesis" in window)) {
@@ -137,6 +180,11 @@ export default function RecursosPage() {
   }
 
   function openModal(resource) {
+    if (resource.id === "r2") {
+      resource = { ...resource, speak: NUMBER_RESOURCES.map((item) => item.word).join(", ") };
+    }
+    clearTimeout(pauseTimeoutRef.current);
+    window.speechSynthesis?.cancel();
     cancelledRef.current = false;
     setModalResource(resource);
     setWordIndex(0);
@@ -173,10 +221,6 @@ export default function RecursosPage() {
     playFrom(modalResource, 0);
   }
 
-  function openPrintable(resource) {
-    setPrintItems({ title: resource.title, vocab: shuffle(getAllVocab()).slice(0, 16) });
-    setTimeout(() => window.print(), 100);
-  }
 
   const words = modalResource ? (modalResource.speak || "").split(",").map((w) => w.trim()).filter(Boolean) : [];
   const progress = words.length ? Math.min(100, Math.round((wordIndex / words.length) * 100)) : 0;
@@ -209,7 +253,7 @@ export default function RecursosPage() {
 
       <div className="mt-7 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
         {list.map((r) => (
-          <div key={r.id} className="card overflow-hidden border border-slate-200/70 shadow-[0_4px_16px_rgba(7,52,113,0.06)] hover:shadow-[0_12px_28px_rgba(7,52,113,0.12)] hover:-translate-y-1 transition-all duration-200 flex flex-col justify-between">
+          <div key={r.id} className="card overflow-hidden border border-slate-200/70 shadow-[0_4px_16px_rgba(7,52,113,0.06)] hover:shadow-[0_12px_28px_rgba(7,52,113,0.12)] hover:-translate-y-1 transition-all duration-200 flex flex-col">
             <div>
               <div className="relative overflow-hidden bg-blue-light/50" style={r.image ? { aspectRatio: r.imageAspect || "3 / 2" } : { aspectRatio: "3 / 2" }}>
                 {r.image ? (
@@ -232,14 +276,12 @@ export default function RecursosPage() {
             </div>
             <div className="p-4 pt-0">
               {r.type === "audio" && (
-                <button onClick={() => openModal(r)} className="btn btn-outline btn-sm btn-block rounded-xl font-extrabold hover:bg-brand-yellow/30 hover:border-brand-yellow cursor-pointer">
+                <button onClick={() => openModal(r.id === "r3" ? { ...r, speak: COLOR_RESOURCES.map((color) => color.word).join(", ") } : r)} className="btn btn-outline btn-sm btn-block rounded-xl font-extrabold hover:bg-brand-yellow/30 hover:border-brand-yellow cursor-pointer">
                   🔊 Escuchar palabras
                 </button>
               )}
               {r.type === "imprimible" && (
-                <button onClick={() => openPrintable(r)} className="btn btn-outline btn-sm btn-block rounded-xl font-extrabold hover:bg-brand-yellow/30 hover:border-brand-yellow cursor-pointer">
-                  🖨 Ver e imprimir
-                </button>
+                <button onClick={() => setPdfPreview({ url: PRINTABLE_RESOURCES[{ r6: "flashcards", r7: "posters", r8: "worksheets" }[r.id]].url, title: r.title })} className="btn btn-outline btn-sm btn-block rounded-xl font-extrabold cursor-pointer">🖨 Ver e imprimir</button>
               )}
               {r.type === "juego" && (
                 <Link href="/actividades" className="btn btn-primary btn-sm btn-block rounded-xl font-extrabold text-navy cursor-pointer">
@@ -253,11 +295,11 @@ export default function RecursosPage() {
 
       {modalResource && (
         <div className="fixed inset-0 z-[1000] grid place-items-center bg-navy/60 p-5" onClick={(e) => e.target === e.currentTarget && closeModal()}>
-          <div className="relative w-full max-w-sm rounded-3xl bg-navy p-7 text-center text-white">
-            <button onClick={closeModal} className="absolute right-4 top-3.5 text-2xl">
+          <div role="dialog" aria-modal="true" aria-label={modalResource.title} className="relative max-h-[90dvh] w-full max-w-lg overflow-y-auto rounded-3xl bg-navy p-5 pt-12 text-center text-white">
+            <button onClick={closeModal} aria-label="Cerrar" className="absolute right-4 top-3.5 text-2xl">
               ✕
             </button>
-            <WordVisual word={words[wordIndex]} />
+            <WordVisual word={words[wordIndex]} isColor={modalResource.id === "r3"} isAnimalsSong2={modalResource.id === "r5"} isAlphabet={modalResource.id === "r1"} isNumber={modalResource.id === "r2"} />
             <h3 className="font-heading text-xl font-extrabold">{modalResource.title}</h3>
             <p className="mt-1.5 text-sm text-[#b9c3dd]">
               {playing ? `Diciendo: "${words[wordIndex] ? titleCase(words[wordIndex]) : ""}"` : "Pausado"}
@@ -280,24 +322,21 @@ export default function RecursosPage() {
         </div>
       )}
 
-      {printItems &&
-        typeof document !== "undefined" &&
-        createPortal(
-          <div id="print-area" className="hidden">
-            <div className="p-5">
-              <h2 className="font-heading text-xl font-extrabold">{printItems.title} — EnglishKids</h2>
-              <div className="mt-4 grid grid-cols-4 gap-3.5">
-                {printItems.vocab.map((v) => (
-                  <div key={v.word} className="rounded-2xl border-2 border-dashed border-[#b7c2dd] px-3 py-4.5 text-center">
-                    <div className="text-4xl">{v.emoji}</div>
-                    <div className="mt-2 font-heading font-extrabold">{v.word}</div>
-                  </div>
-                ))}
+      {pdfPreview && (
+        <div className="fixed inset-0 z-[1000] grid place-items-center bg-navy/60 p-5" onClick={(e) => e.target === e.currentTarget && setPdfPreview(null)}>
+          <div role="dialog" aria-modal="true" aria-label={pdfPreview.title} className="relative flex h-[90dvh] w-full max-w-4xl flex-col overflow-hidden rounded-3xl bg-white">
+            <div className="flex items-center justify-between border-b border-slate-200 px-5 py-3">
+              <h3 className="font-heading text-base font-extrabold text-navy line-clamp-1">{pdfPreview.title}</h3>
+              <div className="flex items-center gap-2">
+                <a href={pdfPreview.url} download className="btn btn-outline btn-sm rounded-xl font-extrabold">Descargar</a>
+                <button onClick={() => setPdfPreview(null)} aria-label="Cerrar" className="grid h-9 w-9 place-items-center rounded-full text-xl text-navy hover:bg-slate-100 cursor-pointer">✕</button>
               </div>
             </div>
-          </div>,
-          document.body
-        )}
+            <iframe src={pdfPreview.url} title={pdfPreview.title} className="w-full flex-1" />
+          </div>
+        </div>
+      )}
+
     </div>
   );
 }
