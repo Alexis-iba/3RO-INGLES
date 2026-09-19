@@ -2,7 +2,7 @@ import Image from "next/image";
 import brandLogo from "../../public/logo_ploopi.svg";
 
 // Logotipo oficial (Ploopi) usado como título en la cabecera
-export default function BrandLogo({ className = "h-11 w-auto", priority = false }) {
+export default function BrandLogo({ className = "h-20 w-auto sm:h-18 md:h-20 lg:h-22", priority = false }) {
   return (
     <Image
       src={brandLogo}
