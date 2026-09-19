@@ -1,12 +1,12 @@
 const sharp = require("sharp");
 const path = require("path");
+const fs = require("fs");
 
 const ROOT = path.join(__dirname, "..");
 const ICON_DESKTOP = path.join(ROOT, "public/favicon.svg");
-const ICON_MOBILE = path.join(ROOT, "public/icono_ploopi.png");
+const ICON_MOBILE_MASTER = path.join(ROOT, "app/icono_ploopi.png");
 const OUT = path.join(ROOT, "public/icons");
-
-const ORANGE_BG = { r: 251, g: 86, b: 1, alpha: 1 };
+const PUBLIC_ICON = path.join(ROOT, "public/icono_ploopi.png");
 
 // 1. Icono normal con fondo transparente para Computadora (Windows / Mac / Barra de tareas / Escritorio)
 async function generateDesktopIcon(size, file, scale = 0.9) {
@@ -26,32 +26,35 @@ async function generateDesktopIcon(size, file, scale = 0.9) {
     .toFile(path.join(OUT, file));
 }
 
-// 2. Icono naranja que llena todo el contenedor para Celular (Android Maskable e iOS)
-async function generateMobileFullBleedIcon(size, file) {
-  const scaledSize = Math.round(size * 1.16);
-  const cropOffset = Math.round((scaledSize - size) / 2);
-
-  await sharp(ICON_MOBILE)
-    .resize(scaledSize, scaledSize, { fit: "cover" })
-    .extract({ left: cropOffset, top: cropOffset, width: size, height: size })
-    .flatten({ background: ORANGE_BG })
+// 2. Icono celular que llena el 100% del contenedor (Android Maskable e iOS)
+async function generateMobileFullBleedIcon(size, destinationPath) {
+  await sharp(ICON_MOBILE_MASTER, { limitInputPixels: false })
+    .resize(size, size, { fit: "cover" })
     .png()
-    .toFile(path.join(OUT, file));
+    .toFile(destinationPath);
 }
 
 async function run() {
+  if (!fs.existsSync(OUT)) {
+    fs.mkdirSync(OUT, { recursive: true });
+  }
+
   // PC / Computadora (Icono normal con fondo transparente)
   await generateDesktopIcon(192, "icon-192.png", 0.9);
   await generateDesktopIcon(512, "icon-512.png", 0.9);
 
-  // Celular (Icono naranja completo que llena todo el contenedor)
-  await generateMobileFullBleedIcon(512, "icon-maskable-512.png");
-  await generateMobileFullBleedIcon(180, "apple-touch-icon.png");
+  // Celular (Icono que llena todo el espacio sin bordes blancos)
+  await generateMobileFullBleedIcon(512, path.join(OUT, "icon-maskable-512.png"));
+  await generateMobileFullBleedIcon(180, path.join(OUT, "apple-touch-icon.png"));
+  
+  // Guardar versión optimizada en public/icono_ploopi.png
+  await generateMobileFullBleedIcon(512, PUBLIC_ICON);
 
-  console.log("PWA icons generated: Desktop (192, 512) = Normal Transparent | Mobile (Maskable, Apple) = Orange Full-Bleed");
+  console.log("✅ PWA icons successfully generated from final icono_ploopi.png!");
 }
 
 run().catch((err) => {
-  console.error(err);
+  console.error("Error generating icons:", err);
   process.exit(1);
 });
+
