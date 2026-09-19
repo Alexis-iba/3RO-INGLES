@@ -63,15 +63,15 @@ async function splashLogoIcon(size, file, scale = 0.84) {
 }
 
 async function run() {
-  // 1. Iconos del lanzador / instalación (puro personaje)
-  await standardIcon(192, "icon-192.png");
+  // 1. Iconos del lanzador / instalacion (puro personaje con fondo blanco)
   await solidCharacterIcon(512, "icon-maskable-512.png", { r: 255, g: 255, b: 255, alpha: 1 });
   await solidCharacterIcon(180, "apple-touch-icon.png", { r: 255, g: 255, b: 255, alpha: 1 });
 
-  // 2. Icono de Splash Screen (logo completo personaje + ploopi en blanco)
-  await splashLogoIcon(512, "icon-512.png", 0.84);
+  // 2. Iconos de Splash Screen (192 y 512 con el logo completo y fondo amarillo #ffd83d)
+  await splashLogoIcon(192, "icon-192.png", 0.88);
+  await splashLogoIcon(512, "icon-512.png", 0.88);
 
-  console.log("PWA icons generated: Splash = Full Logo | Launcher = Pure Character Icon");
+  console.log("PWA icons generated: Splash = Full Logo (192+512) | Launcher = Pure Character Icon");
 }
 
 run().catch((err) => {

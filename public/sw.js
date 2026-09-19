@@ -1,4 +1,4 @@
-const CACHE_NAME = "englishkids-v4";
+const CACHE_NAME = "englishkids-v5";
 const OFFLINE_URL = "/offline.html";
 
 // Páginas clave que se guardan apenas se instala el service worker, para que
