@@ -48,16 +48,16 @@ async function splashLogoIcon(size, file, scale = 0.84) {
   const padY = Math.round((size - innerH) / 2);
 
   await sharp(SPLASH_SRC, { limitInputPixels: false })
-    .resize(innerW, innerH, { fit: "contain", background: { r: 255, g: 255, b: 255, alpha: 1 } })
+    .resize(innerW, innerH, { fit: "contain", background: { r: 255, g: 216, b: 61, alpha: 1 } })
     .extend({
       top: padY,
       bottom: size - innerH - padY,
       left: padX,
       right: size - innerW - padX,
-      background: { r: 255, g: 255, b: 255, alpha: 1 },
+      background: { r: 255, g: 216, b: 61, alpha: 1 },
     })
     .resize(size, size)
-    .flatten({ background: { r: 255, g: 255, b: 255, alpha: 1 } })
+    .flatten({ background: { r: 255, g: 216, b: 61, alpha: 1 } })
     .png()
     .toFile(path.join(OUT, file));
 }
