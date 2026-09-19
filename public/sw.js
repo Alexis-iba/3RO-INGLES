@@ -1,4 +1,4 @@
-const CACHE_NAME = "ploopi-v3";
+const CACHE_NAME = "ploopi-v5";
 const OFFLINE_URL = "/offline.html";
 
 // Páginas clave que se guardan apenas se instala el service worker, para que

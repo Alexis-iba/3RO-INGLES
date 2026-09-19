@@ -2,64 +2,47 @@ const sharp = require("sharp");
 const path = require("path");
 
 const ROOT = path.join(__dirname, "..");
-const ICON_SRC = path.join(ROOT, "public/favicon.svg");
-const SPLASH_SRC = path.join(ROOT, "public/logo_splash.svg");
+const ICON_MOBILE = path.join(ROOT, "public/icono_ploopi.png");
 const OUT = path.join(ROOT, "public/icons");
 
-// Icono con fondo 100% transparente para el Splash Screen
-// (permite que el color amarillo #ffd83d del manifest se vea de fondo continuo y perfecto)
-async function splashTransparentIcon(size, file, scale = 0.88) {
-  const innerW = Math.round(size * scale);
-  const innerH = Math.round(innerW / 1.5602);
-  const padX = Math.round((size - innerW) / 2);
-  const padY = Math.round((size - innerH) / 2);
-
-  await sharp(SPLASH_SRC, { limitInputPixels: false })
-    .resize(innerW, innerH, { fit: "contain", background: { r: 0, g: 0, b: 0, alpha: 0 } })
-    .extend({
-      top: padY,
-      bottom: size - innerH - padY,
-      left: padX,
-      right: size - innerW - padX,
-      background: { r: 0, g: 0, b: 0, alpha: 0 },
-    })
-    .resize(size, size)
+async function generateAppIcons() {
+  // 1. Iconos estándar 192 y 512 (PNG de alta resolución con el nuevo icono squircle)
+  await sharp(ICON_MOBILE)
+    .resize(192, 192, { fit: "contain" })
     .png()
-    .toFile(path.join(OUT, file));
-}
+    .toFile(path.join(OUT, "icon-192.png"));
 
-// Icono del lanzador de celular (puro personaje con fondo blanco y mayor margen para verse equilibrado)
-async function solidCharacterIcon(size, file, bg, scale = 0.60) {
-  const inner = Math.round(size * scale);
-  const pad = Math.round((size - inner) / 2);
-  await sharp(ICON_SRC, { density: 600 })
-    .resize(inner, inner, { fit: "contain", background: bg })
-    .extend({
-      top: pad,
-      bottom: size - inner - pad,
-      left: pad,
-      right: size - inner - pad,
-      background: bg,
-    })
-    .resize(size, size)
-    .flatten({ background: bg })
+  await sharp(ICON_MOBILE)
+    .resize(512, 512, { fit: "contain" })
     .png()
-    .toFile(path.join(OUT, file));
+    .toFile(path.join(OUT, "icon-512.png"));
+
+  // 2. Icono Maskable 512 para Android (centrado en área segura)
+  const maskInner = Math.round(512 * 0.84);
+  const maskPad = Math.round((512 - maskInner) / 2);
+  await sharp(ICON_MOBILE)
+    .resize(maskInner, maskInner, { fit: "contain" })
+    .extend({
+      top: maskPad,
+      bottom: 512 - maskInner - maskPad,
+      left: maskPad,
+      right: 512 - maskInner - maskPad,
+      background: { r: 254, g: 102, b: 19, alpha: 1 }, // Fondo naranja de marca continuo
+    })
+    .resize(512, 512)
+    .png()
+    .toFile(path.join(OUT, "icon-maskable-512.png"));
+
+  // 3. Apple Touch Icon para iPhone / iPad (180x180)
+  await sharp(ICON_MOBILE)
+    .resize(180, 180, { fit: "contain" })
+    .png()
+    .toFile(path.join(OUT, "apple-touch-icon.png"));
+
+  console.log("All PWA & Mobile icons generated successfully with icono_ploopi.png!");
 }
 
-async function run() {
-  // 1. Iconos del lanzador / instalación (puro personaje con fondo blanco limpio)
-  await solidCharacterIcon(512, "icon-maskable-512.png", { r: 255, g: 255, b: 255, alpha: 1 });
-  await solidCharacterIcon(180, "apple-touch-icon.png", { r: 255, g: 255, b: 255, alpha: 1 });
-
-  // 2. Iconos de Splash Screen 192 y 512 (logo completo con letras blancas y FONDO TRANSPARENTE)
-  await splashTransparentIcon(192, "icon-192.png", 0.88);
-  await splashTransparentIcon(512, "icon-512.png", 0.88);
-
-  console.log("PWA icons generated: Splash = Transparent Full Logo | Launcher = Pure Character Icon (White)");
-}
-
-run().catch((err) => {
+generateAppIcons().catch((err) => {
   console.error(err);
   process.exit(1);
 });
