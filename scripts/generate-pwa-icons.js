@@ -2,47 +2,56 @@ const sharp = require("sharp");
 const path = require("path");
 
 const ROOT = path.join(__dirname, "..");
+const ICON_DESKTOP = path.join(ROOT, "public/favicon.svg");
 const ICON_MOBILE = path.join(ROOT, "public/icono_ploopi.png");
 const OUT = path.join(ROOT, "public/icons");
 
-async function generateAppIcons() {
-  // 1. Iconos estándar 192 y 512 (PNG de alta resolución con el nuevo icono squircle)
-  await sharp(ICON_MOBILE)
-    .resize(192, 192, { fit: "contain" })
-    .png()
-    .toFile(path.join(OUT, "icon-192.png"));
+const ORANGE_BG = { r: 251, g: 86, b: 1, alpha: 1 };
 
-  await sharp(ICON_MOBILE)
-    .resize(512, 512, { fit: "contain" })
-    .png()
-    .toFile(path.join(OUT, "icon-512.png"));
-
-  // 2. Icono Maskable 512 para Android (centrado en área segura)
-  const maskInner = Math.round(512 * 0.84);
-  const maskPad = Math.round((512 - maskInner) / 2);
-  await sharp(ICON_MOBILE)
-    .resize(maskInner, maskInner, { fit: "contain" })
+// 1. Icono normal con fondo transparente para Computadora (Windows / Mac / Barra de tareas / Escritorio)
+async function generateDesktopIcon(size, file, scale = 0.9) {
+  const inner = Math.round(size * scale);
+  const pad = Math.round((size - inner) / 2);
+  await sharp(ICON_DESKTOP, { density: 600 })
+    .resize(inner, inner, { fit: "contain", background: { r: 0, g: 0, b: 0, alpha: 0 } })
     .extend({
-      top: maskPad,
-      bottom: 512 - maskInner - maskPad,
-      left: maskPad,
-      right: 512 - maskInner - maskPad,
-      background: { r: 254, g: 102, b: 19, alpha: 1 }, // Fondo naranja de marca continuo
+      top: pad,
+      bottom: size - inner - pad,
+      left: pad,
+      right: size - inner - pad,
+      background: { r: 0, g: 0, b: 0, alpha: 0 },
     })
-    .resize(512, 512)
+    .resize(size, size)
     .png()
-    .toFile(path.join(OUT, "icon-maskable-512.png"));
-
-  // 3. Apple Touch Icon para iPhone / iPad (180x180)
-  await sharp(ICON_MOBILE)
-    .resize(180, 180, { fit: "contain" })
-    .png()
-    .toFile(path.join(OUT, "apple-touch-icon.png"));
-
-  console.log("All PWA & Mobile icons generated successfully with icono_ploopi.png!");
+    .toFile(path.join(OUT, file));
 }
 
-generateAppIcons().catch((err) => {
+// 2. Icono naranja que llena todo el contenedor para Celular (Android Maskable e iOS)
+async function generateMobileFullBleedIcon(size, file) {
+  const scaledSize = Math.round(size * 1.16);
+  const cropOffset = Math.round((scaledSize - size) / 2);
+
+  await sharp(ICON_MOBILE)
+    .resize(scaledSize, scaledSize, { fit: "cover" })
+    .extract({ left: cropOffset, top: cropOffset, width: size, height: size })
+    .flatten({ background: ORANGE_BG })
+    .png()
+    .toFile(path.join(OUT, file));
+}
+
+async function run() {
+  // PC / Computadora (Icono normal con fondo transparente)
+  await generateDesktopIcon(192, "icon-192.png", 0.9);
+  await generateDesktopIcon(512, "icon-512.png", 0.9);
+
+  // Celular (Icono naranja completo que llena todo el contenedor)
+  await generateMobileFullBleedIcon(512, "icon-maskable-512.png");
+  await generateMobileFullBleedIcon(180, "apple-touch-icon.png");
+
+  console.log("PWA icons generated: Desktop (192, 512) = Normal Transparent | Mobile (Maskable, Apple) = Orange Full-Bleed");
+}
+
+run().catch((err) => {
   console.error(err);
   process.exit(1);
 });
