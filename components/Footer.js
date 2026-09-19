@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import logoFooter from "../public/logo_footer.png";
+import logoFooter from "../public/logo_ploopi.svg";
 
 const LINKS = [
   { href: "/", label: "Inicio" },
@@ -18,9 +18,9 @@ export default function Footer() {
         <Link href="/" className="flex items-center transition-transform hover:scale-105">
           <Image
             src={logoFooter}
-            alt="Bloopi / EnglishKids"
-            width={160}
-            height={60}
+            alt="Ploopi"
+            width={24098}
+            height={7920}
             className="h-11 w-auto object-contain"
           />
         </Link>

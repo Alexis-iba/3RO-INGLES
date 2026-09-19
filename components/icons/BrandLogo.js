@@ -1,15 +1,14 @@
 import Image from "next/image";
-import brandLogo from "../../public/english-kids-frog.png";
+import brandLogo from "../../public/logo_ploopi.svg";
 
-// Logotipo oficial (ranita + wordmark "EnglishKids") usado como título en
-// todo el sitio, en vez del icono de libro + texto anterior.
+// Logotipo oficial (Ploopi) usado como título en la cabecera
 export default function BrandLogo({ className = "h-11 w-auto", priority = false }) {
   return (
     <Image
       src={brandLogo}
-      alt="EnglishKids"
-      width={1713}
-      height={918}
+      alt="Ploopi"
+      width={24098}
+      height={7920}
       priority={priority}
       className={className}
     />

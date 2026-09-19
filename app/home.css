@@ -17,7 +17,7 @@
   gap: clamp(24px, 3.5vw, 60px);
   height: calc(clamp(520px, 42vw, 700px) + 20px);
   min-height: 530px;
-  padding: 44px 10% 40px 8%;
+  padding: 44px max(24px, calc((100% - 1200px) / 2 + 24px)) 40px;
   background: #c8eaff url('/home-sky.svg') center / cover no-repeat;
   position: relative;
   isolation: isolate;
@@ -622,7 +622,7 @@ footer {
     background: #c8eaff url('/home-sky-mobile.svg') center / cover no-repeat !important;
     grid-template-columns: 1fr;
     gap: 16px;
-    padding: 24px 16px 0;
+    padding: 24px 18px 0;
     position: relative;
     overflow: hidden;
     height: auto;
