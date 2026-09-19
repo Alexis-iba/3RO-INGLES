@@ -27,7 +27,7 @@ export default function WorkbookLeaf({ book, index, miniature, print = false, an
   const field = (key, label, wide = false) => <Answer id={`${index}-${key}`} answers={answers} onAnswer={onAnswer} miniature={miniature} print={print} label={label} wide={wide} />;
   return <section className={`book-leaf workbook-leaf workbook-page-${index} ${index % 2 ? 'words-leaf' : 'illustrated-leaf'}`}>
     <Image src="/workbook-images/garden-book.png" alt="" width={1536} height={1024} loading="eager" unoptimized className="workbook-garden-art" />
-    <div className="workbook-kicker">{book.title} · EnglishKids</div>
+    <div className="workbook-kicker">{book.title} · Ploopi</div>
     <div className="workbook-title-row"><h2>{title.split(' ').map((word, i) => <span key={i}>{word}{' '}</span>)}</h2></div>
     <div className="workbook-content">
     <p className="workbook-instruction">{instruction}<small>{spanish}</small></p>

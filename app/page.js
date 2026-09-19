@@ -133,7 +133,7 @@ export default function HomePage() {
         <div className="hero-photograph hero-brand-art">
           <Image
             src={heroImage}
-            alt="Ranita sonriente y perrito saludando, personajes de EnglishKids"
+            alt="Personajes de Ploopi saludando"
             fill
             priority
             sizes="(max-width: 700px) 90vw, 50vw"

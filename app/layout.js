@@ -21,7 +21,7 @@ const nunito = localFont({
 });
 
 export const metadata = {
-  title: "EnglishKids — Aprende inglés jugando",
+  title: "Ploopi — Aprende inglés jugando",
   description: "Libros y recursos de inglés para niños de 3° de primaria.",
   icons: {
     icon: [
@@ -33,7 +33,7 @@ export const metadata = {
   appleWebApp: {
     capable: true,
     statusBarStyle: "default",
-    title: "EnglishKids",
+    title: "Ploopi",
   },
 };
 

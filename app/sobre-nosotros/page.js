@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export const metadata = { title: "Sobre nosotros — EnglishKids" };
+export const metadata = { title: "Sobre nosotros — Ploopi" };
 
 export default function SobreNosotrosPage() {
   return (
@@ -63,7 +63,7 @@ export default function SobreNosotrosPage() {
       </div>
 
       <p className="about-lead">
-        En EnglishKids diseñamos libros y recursos pensados especialmente para niños y niñas de 3° de
+        En Ploopi diseñamos libros y recursos pensados especialmente para niños y niñas de 3° de
         primaria, combinando historias, vocabulario en contexto y actividades interactivas para que
         aprender inglés se sienta como un juego, no como una tarea.
       </p>

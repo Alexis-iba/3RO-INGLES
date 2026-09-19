@@ -31,7 +31,7 @@ export default function InstallAppBanner() {
       <div className="flex items-start gap-3">
         <img src="/icons/icon-192.png" alt="" className="h-11 w-11 flex-shrink-0 rounded-xl" />
         <div className="min-w-0 flex-1">
-          <p className="font-heading text-sm font-extrabold text-navy">Instala EnglishKids</p>
+          <p className="font-heading text-sm font-extrabold text-navy">Instala Ploopi</p>
           <p className="mt-0.5 text-xs font-semibold text-navy/60">
             {platform === "ios"
               ? "Agrégala a tu pantalla de inicio para abrirla como app."

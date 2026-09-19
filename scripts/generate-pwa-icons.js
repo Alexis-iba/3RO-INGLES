@@ -3,11 +3,10 @@ const path = require("path");
 
 const ROOT = path.join(__dirname, "..");
 const ICON_SRC = path.join(ROOT, "public/favicon.svg");
-const SPLASH_SRC = path.join(ROOT, "public/logo_splash.svg");
 const OUT = path.join(ROOT, "public/icons");
 
-async function standardIcon(size, file) {
-  const inner = Math.round(size * 0.9);
+async function generateTransparentIcon(size, file, scale = 0.9) {
+  const inner = Math.round(size * scale);
   const pad = Math.round((size - inner) / 2);
   await sharp(ICON_SRC, { density: 600 })
     .resize(inner, inner, { fit: "contain", background: { r: 0, g: 0, b: 0, alpha: 0 } })
@@ -23,55 +22,12 @@ async function standardIcon(size, file) {
     .toFile(path.join(OUT, file));
 }
 
-async function solidCharacterIcon(size, file, bg) {
-  const inner = Math.round(size * 0.72);
-  const pad = Math.round((size - inner) / 2);
-  await sharp(ICON_SRC, { density: 600 })
-    .resize(inner, inner, { fit: "contain", background: bg })
-    .extend({
-      top: pad,
-      bottom: size - inner - pad,
-      left: pad,
-      right: size - inner - pad,
-      background: bg,
-    })
-    .resize(size, size)
-    .flatten({ background: bg })
-    .png()
-    .toFile(path.join(OUT, file));
-}
-
-async function splashLogoIcon(size, file, scale = 0.84) {
-  const innerW = Math.round(size * scale);
-  const innerH = Math.round(innerW / 1.5602);
-  const padX = Math.round((size - innerW) / 2);
-  const padY = Math.round((size - innerH) / 2);
-
-  await sharp(SPLASH_SRC, { limitInputPixels: false })
-    .resize(innerW, innerH, { fit: "contain", background: { r: 255, g: 216, b: 61, alpha: 1 } })
-    .extend({
-      top: padY,
-      bottom: size - innerH - padY,
-      left: padX,
-      right: size - innerW - padX,
-      background: { r: 255, g: 216, b: 61, alpha: 1 },
-    })
-    .resize(size, size)
-    .flatten({ background: { r: 255, g: 216, b: 61, alpha: 1 } })
-    .png()
-    .toFile(path.join(OUT, file));
-}
-
 async function run() {
-  // 1. Iconos del lanzador / instalacion (puro personaje con fondo blanco)
-  await solidCharacterIcon(512, "icon-maskable-512.png", { r: 255, g: 255, b: 255, alpha: 1 });
-  await solidCharacterIcon(180, "apple-touch-icon.png", { r: 255, g: 255, b: 255, alpha: 1 });
-
-  // 2. Iconos de Splash Screen (192 y 512 con el logo completo y fondo amarillo #ffd83d)
-  await splashLogoIcon(192, "icon-192.png", 0.88);
-  await splashLogoIcon(512, "icon-512.png", 0.88);
-
-  console.log("PWA icons generated: Splash = Full Logo (192+512) | Launcher = Pure Character Icon");
+  await generateTransparentIcon(192, "icon-192.png", 0.9);
+  await generateTransparentIcon(512, "icon-512.png", 0.9);
+  await generateTransparentIcon(512, "icon-maskable-512.png", 0.8);
+  await generateTransparentIcon(180, "apple-touch-icon.png", 0.9);
+  console.log("All PWA icons generated with transparent background and pure character icon");
 }
 
 run().catch((err) => {

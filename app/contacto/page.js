@@ -35,7 +35,7 @@ export default function ContactoPage() {
 
     const subject = encodeURIComponent(values.subject.trim());
     const body = encodeURIComponent(`Nombre: ${values.name.trim()}\nCorreo: ${values.email.trim()}\n\n${values.message.trim()}`);
-    window.location.href = `mailto:info@englishkids.com?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:info@ploopi.com?subject=${subject}&body=${body}`;
     setSuccess(true);
     setValues({ name: "", email: "", subject: "", message: "" });
     setErrors({});
@@ -53,7 +53,7 @@ export default function ContactoPage() {
         <div className="contact-hero">
           <div className="contact-hero-clouds" aria-hidden="true" />
           <div className="contact-hero-info">
-            <InfoRow icon="mail" color="text-brand-blue" label="Correo electrónico" value="info@englishkids.com" />
+            <InfoRow icon="mail" color="text-brand-blue" label="Correo electrónico" value="info@ploopi.com" />
             <InfoRow icon="pin" color="text-brand-pink" label="Ubicación" value="Morelia, Michoacán, México" />
             <InfoRow icon="clock" color="text-brand-blue" label="Horario de atención" value="Lunes a viernes, 9:00 a.m. - 6:00 p.m." />
           </div>
@@ -72,7 +72,7 @@ export default function ContactoPage() {
         <div className="card p-7 border border-slate-200/80 shadow-[0_4px_20px_rgba(7,52,113,0.06)] bg-white">
           {success && (
             <div className="mb-4 rounded-xl bg-[#e3f7ee] border border-[#a3e6c5] px-4.5 py-3.5 font-bold text-[#1c7a4d]">
-              ✉️ ¡Listo! Abrimos tu aplicación de correo para que envíes el mensaje a EnglishKids.
+              ✉️ ¡Listo! Abrimos tu aplicación de correo para que envíes el mensaje a Ploopi.
             </div>
           )}
           <form onSubmit={handleSubmit} noValidate>

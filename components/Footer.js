@@ -40,7 +40,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="border-t border-white/10 py-3 pb-20 md:pb-3 text-center text-xs text-[#93a0c2]">
-        © {new Date().getFullYear()} EnglishKids — &quot;A new language is a new world.&quot;
+        © {new Date().getFullYear()} Ploopi — &quot;A new language is a new world.&quot;
       </div>
     </footer>
   );

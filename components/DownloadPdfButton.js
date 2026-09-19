@@ -40,7 +40,7 @@ export default function DownloadPdfButton({ book, answers = {} }) {
       const leaves = Array.from(root.querySelectorAll(".workbook-leaf"));
       if (leaves.length !== book.pages) throw new Error("El número de páginas no coincide con el libro.");
       const doc = new jsPDF({ unit: "mm", format: "a4", orientation: "portrait", compress: true });
-      doc.setProperties({ title: book.title, subject: "Cuaderno de inglés de 3° de primaria", author: "EnglishKids" });
+      doc.setProperties({ title: book.title, subject: "Cuaderno de inglés de 3° de primaria", author: "Ploopi" });
       for (let i = 0; i < leaves.length; i++) {
         if (cancelledRef.current) return;
         const canvas = await html2canvas(leaves[i], {
@@ -59,7 +59,7 @@ export default function DownloadPdfButton({ book, answers = {} }) {
       setPdfUrl(url);
       const link = document.createElement("a");
       link.href = url;
-      link.download = `${book.id}-englishkids.pdf`;
+      link.download = `${book.id}-ploopi.pdf`;
       link.click();
       setStatus("done");
     } catch (err) {
@@ -76,7 +76,7 @@ export default function DownloadPdfButton({ book, answers = {} }) {
       {status === "loading" ? `Generando ${progress}/${book.pages}…` : status === "error" ? "Reintentar descarga" : "Descargar (PDF)"}
     </button>
     <span className="pdf-status" role="status">{status === "done" ? `PDF listo: ${book.pages} páginas.` : status === "error" ? "No se pudo generar el PDF completo. Inténtalo de nuevo." : ""}</span>
-    {pdfUrl && <a className="pdf-ready-link" href={pdfUrl} download={`${book.id}-englishkids.pdf`}>Guardar PDF de nuevo</a>}
+    {pdfUrl && <a className="pdf-ready-link" href={pdfUrl} download={`${book.id}-ploopi.pdf`}>Guardar PDF de nuevo</a>}
     {status === "loading" && <div className="pdf-workbook-pages" ref={pagesRef} aria-hidden="true" inert>
       {Array.from({ length: Math.ceil(WORKBOOK_PAGES.length / 2) }, (_, page) => <WorkbookSpread key={page} book={book} page={page} print answers={answers} />)}
     </div>}

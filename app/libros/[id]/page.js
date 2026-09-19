@@ -18,7 +18,7 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }) {
   const { id } = await params;
   const book = getBookById(id);
-  return { title: book ? `${book.title} — EnglishKids` : "EnglishKids" };
+  return { title: book ? `${book.title} — Ploopi` : "Ploopi" };
 }
 
 export default async function BookDetailPage({ params }) {

@@ -27,7 +27,7 @@ const STEPS = {
     items: [
       <>Busca el ícono de instalar <b>⊕</b> en la barra de direcciones.</>,
       <>Si no lo ves, abre el menú <b>⋮</b> del navegador.</>,
-      <>Elige <b>Instalar EnglishKids...</b>.</>,
+      <>Elige <b>Instalar Ploopi...</b>.</>,
     ],
   },
   other: {

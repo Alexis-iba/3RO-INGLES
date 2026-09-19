@@ -1,7 +1,7 @@
 export default function manifest() {
   return {
-    name: "EnglishKids — Aprende inglés jugando",
-    short_name: "EnglishKids",
+    name: "Ploopi — Aprende inglés jugando",
+    short_name: "Ploopi",
     description: "Libros y recursos de inglés para niños de 3° de primaria.",
     start_url: "/",
     display: "standalone",

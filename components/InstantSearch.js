@@ -206,7 +206,7 @@ export default function InstantSearch({ isMobileModal = false, onCloseMobile }) 
           onFocus={() => setIsOpen(true)}
           onKeyDown={handleKeyDown}
           placeholder="Buscar libros, juegos, temas..."
-          aria-label="Buscar en EnglishKids"
+          aria-label="Buscar en Ploopi"
           style={{ outline: "none", boxShadow: "none", border: "none" }}
           className="min-w-0 flex-1 bg-transparent text-xs sm:text-sm text-[#073471] placeholder:text-slate-400 font-medium outline-none border-none focus:outline-none focus:ring-0 focus-visible:outline-none"
         />
