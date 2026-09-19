@@ -24,7 +24,10 @@ export const metadata = {
   title: "EnglishKids — Aprende inglés jugando",
   description: "Libros y recursos de inglés para niños de 3° de primaria.",
   icons: {
-    icon: "/favicon.ico?v=20260914",
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/favicon.ico" },
+    ],
     apple: "/icons/apple-touch-icon.png",
   },
   appleWebApp: {

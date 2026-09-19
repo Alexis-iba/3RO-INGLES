@@ -21,7 +21,7 @@ export default function Footer() {
             alt="Ploopi"
             width={24098}
             height={7920}
-            className="h-11 w-auto object-contain"
+            className="h-12 w-auto object-contain"
           />
         </Link>
 

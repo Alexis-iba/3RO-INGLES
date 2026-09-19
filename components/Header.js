@@ -33,7 +33,7 @@ export default function Header() {
         
         {/* Logo a la izquierda */}
         <Link href="/" className="flex flex-shrink-0 items-center transition-transform duration-150 hover:scale-105">
-          <BrandLogo className="h-10 w-auto sm:h-12 md:h-13" priority />
+          <BrandLogo className="h-11 w-auto sm:h-13 md:h-14" priority />
         </Link>
 
         {/* Links de navegación para computadoras / tablets grandes */}
